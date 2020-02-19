@@ -1,0 +1,110 @@
+/*entertainment-screen*/
+
+.entertainment-screen {
+	padding: 120px 0;
+}
+
+.entertainment {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	background: #f3f0ee;
+	padding: 40px;
+	height: 577px;
+	position: relative;
+	&:hover{
+	}
+}
+.entertainment_children {
+	background: url(../images/balloons.png) no-repeat bottom right;
+	background-size: cover;
+}
+
+.entertainment_aquarium {
+	background: url(../images/fish.png) no-repeat bottom right;
+	background-size: cover;
+}
+
+.entertainment_film {
+	background: url(../images/film.png) no-repeat bottom right;
+	background-size: cover;
+}
+
+.entertainment__type {
+	font-size: 12px;
+	color: rgb(121, 95, 49);
+	text-transform: uppercase;
+}
+
+.entertainment__caption {
+	font: 700 30px "OpenSans";
+	margin: 20px 0 45px;
+}
+
+.entertainment__description {
+	font-size: 14px;
+	color: rgb(97, 92, 88);
+}
+
+.entertainment__location {
+	font-size: 14px;
+	color: rgb(121, 95, 49);
+}
+
+
+/*media*/ 
+
+@media screen and (min-width: 1921px) {
+    
+}
+
+@media screen and (max-width: 1279px) { 
+	
+	.plates {
+		margin: 0 -10px;
+	}
+	
+	.plates__plate { 
+		padding: 5px 10px 15px;
+	}
+	
+	.plates__caption{
+		font-size: 17px;
+	}
+	
+	.courses-screen {
+		padding: 45px 0 35px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.courses-screen .wrapper {
+		flex-wrap: nowrap;
+		flex-direction: column-reverse;
+	}
+	
+	.courses-screen__types {
+		width: 100%;
+	}
+	
+	.plates__plate-wr{
+		padding: 10px 15px 20px;
+	}
+	
+	
+}
+
+@media screen and (max-width: 767px) {
+	.plates__plate {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 639px) {
+	
+	
+	
+}
+
