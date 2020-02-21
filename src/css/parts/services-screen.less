@@ -1,13 +1,8 @@
 .services-screen {
 	background: url(../../images/services-bg.jpg) no-repeat center;
 	background-size: cover;
-	padding: 100px 0;
-}
-
-.services-screen__description {
-	font-size: 14px;
-	color: rgb(255, 255, 255);
-	max-width: 275px;
+	padding: 110px 0;
+	position: relative;
 }
 
 .simple-plates {
@@ -22,14 +17,28 @@
 }
 
 .simple-plates__plate-wr {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	.flex-column_center;
+	height: 137px;
 	text-align: center;
+	box-sizing: border-box;
 	background: rgb(255, 255, 255);
-	padding: 20px 10px;
-	transition: all 0.3s linear;
+	padding: 20px;
+	opacity: 0;
+	&.visible {
+		.visible
+	}
+}
+
+.simple-plates__plate:nth-child(2n) .simple-plates__plate-wr {
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out 0.1s;
+}
+
+.simple-plates__plate:nth-child(3n) .simple-plates__plate-wr {
+    -moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out 0.2s;
 }
 
 .simple-plates__plate-wr:hover {
@@ -38,6 +47,7 @@
 
 .simple-plates__caption {
 	font-size: 16px;
+	margin-bottom: 8px;
 }
 
 .simple-plates__plate-wr:hover .simple-plates__caption {

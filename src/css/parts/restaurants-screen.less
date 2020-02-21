@@ -1,0 +1,110 @@
+.restaurants-screen {
+    background: url(../../images/restaurants-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 140px 0 163px;
+}
+
+.restaurants-screen .dark-plates {
+    .animated;
+	.animated_bottom;
+	&.visible {
+		.visible
+	}
+}
+
+.dark-plates {
+	padding: 0 6.35%;
+	margin: 0 -15px;
+	
+	.dark-plates__plate {
+		box-sizing: border-box;
+		width: 20%;
+		padding: 0 15px;
+	}
+	
+	.dark-plates__plate-wr {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+  		background: rgb(23, 23, 23);
+		border: 4px solid rgb(23, 23, 23);
+		padding: 45px 40px 25px;
+		transition: all 0.3s linear;
+		&:hover{
+			background: transparent;
+			border: 4px solid rgb(121, 95, 49);
+		}
+	}
+	.dark-plates__caption {
+		font-size: 24px;
+		color: rgb(255, 255, 255);
+		margin-bottom: 10px;
+	}
+	.dark-plates__description {
+		font-size: 14px;
+		line-height: 1.7;
+		color: rgb(230, 193, 121);
+	}
+}
+
+.bottom-line {
+	.flex_between;
+	height: 52px;
+	.bottom-line__stage {
+		font-size: 14px;
+		color: rgb(121, 95, 49);
+	}
+	
+	.bottom-line__icon {
+		display: none;
+		border-radius: 50%;
+		background: url(../../images/icons/arrow.svg) no-repeat center,rgb(38, 33, 25);
+		width: 52px;
+		height: 52px;
+	}
+}
+	
+
+.dark-plates__plate-wr {
+	&:hover .dark-plates__icon {
+		display: block;
+	}
+}
+
+.restaurants-screen__dark-plates {
+	margin-top: 80px;
+}
+
+
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1921px) {
+		
+}
+
+@media screen and (max-width: 1365px) {
+	
+	
+}
+
+@media screen and (max-width: 1279px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+	
+	
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+@media screen and (max-width: 639px) {
+	
+	
+}

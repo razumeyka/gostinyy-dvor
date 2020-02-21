@@ -1,34 +1,38 @@
 .header {
-	align-items: center;
-	background: #faf9f8;
-	padding: 15px 50px 15px 35px;
+    align-items: center;
+    background: rgb(247,246,244);
+	background: -moz-linear-gradient(top, rgb(247,246,244) 0%, rgba(255,255,255) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgb(247,246,244) 0%, rgba(255,255,255) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgb(247,246,244) 0%, rgba(255,255,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding: 30px 50px 30px 35px;
 }
 
 .shedule {
 	font-size: 14px;
 	color: rgb(63, 45, 41);
-	padding-left: 35px;
+	padding-left: 47px;
 	position: relative;
-}
-
-.shedule:before {
-	content: "";
-	background: url(../../images/icons/vremya.svg) no-repeat center;
-	background-size: contain;
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	left: 0;
+	&:before {
+		content: "";
+		background: url(../../images/icons/vremya.svg) no-repeat center;
+		background-size: contain;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		left: 0;
+		top: -4px;
+	}
 }
 
 .header__right-part {
 	align-items: center;
+		a {
+		margin-left: 20px;
+		&:hover {
+			color: rgb(241, 56, 54);
+		}
+	}
 }
-
-.header__right-part a {
-	margin-left: 10px;
-}
-
 
 .phone {
 	display: block;
@@ -36,18 +40,28 @@
 	color: rgb(63, 45, 41);
 	padding-left: 35px;
 	position: relative;
+	&:before {
+		content: "";
+		background: url(../images/icons/telephone.svg) no-repeat center;
+		background-size: contain;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 0;
+	}
+	&:hover {
+		color: rgb(63, 45, 41);
+	}
 }
 
-.phone:before {
-	content: "";
-	background: url(../images/icons/telephone.svg) no-repeat center;
+.burger {
+	display: none;
+    background: url(../../images/icons/burger.svg) no-repeat center;
 	background-size: contain;
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	left: 0;
-}
-
+    width: 40px;
+    height: 40px;
+	cursor: pointer;
+} 
 
 
 /*media*/ 
@@ -71,7 +85,9 @@
 }
 
 @media screen and (max-width: 767px) {
-    
+    .burger {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 639px) {

@@ -1,0 +1,105 @@
+.shops-screen {
+	background: #171717; /* Old browsers */
+	background: -moz-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	padding-top: 60px;
+	padding-bottom: 60px;
+	position: relative;
+}
+
+.shops-screen .swiper-container {
+    .animated;
+	.animated_right;
+	&.visible {
+		.visible
+	}
+}
+
+.shop-plate {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	background: rgb(255,255,255);
+	height: 277px;
+	padding: 30px;
+	transition: all 0.3s linear;
+	&:hover{
+		box-shadow: 0px 6px 55.18px 6.82px rgb(216, 205, 199);
+	}
+	.shop-plate__logo {
+		width: 135px;
+		height: 80px;
+		margin: 0 auto;
+	}
+	.shop-plate__logo_nb {
+		background: url(../images/new-balance-logo.png) no-repeat center;
+		background-size: contain;
+	}
+	.shop-plate__logo_oodji {
+		background: url(../images/oodji-logo.png) no-repeat center;
+		background-size: contain;
+	}
+	.shop-plate__logo_ecco {
+		background: url(../images/ecco-logo.png) no-repeat center;
+		background-size: contain;
+	}
+	.shop-plate__name {
+		font-size: 16px;
+	}
+	.shop-plate__category {
+		font-size: 12px;
+		color: rgb(121, 95, 49);
+		&:hover {
+			color: rgb(0, 0, 0);
+		}
+	}
+}
+
+.swiper-shops .swiper-wrapper {
+	padding: 70px 0;
+}
+
+.swiper-shops .swiper-pagination {
+    background: rgba(183,161,122,.25);
+    width: 204px;
+    height: 2px;
+    left: 50px;
+    top: 223px;
+}
+
+.swiper-shops .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background-color: rgb(241, 56, 54);
+}
+
+.swiper-shops .swiper-button-next, .swiper-shops .swiper-button-prev {
+    top: 230px;
+	left: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.swiper-shops .swiper-button-next:after, .swiper-shops .swiper-button-prev:after {
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.swiper-shops .swiper-button-next:hover, .swiper-shops .swiper-button-prev:hover {
+	background: none;
+}
+
+.swiper-shops .swiper-button-next:hover:after, .swiper-shops .swiper-button-prev:hover:after {
+	color: rgb(121, 95, 49);
+}
+
+
+.swiper-shops .swiper-button-next {
+	right: auto;
+	left: 270px;
+}
+
+.swiper-shops .swiper-slide {
+	width: 200px;
+}

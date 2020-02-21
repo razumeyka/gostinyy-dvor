@@ -1,5 +1,7 @@
 @@include('./lib/jquery.fancybox.min.js')
 @@include('./lib/swiper.js')
+@@include('./lib/jquery.viewportchecker.js')
+@@include('./lib/jquery.maskedinput.js')
 
 
 $(document).ready(function(){
@@ -7,27 +9,38 @@ $(document).ready(function(){
 // mobile_menu
     
     $('.burger').click( function() { 
-        $('header .navbar').slideToggle(300); 
-        $('.burger').toggleClass( 'burger_active' ); 
+        $('.menu-column').slideToggle(300); 
     });
 	
 	var ww=window.innerWidth;
 	$(window).resize(function(){
 		//функция вызывается всегда, при изменении размера окна. Для того, чтобы она вызывалась только при изменении ширины окна - этот пункт
 		if(ww==window.innerWidth) return;//
-		if(window.innerWidth > 1279) {
-			$('header .navbar').show(); 
+		if(window.innerWidth > 767) {
+			$('.menu-column').show(); 
 		} else {
-			$('header .navbar').hide();
-			$('.burger').removeClass('burger_active'); 
+			$('.menu-column').hide();
 		}
 	});
 	
 // Swiper slider	
 	
-	var sharesSwiper = new Swiper ('swiper-shares .swiper-container', {
+	var sharesSwiper = new Swiper ('.swiper-shares .swiper-container', {
 		slidesPerView: "auto",
-      	spaceBetween: 35,
+      	spaceBetween: 30,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+	
+	var shopsSwiper = new Swiper ('.swiper-shops .swiper-container', {
+		slidesPerView: "auto",
+		spaceBetween: 30,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -52,12 +65,95 @@ $(document).ready(function(){
 		},
 	})
 	
-	
 // plates height
 	
-	$(window).resize(function(){
-		$('.plates-line__inner').css('height', $('.plates-line__inner').width() + 'px');
+	// height
+	
+	var w= $('.dark-plates__plate-wr').width();
+	$('.dark-plates__plate-wr').css({
+		'height': w + 'px'
 	});
+	
+	$(window).resize(function(){
+		var w= $('.dark-plates__plate-wr').width();
+		$('.dark-plates__plate-wr').css({
+			'height': w + 'px'
+		});
+	});
+	
+// animation
+	
+	$('.mosaic__group_first').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	});
+	
+	$('.mosaic__group_second').viewportChecker({
+		classToAdd: 'visible',
+		offset: 350,
+		repeat: true,
+	});
+	
+	$('.shares-events .swiper-container').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	});
+	
+	$('.restaurants-screen .dark-plates ').viewportChecker({
+		classToAdd: 'visible',
+		offset: 250,
+		repeat: true,
+	});
+	
+	$('.shops-screen .swiper-container').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	});
+	
+	$('.simple-plates__plate-wr').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	}); 
+	
+	$('.entertainment').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	}); 
+	
+	$('.film').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	}); 
+	
+	$('.sight__item-wr').viewportChecker({
+		classToAdd: 'visible',
+		offset: 50,
+		repeat: true,
+	}); 
+	
+	$('.footer-bg').viewportChecker({
+		classToAdd: 'visible',
+		offset: 100,
+		repeat: true,
+	}); 
+	
+	$('.footer-info').viewportChecker({
+		classToAdd: 'visible',
+		offset: 150,
+		repeat: true,
+	}); 
+     
+	$('.footer-contacts').viewportChecker({
+		classToAdd: 'visible',
+		offset: 100,
+		repeat: true,
+	}); 
 	
 //seotext open
 	
@@ -84,69 +180,11 @@ $(document).ready(function(){
 		$(this).parent().parent().css('height', 'auto');
 		$(this).addClass('open');
 	});
+	
+// mask
+	
+	$('input[type="tel"]').mask("8-999-999-99-99");
 
-// 	slick-slider	
-	
-	$('.img-slider').slick({
-		infinite: true,
-		slidesToShow: 1,
-		dots: false,
-		arrows: false,
-		autoplay: true,
-    	autoplaySpeed: 2000,
-	});
-	
-	$('.exclusive').slick({
-		infinite: true,
-		slidesToShow: 1,
-		dots: true,
-		arrows: true,
-	});
-	
-	$('.examples').slick({
-		infinite: true,
-		slidesToShow: 1,
-		dots: false,
-		arrows: true,
-		responsive: [
-			{
-			  breakpoint: 768,
-			  settings: {
-				arrows: false,
-			  }
-			},
-		]
-	});
-	
-	$('.reviews').slick({
-		infinite: true,
-		slidesToShow: 3,
-		dots: false,
-		arrows: true,
-		responsive: [
-			{
-			  breakpoint: 1024,
-			  settings: {
-				slidesToShow: 2,
-				arrows: false,
-			  }
-			},
-			{
-			  breakpoint: 768,
-			  settings: {
-				slidesToShow: 1,
-			  }
-			},
-		]
-	});
-	
-// plates height
-	
-	$(window).resize(function(){
-		$('.partners__partner').css('height', $('.partners__partner').width() + 'px');
-	});
-	
-	
 	
 	$(window).resize();
 	setTimeout(function(){

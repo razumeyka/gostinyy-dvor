@@ -142,8 +142,8 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: 71px;
-  height: 71px;
+  width: 69px;
+  height: 69px;
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
@@ -152,34 +152,39 @@
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 	border-radius: 50%;
-  border: 3px solid rgb(210, 201, 194);
+  border: 3px solid  rgb(210, 201, 194);
+	outline: none;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: rgb(255, 255, 255);
-	border: 3px solid rgb(255, 255, 255);
+	background-color: rgb(243, 241, 239);
+	border: 3px solid  rgb(243, 241, 239);
 }
 
+
+/*
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;
   cursor: auto;
   pointer-events: none;
 }
+*/
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
-	color: rgb(210, 201, 194);
-  font-size: var(--swiper-navigation-size);
+	color:  rgb(121, 95, 49);
+  font-size: 14px;
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
 }
+
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: 10px;
+  left: -90px;
   right: auto;
 }
 .swiper-button-prev:after,
@@ -188,7 +193,7 @@
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  right: 10px;
+  right: -90px;
   left: auto;
 }
 .swiper-button-next:after,

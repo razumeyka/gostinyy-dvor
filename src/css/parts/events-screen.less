@@ -1,4 +1,92 @@
+.events-screen {
+    padding: 220px 0 80px;
+}
 
+.swiper-events  .swiper-wrapper {
+    padding: 50px 0;
+}
+
+.swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
+    top: 72px;
+    left: 60px;
+}
+
+.swiper-events .swiper-button-prev {
+    top: 155px;
+}
+
+.swiper-events .swiper-slide {
+	width: 275px;
+}
+
+.film {
+	display: block;
+	box-sizing: border-box;
+	background: rgb(243, 240, 238);
+	padding: 45px 55px;
+	.animated;
+	.animated_bottom;
+	&.visible {
+		.visible
+	}
+	&:hover {
+		box-shadow: 0px 6px 55.18px 6.82px rgba(216, 205, 199, 0.4);
+	}
+}
+
+.film__poster {
+	background: #795f31;
+	width: 100%;
+	height: 259px;
+	&.film__poster_1 {
+		background: url(../images/film-1.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&.film__poster_2 {
+		background: url(../images/film-2.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&.film__poster_3 {
+		background: url(../images/film-3.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&.film__poster_4 {
+		background: url(../images/film-4.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&.film__poster_5 {
+		background: url(../images/film-5.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+.film__caption {
+	font-size: 14px;
+	color: rgb(23, 23, 23);
+	text-transform: uppercase;
+	margin: 10px 0 25px;
+}
+
+.film__ticket {
+	font-size: 14px;
+	color: rgb(241, 56, 54);
+	padding-left: 45px;
+	position: relative;
+	&:before {
+		content: "";
+		border-radius: 50%;
+		background: url(../images/icons/ticket.svg) no-repeat center,rgb(255, 255, 255);
+		width: 37px;
+		height: 37px;
+		position: absolute;
+		left: 0;
+		top: -10px;
+	}
+}
+
+.film:hover .film__ticket {
+	color: rgb(0, 0, 0);
+}
 
 
 

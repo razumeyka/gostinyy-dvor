@@ -1,7 +1,12 @@
 /*entertainment-screen*/
 
 .entertainment-screen {
-	padding: 120px 0;
+	padding: 220px 0 120px;
+}
+
+.swiper-entertainment {
+	margin-top: 100px;
+	position: relative;
 }
 
 .entertainment {
@@ -14,6 +19,13 @@
 	height: 577px;
 	position: relative;
 	&:hover{
+		background: url(../../images/aqua-hover.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.animated;
+	.animated_bottom;
+	&.visible {
+		.visible
 	}
 }
 .entertainment_children {
@@ -47,9 +59,18 @@
 	color: rgb(97, 92, 88);
 }
 
-.entertainment__location {
-	font-size: 14px;
-	color: rgb(121, 95, 49);
+.entertainment:hover {
+	.entertainment__caption {
+		color: rgb(255, 255, 255);
+	}
+
+	.entertainment__description {
+		color: rgb(255, 255, 255);
+	}
+	
+	.bottom-line__icon {
+		display: block;
+	}
 }
 
 

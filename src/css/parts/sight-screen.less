@@ -1,0 +1,159 @@
+.sight-screen {
+	box-sizing: border-box;
+	background: #171717;
+	padding: 170px 0;
+	position: relative;
+}
+
+.sight {
+	flex-wrap: wrap;
+	margin: -15px;
+}
+
+.sight__item {
+	box-sizing: border-box;
+	width: 33.3333%;
+	padding: 15px;
+}
+
+.sight__item-wr {
+    height: 300px;
+    box-sizing: border-box;
+    background: url(../images/sight-gingerbread.jpg) no-repeat center;
+    background-size: 100% 100%;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+	opacity: 0;
+	transition: background 0.2s linear;
+	&:hover{
+		background-size: 110% 110%;
+	}
+	&.visible {
+		.visible
+	}
+}
+
+.sight__item:nth-child(2n) .sight__item-wr{
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out 0.1s;
+}
+
+.sight__item:nth-child(3n) .sight__item-wr {
+    -moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out 0.2s;
+}
+
+
+.sight__item_double .sight__item-wr{
+	height: 135px;
+}
+
+.sight__item_double .sight__item-wr:first-child{
+	margin-bottom: 30px;
+}
+
+.sight__item-wr_samovar {
+	background: url(../images/sight-samovar.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_weapons {
+	background: url(../images/sight-weapons.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_kremlin {
+	background: url(../images/sight-kremlin.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_park {
+	background: url(../images/sight-park.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_glade {
+	background: url(../images/sight-glade.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_temple {
+	background: url(../images/sight-temple.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__item-wr_victory {
+	background: url(../images/sight-victory.jpg) no-repeat center;
+	background-size: 100% 100%;
+	&:hover{
+		background-size: 110% 110%;
+	}
+}
+
+.sight__caption {
+	font: 400 36px/1 "JOURNALISM";
+	color: rgb(255, 255, 255);
+}
+
+.sight__item_double .sight__caption {
+  font: 400 16px "OpenSans";
+}
+
+.sight__time {
+	font-size: 12px;
+	color: rgb(229, 197, 154);
+}
+
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1921px) {
+		
+}
+
+@media screen and (max-width: 1365px) {
+	
+	
+}
+
+@media screen and (max-width: 1279px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+	
+	
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+@media screen and (max-width: 639px) {
+	
+}
+	
