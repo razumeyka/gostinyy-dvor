@@ -3,7 +3,7 @@
 }
 
 .mosaic {
-    margin: -15px;
+    margin: -16px;
 }
 
 .mosaic__group {
@@ -15,7 +15,7 @@
 	box-sizing: border-box;
     width: 100%;
 	height: 100%;
-    padding: 15px;
+    padding: 16px;
 	position: relative;
 }
 
@@ -60,28 +60,28 @@
 }
 
 .mosaic__group_first {
-	width: 55%;
+	width: 54.7%;
 	.animated;
 	.animated_bottom;
 	&.visible {
 		.visible
 	}
 	.mosaic__column:first-child {
-		width: 66%;
+		width: 66.5%;
 	}
 	.mosaic__column:nth-child(2n) {
-		width: 34%;
+		width: 33.5%;
 		.mosaic__item-wr:first-child{
-			height: 66%;
+			height: 66.5%;
 		}
 		.mosaic__item-wr:nth-child(2n){
-			height: 34%;
+			height: 33.5%;
 		}
 	}
 }
 
 .mosaic__group_second {
-	width: 45%;
+	width: 45.3%;
 	.animated;
 	.animated_top;
 	&.visible {
@@ -129,11 +129,36 @@
 }
 
 @media screen and (max-width: 1279px) {  
+	.mosaic__group {
+		height: 310px;
+	}
 	
+	.mosaic {
+		margin: -5px;
+	}
+	
+	.mosaic__item-wr {
+		padding: 5px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
+	.main-screen {
+		padding: 20px 20px 30px 20px;
+	}
 	
+	.mosaic {
+		flex-direction: column;
+	}
+	
+	.mosaic__group {
+		height: 420px;
+		width: 100%;
+	}
+	
+	.mosaic__group_second  {
+		display: none;
+	}
 
 }
 

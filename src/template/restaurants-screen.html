@@ -1,18 +1,77 @@
-<div class="restaurants-screen">
+<div class="restaurants-screen padding-big">
 	<div class="caption-center caption-center_on-dark">
-		<div class="caption-center__backgound">Рестораны</div>
+		<div class="caption-center__background">Рестораны</div>
 		<div class="caption-center__small-caption">
 			<div>Рестораны и кафе</div>
 			<a href="#" class="caption-center__button button button_red">Все рестораны</a>
 		</div>
 	</div>
-	<div class="restaurants-screen__dark-plates dark-plates flex">
-		@@loop('../template/dark-plate.html',[
-				{"title":"Charte Bar", "description":"Фаст-фуд, напитки, Гриль, морепродукты", "stage":"4 этаж"},
-				{"title":"Salateira", "description":"итальянская кухня", "stage":"4 этаж"},
-				{"title":"Charte Bar", "description":"Фаст-фуд, напитки, Гриль, морепродукты", "stage":"4 этаж"},
-				{"title":"Salateira", "description":"итальянская кухня", "stage":"4 этаж"},
-				{"title":"Charte Bar", "description":"Фаст-фуд, напитки, Гриль, морепродукты", "stage":"4 этаж"}
-			])
+	<div class="swiper-restaurants">
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#" class="dark-plate">
+						<div>
+							<div class="dark-plate__caption">Charte Bar</div>
+							<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
+						</div>
+						<div class="dark-plate__bottom-line bottom-line">
+							<div class="bottom-line__stage">4 этаж</div>
+							<div class="bottom-line__icon"></div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="dark-plate">
+						<div>
+							<div class="dark-plate__caption">Salateira</div>
+							<div class="dark-plate__description">итальянская кухня</div>
+						</div>
+						<div class="dark-plate__bottom-line bottom-line">
+							<div class="bottom-line__stage">4 этаж</div>
+							<div class="bottom-line__icon"></div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="dark-plate">
+						<div>
+							<div class="dark-plate__caption">Charte Bar</div>
+							<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
+						</div>
+						<div class="dark-plate__bottom-line bottom-line">
+							<div class="bottom-line__stage">4 этаж</div>
+							<div class="bottom-line__icon"></div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="dark-plate">
+						<div>
+							<div class="dark-plate__caption">Salateira</div>
+							<div class="dark-plate__description">итальянская кухня</div>
+						</div>
+						<div class="dark-plate__bottom-line bottom-line">
+							<div class="bottom-line__stage">4 этаж</div>
+							<div class="bottom-line__icon"></div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="dark-plate">
+						<div>
+							<div class="dark-plate__caption">Charte Bar</div>
+							<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
+						</div>
+						<div class="dark-plate__bottom-line bottom-line">
+							<div class="bottom-line__stage">4 этаж</div>
+							<div class="bottom-line__icon"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

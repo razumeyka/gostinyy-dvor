@@ -27,41 +27,92 @@ $(document).ready(function(){
 	
 	var sharesSwiper = new Swiper ('.swiper-shares .swiper-container', {
 		slidesPerView: "auto",
-      	spaceBetween: 30,
+		spaceBetween: 20,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: ('.swiper-shares .swiper-button-next'),
+			prevEl: ('.swiper-shares .swiper-button-prev'),
 		},
+		breakpoints: {
+			1024: {
+			  slidesPerView: "auto",
+			  spaceBetween:32,
+			},
+		}
+	})
+	
+	var sharesSwiper = new Swiper ('.swiper-restaurants .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-restaurants .swiper-button-next',
+			prevEl: '.swiper-restaurants .swiper-button-prev',
+		},
+		breakpoints: {
+			450: {
+			  slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			640: {
+			  slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1024: {
+			  slidesPerView: 3,
+			  spaceBetween: 32,
+			},
+			1280: {
+			  slidesPerView: 4,
+			  spaceBetween: 32,
+			},
+			1440: {
+			  slidesPerView: 5,
+				spaceBetween: 32,
+			},
+		}
 	})
 	
 	var shopsSwiper = new Swiper ('.swiper-shops .swiper-container', {
 		slidesPerView: "auto",
-		spaceBetween: 30,
+		spaceBetween: 32,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'progressbar',
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-shops .swiper-button-next',
+			prevEl: '.swiper-shops .swiper-button-prev',
 		},
 	})
 	
 	var entertainmentSwiper = new Swiper ('.swiper-entertainment .swiper-container', {
-		slidesPerView: "3",
-      	spaceBetween: 30,
+		slidesPerView: "1",
+		spaceBetween: 20,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-entertainment .swiper-button-next',
+			prevEl: '.swiper-entertainment .swiper-button-prev',
 		},
+		breakpoints: {
+			640: {
+			  slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 2,
+			  spaceBetween: 20,
+			},
+			1280: {
+			  slidesPerView: 3,
+			  spaceBetween: 32,
+			},
+		}
 	})
 	
 	var eventsSwiper = new Swiper ('.swiper-events .swiper-container', {
 		slidesPerView: "auto",
-      	spaceBetween: 30,
+      	spaceBetween: 32,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-events .swiper-button-next',
+			prevEl: '.swiper-events .swiper-button-prev',
 		},
 	})
 	
@@ -69,15 +120,15 @@ $(document).ready(function(){
 	
 	// height
 	
-	var w= $('.dark-plates__plate-wr').width();
-	$('.dark-plates__plate-wr').css({
-		'height': w + 'px'
+	var w1= $('.dark-plate').width();
+	$('.dark-plate').css({
+		'height': w1 + 'px'
 	});
 	
 	$(window).resize(function(){
-		var w= $('.dark-plates__plate-wr').width();
-		$('.dark-plates__plate-wr').css({
-			'height': w + 'px'
+		var w2= $('.dark-plate').width();
+		$('.dark-plate').css({
+			'height': w2 + 'px'
 		});
 	});
 	
@@ -91,23 +142,23 @@ $(document).ready(function(){
 	
 	$('.mosaic__group_second').viewportChecker({
 		classToAdd: 'visible',
-		offset: 350,
-		repeat: true,
-	});
-	
-	$('.shares-events .swiper-container').viewportChecker({
-		classToAdd: 'visible',
 		offset: 50,
 		repeat: true,
 	});
 	
-	$('.restaurants-screen .dark-plates ').viewportChecker({
+	$('.swiper-shares .swiper-container').viewportChecker({
 		classToAdd: 'visible',
-		offset: 250,
+		offset: 300,
 		repeat: true,
 	});
 	
-	$('.shops-screen .swiper-container').viewportChecker({
+	$('.swiper-restaurants ').viewportChecker({
+		classToAdd: 'visible',
+		offset: 10,
+		repeat: true,
+	});
+	
+	$('.swiper-shops .swiper-container').viewportChecker({
 		classToAdd: 'visible',
 		offset: 50,
 		repeat: true,

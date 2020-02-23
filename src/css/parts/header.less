@@ -10,7 +10,7 @@
 .shedule {
 	font-size: 14px;
 	color: rgb(63, 45, 41);
-	padding-left: 47px;
+	padding-left: 35px;
 	position: relative;
 	&:before {
 		content: "";
@@ -24,13 +24,40 @@
 	}
 }
 
+.header__shedule {
+	margin-right: 20px;
+}
+
+.search-button {
+	display: block;
+	font-size: 14px;
+	color: rgb(63, 45, 41);
+	padding-left: 35px;
+	position: relative;
+	&:before {
+		content: "";
+		background: url(../../images/icons/poisk.svg) no-repeat center;
+		background-size: contain;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		left: 0;
+		top: -4px;
+	}
+}
+
 .header__right-part {
 	align-items: center;
-		a {
-		margin-left: 20px;
-		&:hover {
-			color: rgb(241, 56, 54);
-		}
+}
+
+.header__button {
+	margin: 0 10px 0 30px;
+}
+
+.header__link {
+	margin-left: 20px;
+	&:hover {
+		color: rgb(241, 56, 54);
 	}
 }
 
@@ -49,19 +76,21 @@
 		position: absolute;
 		left: 0;
 	}
-	&:hover {
-		color: rgb(63, 45, 41);
-	}
 }
 
 .burger {
-	display: none;
+    display: none;
     background: url(../../images/icons/burger.svg) no-repeat center;
-	background-size: contain;
-    width: 40px;
-    height: 40px;
-	cursor: pointer;
-} 
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.logo.mobile-logo {
+	display: none;
+}
 
 
 /*media*/ 
@@ -76,15 +105,65 @@
 }
 
 @media screen and (max-width: 1279px) {
+	.header__button {
+		display: none;
+	}
 
+	.header__link {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1023px) {
+	.header {
+		padding: 20px 20px 20px 20px;
+	}
+
+	.phone, .search-button, .shedule  {
+		font-size: 12px;
+		padding-left: 30px;
+	}
 	
-	
+	.phone:before {
+		top: -2px;
+	}
 }
 
 @media screen and (max-width: 767px) {
+	.header {
+		.flex_between;
+		background: rgb(247,246,244);
+		padding: 10px 20px 10px 20px;
+	}
+	
+	.logo.mobile-logo {
+		display: block;
+		margin: 0;
+	}
+	
+	.shedule {
+		display: none;
+	}
+	
+	header .phone, .search-button {
+		font-size: 0;
+		box-sizing: border-box;
+		background: rgb(255,255,255);
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	
+	header .phone:before {
+		top: 4px;
+		left: 6px;
+	}
+	
+	.search-button:before {
+		top: 2px;
+		left: 2px;
+	}
+
     .burger {
         display: block;
     }

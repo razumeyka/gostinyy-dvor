@@ -1,7 +1,6 @@
 .sight-screen {
 	box-sizing: border-box;
 	background: #171717;
-	padding: 170px 0;
 	position: relative;
 }
 
@@ -115,10 +114,11 @@
 .sight__caption {
 	font: 400 36px/1 "JOURNALISM";
 	color: rgb(255, 255, 255);
+	margin-bottom: 12px;
 }
 
 .sight__item_double .sight__caption {
-  font: 400 16px "OpenSans";
+  font-size: 16px;
 }
 
 .sight__time {
@@ -131,21 +131,62 @@
 
 /*media*/ 
 
-@media screen and (max-width: 1921px) {
-		
+@media screen and (max-width: 1823px) {
+	.sight__caption {
+		font-size: 30px;
+	}
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1439px) {
+	.sight__item-wr {
+		height: 260px;
+		padding: 25px 30px 20px;
+	}
 	
+	.sight__item_double .sight__item-wr {
+		height: 115px;
+		.sight__caption {
+			margin-bottom: 3px;
+		}
+	}
 	
 }
 
 @media screen and (max-width: 1279px) {
-
+	.sight__caption {
+		font-size: 24px;
+	}
+	
+	.sight__item {
+		padding: 10px;
+	}
+	
+	.sight__item-wr {
+		height: 200px;
+		padding: 10px 15px 10px;
+	}
+	
+	.sight__item_double .sight__item-wr {
+		height: 90px;
+	}
+	
+	.sight__item_double .sight__item-wr:first-child {
+		margin-bottom: 20px;
+	}
+	
+	.sight__item_double .sight__caption {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
+	.sight__item {
+		width: 50%;
+	}
 	
+	.sight__item:nth-child(3n) {
+		display: none;
+	}
 	
 }
 

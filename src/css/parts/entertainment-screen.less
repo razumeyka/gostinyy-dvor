@@ -1,12 +1,12 @@
 /*entertainment-screen*/
 
-.entertainment-screen {
-	padding: 220px 0 120px;
-}
-
 .swiper-entertainment {
 	margin-top: 100px;
 	position: relative;
+	.swiper-container {
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .entertainment {
@@ -15,13 +15,9 @@
 	justify-content: space-between;
 	box-sizing: border-box;
 	background: #f3f0ee;
-	padding: 40px;
+	padding: 70px 50px 45px 90px;
 	height: 577px;
 	position: relative;
-	&:hover{
-		background: url(../../images/aqua-hover.jpg) no-repeat center;
-		background-size: cover;
-	}
 	.animated;
 	.animated_bottom;
 	&.visible {
@@ -31,16 +27,28 @@
 .entertainment_children {
 	background: url(../images/balloons.png) no-repeat bottom right;
 	background-size: cover;
+	&:hover{
+		background: url(../../images/children-hover.jpg) no-repeat center;
+		background-size: cover;
+	}
 }
 
 .entertainment_aquarium {
 	background: url(../images/fish.png) no-repeat bottom right;
 	background-size: cover;
+	&:hover{
+		background: url(../../images/aqua-hover.jpg) no-repeat center;
+		background-size: cover;
+	}
 }
 
 .entertainment_film {
 	background: url(../images/film.png) no-repeat bottom right;
 	background-size: cover;
+	&:hover{
+		background: url(../../images/film-hover.jpg) no-repeat center;
+		background-size: cover;
+	}
 }
 
 .entertainment__type {
@@ -50,13 +58,22 @@
 }
 
 .entertainment__caption {
-	font: 700 30px "OpenSans";
-	margin: 20px 0 45px;
+	font-size: 30px;
+	margin: 15px 0 45px;
 }
 
 .entertainment__description {
 	font-size: 14px;
+	line-height: 1.75;
 	color: rgb(97, 92, 88);
+	max-width: 250px;
+	ul {
+		padding-left: 17px;
+		margin: 0;
+		li {
+			padding: 5px 0 5px 10px;
+		}
+	}
 }
 
 .entertainment:hover {
@@ -76,55 +93,71 @@
 
 /*media*/ 
 
-@media screen and (min-width: 1921px) {
-    
+@media screen and (max-width: 1823px) { 
+	
+	.entertainment {
+		padding: 50px 40px 30px 60px;
+		height: 440px;
+		.entertainment__type {
+			font-size: 10px;
+		}
+		.entertainment__caption {
+			font-size: 26px;
+			margin: 10px 0 30px;
+		}
+		.entertainment__description {
+			font-size: 12px;
+			line-height: 1.6;
+		}
+	}
 }
 
-@media screen and (max-width: 1279px) { 
-	
-	.plates {
-		margin: 0 -10px;
-	}
-	
-	.plates__plate { 
-		padding: 5px 10px 15px;
-	}
-	
-	.plates__caption{
-		font-size: 17px;
-	}
-	
-	.courses-screen {
-		padding: 45px 0 35px;
+@media screen and (max-width: 1439px) { 
+	.swiper-entertainment {
+		margin-top: 50px;
 	}
 }
 
 @media screen and (max-width: 1023px) {
-	.courses-screen .wrapper {
-		flex-wrap: nowrap;
-		flex-direction: column-reverse;
+	.entertainment-screen .wrapper {
+		padding-right: 10.4%;
 	}
 	
-	.courses-screen__types {
-		width: 100%;
+	.entertainment {
+		padding: 30px 30px 20px 35px;
+		height: 340px;
+		.entertainment__caption {
+			font-size: 22px;
+			margin: 5px 0 20px;
+		}
+		.entertainment .entertainment__description {
+			font-size: 11px;
+		}
 	}
 	
-	.plates__plate-wr{
-		padding: 10px 15px 20px;
+	.swiper-button-prev {
+		left: -59px;
 	}
-	
-	
+		.swiper-button-next {
+		right: -59px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-	.plates__plate {
-		width: 50%;
+	
+	.entertainment-screen .wrapper {
+		padding-right: 20px;
 	}
 	
+	.swiper-button-prev {
+		left: -15px;
+	}
+		.swiper-button-next {
+		right: -15px;
+	}
 }
 
 @media screen and (max-width: 639px) {
-	
 	
 	
 }

@@ -1,9 +1,7 @@
-.events-screen {
-    padding: 220px 0 80px;
-}
+/*events-screen*/ 
 
-.swiper-events  .swiper-wrapper {
-    padding: 50px 0;
+.events-screen .caption-center {
+    margin-bottom: 45px;
 }
 
 .swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
@@ -30,7 +28,7 @@
 		.visible
 	}
 	&:hover {
-		box-shadow: 0px 6px 55.18px 6.82px rgba(216, 205, 199, 0.4);
+		box-shadow: @box-shadow-hover;
 	}
 }
 
@@ -64,13 +62,13 @@
 	font-size: 14px;
 	color: rgb(23, 23, 23);
 	text-transform: uppercase;
-	margin: 10px 0 25px;
+	margin: 20px 0 25px;
 }
 
 .film__ticket {
 	font-size: 14px;
 	color: rgb(241, 56, 54);
-	padding-left: 45px;
+	padding-left: 55px;
 	position: relative;
 	&:before {
 		content: "";
@@ -96,13 +94,48 @@
 		
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1439px) {
+	.swiper-events .swiper-slide {
+		width: 240px;
+	}
 	
+	.swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
+		top: 60px;
+		left: 50px;
+	}
+	
+	.swiper-events .swiper-button-prev {
+		top: 130px;
+	}
+	
+	.film {
+		padding: 35px 40px;
+	}
+	
+	.film__poster {
+		height: 250px;
+	}
 	
 }
 
 @media screen and (max-width: 1279px) {
+	.swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
+		left: 17px;
+	}
+	
+	.film {
+		padding: 30px 25px;
+		.film__poster {
+			height: 220px;
+		}
 
+		.film__caption {
+			font-size: 12px;
+			margin: 15px 0 20px;
+		}
+	}
+	
+	
 }
 
 @media screen and (max-width: 1023px) {

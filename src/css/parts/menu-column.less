@@ -65,7 +65,7 @@
 }
 
 .menu li.menu__item_restaurants a:before {
-	background: url(../../images/icons/akcii.svg) no-repeat center;
+	background: url(../../images/icons/cafe.svg) no-repeat center;
 	background-size: contain;
 }
 
@@ -97,7 +97,25 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.menu-column {
+		width: 130px;
+	}
 	
+	.logo {
+		width: 100px;
+		height: 75px;
+		margin: 20px auto;
+	}
+	
+	.menu li a {
+		padding: 40px 10px 15px;
+		font-size: 12px;
+		&:before {
+			width: 24px;
+			height: 24px;
+			top: 10px;
+		}
+	}
 	
 }
 
@@ -107,21 +125,28 @@
 		display: none;
 		box-sizing: border-box;
 		width: 100%;
-		padding: 0 20px;
 		z-index: 1000;
 		transition: all 0.5s linear;
 	}
 	
-	.logo {
-		margin: 20px auto 20px 0;
+	.menu-column .logo {
+		margin: 10px auto 10px 20px;
+	}
+	
+	.menu-column .burger {
+		margin-right: 20px;
+	}
+	
+	.navbar {
+		margin-top: 20px;
 	}
 	
 	.menu li a {
 		text-align: left;
-		padding: 15px 10px 15px 40px;
+		padding: 15px 10px 15px 60px;
 		&:before {
 			top: 10px;
-			left: 0;
+			left: 20px;
 			right: auto;
 			margin: 0;
 		}
