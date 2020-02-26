@@ -3,6 +3,7 @@
     background-size: cover;
 	padding-left: 6.35%;
 	padding-right: 6.35%;
+	padding-bottom: 170px;
 }
 
 .swiper-restaurants {
@@ -68,25 +69,56 @@
 		margin-top: 50px;
 	}
 	
+	.swiper-restaurants .swiper-button-prev, .swiper-restaurants .swiper-button-next {
+		display: flex;
+		left: -60px;
+		border: 3px solid #68532c;
+		&:hover {
+			background: #171717;
+			border: 3px solid #68532c;
+		}
+	}
+	
+	.swiper-restaurants .swiper-button-next {
+		right: -60px;
+		left: auto;
+	}
+	
 }
 
-@media screen and (max-width: 1279px) {
-
+@media screen and (max-width: 1280px) {
+	.swiper-restaurants .swiper-button-next, .swiper-restaurants .swiper-button-prev {
+		width: 35px;
+		height: 35px;
+		background: #171717;
+		border: 1px solid #68532c;
+		left: -45px;
+		&:hover {
+			background: #171717;
+			border: 1px solid #68532c;
+		}
+	}
+	
+	.swiper-restaurants .swiper-button-next {
+		right: -45px;
+		left: auto;
+	}
 }
+
 
 @media screen and (max-width: 1023px) {
+	
 	.dark-plate {
 		padding: 20px 20px 10px;
 		.dark-plate__caption {
 			font-size: 20px;
 		}
 		
-		.dark-plate__description {
+	.dark-plate__description {
 			font-size: 10px;
 			line-height: 1.5;
 		}
 	}
-	
 }
 
 @media screen and (max-width: 767px) {
@@ -95,8 +127,13 @@
 		padding-right: 20px;
 	}
 	
-    .swiper-restaurants .swiper-button-prev, .swiper-restaurants .swiper-button-next {
-		display: flex;
+	.swiper-restaurants .swiper-button-next, .swiper-restaurants .swiper-button-prev {
+		left: -15px;
+	}
+	
+	.swiper-restaurants .swiper-button-next {
+		right: -15px;
+		left: auto;
 	}
 	
 	.dark-plate {

@@ -1,5 +1,6 @@
 @import "parts/jquery.fancybox.min.css";
 @import "parts/swiper.css";
+@import "parts/select2.css";
 @import "parts/base-blocks.less";
 @import "parts/menu-column.less";
 @import "parts/header.less";
@@ -11,9 +12,330 @@
 @import "parts/services-screen.less";
 @import "parts/events-screen.less";
 @import "parts/sight-screen.less";
-@import "parts/form.less";
+@import "parts/forms.less";
 @import "parts/footer.less";
 @import "parts/popup.less";
+@import "parts/pagination.less";
+
+.inner-page__header {
+	width: 100%;
+	height: 535px;
+}
+
+.inner-page__top-bg {
+	background: url(../images/broun-bg.png) no-repeat center top;
+	background-size: contain;
+	width: 100%;
+	height: 680px;
+	position: absolute;
+	top: 95px;
+	left: 0;
+	.inner-page__top-bg_entertainments{
+		width: 100%;
+		height: 100%;
+		background: url(../images/balloons-bg.png) no-repeat center;
+		background-size: contain;
+	}
+}
+
+.inner-page .caption-background_white {
+	color: rgba(255, 255, 254, 0.129);
+}
+
+.inner-page .caption-center__small-caption {
+	font-size: 96px;
+	font-family: "JOURNALISM";
+	color: rgb(255, 255, 255);
+}
+
+.inner-page__main {
+	background: #ede9e6;
+	padding: 90px 10.4%;
+	position: relative;
+}
+
+.inner-page__right-content {
+	width: 44%;
+	margin: 0 0 0 auto;
+}
+
+.inner-page__content footer{
+	background: rgb(255,255,255);
+}
+
+/*shops-page*/
+
+.filters {
+	padding: 55px 10.4%;
+	align-items: center;
+}
+
+.alphabet-filter {
+	margin-left: 30px;
+}
+
+.alphabet-filter a {
+	display: block;
+	font-size: 18px;
+	margin: 0 8px;
+}
+
+.alphabet-filter__all {
+	color: rgb(241, 56, 54);
+}
+
+.big-letter {
+	font-size: 330px;
+	font-family: "JOURNALISM";
+	color: rgb(0, 0, 0);
+}
+
+/*shop-page*/
+
+.swiper-header {
+	height: 100%;
+	position: relative;
+}
+
+.swiper-header .swiper-pagination {
+	left: auto;
+	top: auto;
+    bottom: 20px;
+    right: 32%;
+}
+
+.swiper-header .swiper-button-next, .swiper-header .swiper-button-prev {
+	left: auto;
+	top: auto;
+    bottom: 5px;
+    right: calc(33% + 210px);
+	left: auto;
+}
+
+.swiper-header .swiper-button-next {
+    right: calc(33% - 40px);
+}
+
+.swiper-header_oodji .swiper-slide {
+	background: url(../images/oodji-bg.jpg) no-repeat center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.plate {
+	position: absolute;
+	z-index: 10;
+	top: 215px;
+	left: 10.4%;
+	box-sizing: border-box;
+	background: rgb(255,255,255);
+	width: 33.5%;
+	padding: 35px 30px 35px 55px;
+	overflow: hidden;
+	.caption-background {
+		color: rgba(243, 240, 238, 0.6);
+		top: -35px;
+		left: -10px;
+	}
+	.plate__top-line{
+		position: relative;
+	}
+	
+	.plates__back-link {
+		font-size: 12px;
+		box-sizing: border-box;
+		padding-left: 30px;
+		position: relative;
+		&:before {
+			content: "";
+			background: url(../images/icons/arrow%20back.svg) no-repeat center;
+			background-size: contain;
+			width: 12px;
+			height: 7px;
+			position: absolute;
+			left: 0;
+			top: 5px;
+		}
+	}
+	
+	.plate__logo {
+		display: block;
+		width: 130px;
+		height: 55px;
+		&.plate__logo_oodji {
+			background: url(../images/oodji-logo.png) no-repeat center;
+			background-size: contain;
+		}
+	}
+	.plate__content {
+		position: relative;
+		box-sizing: border-box;
+		padding: 110px 50px 65px 95px;
+		.plate__category {
+			font-size: 12px;
+			color: rgb(121, 95, 49);
+			text-transform: uppercase;
+		}
+		.plate__caption {
+			font-size: 96px;
+			line-height: 1;
+			font-family: "JOURNALISM";
+			margin: 15px 0 40px;
+		}
+		.contact {
+			font-size: 16px;
+			margin: 25px 0;
+			.animated;
+			.animated_right;
+			&:before {
+				.animated;
+				-ms-transform: translate(-100px, 0);
+				-moz-transform: translate(-100px, 0);
+				-webkit-transform: translate(-100px, 0);
+				transform: translate(-100px, 0);
+			}
+			&.visible {
+				.visible;
+				&:before {
+					.visible
+				}
+			}
+			&.contact_site:before {
+				background: url(../images/icons/globus.svg) no-repeat center;
+				background-size: contain;
+			}
+			&.contact_stage:before {
+				background: url(../images/icons/shema2.svg) no-repeat center;
+				background-size: contain;
+			}
+		}
+		.plate__location {
+			align-items: center;
+			margin: 15px 0;
+			.contact {
+				margin: 0;
+			}
+			.button {
+				margin-left: 10px;
+				width: auto;
+				padding: 2px 15px;
+			}
+		}
+		.plate__social {
+			margin: 45px 0 30px;
+			a {
+				margin-right: 10px;
+			}
+		}
+		.plate__hashtag {
+			font-size: 16px;
+			color: rgb(241, 56, 54);
+		}
+	}
+}
+
+/*tabs*/
+
+.tabs {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	.tabs__buttons {
+		margin-bottom: 50px;
+	}
+
+	.tabs__button {
+		padding: 10px 15px;
+		width: 145px;
+		margin-right: 10px;
+	}
+
+	.tabs__content {
+		position: relative;
+		width: 500%;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.tabs__item {
+		width: 20%;
+		display: inline;
+		float: left;
+		overflow: hidden; 
+		box-sizing: border-box;
+		p:first-child {
+			font-size: 24px;
+			line-height: 1.3;
+			margin: 0 0 45px;
+		}
+	}
+}
+
+.goods-plate {
+	background: rgb(255,255,255);
+	.goods-plate__photo {
+	}
+	img {
+		width: 100%;
+	}
+	.goods-plate__text {
+		padding: 40px;
+	}
+	.goods-plate__caption {
+		font-size: 24px;
+		color: rgb(121, 95, 49);
+		margin-bottom: 30px;
+	}
+	.goods-plate__detail {
+		color: rgb(63, 45, 41);
+	}
+	.goods-plate__bottom {
+		&.flex_between{
+			margin-top: 30px;
+		}
+	}
+	.goods-plate__price {
+		font-size: 16px;
+		color: rgb(0, 0, 0);
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.goods-plate__reserv {
+		font-size: 14px;
+		color: rgb(241, 56, 54);
+		cursor: pointer;
+	}
+}
+
+/*news-page*/
+
+.inner-page_news .inner-page__main {
+	padding: 90px 10px 90px 10.4%;
+}
+
+
+/*contacts-page*/
+
+.inner-page_contacts footer{
+	margin-top: -70px;
+	.footer-bg {
+		z-index: 2;
+	}
+	.footer-info {
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.map {
+	position: relative;
+	width: 100%;
+	height: 700px;
+	z-index: 1;
+}
 
 
 

@@ -1,7 +1,7 @@
 /*entertainment-screen*/
 
 .swiper-entertainment {
-	margin-top: 100px;
+	margin-top: 50px;
 	position: relative;
 	.swiper-container {
 		padding: 0;
@@ -18,37 +18,61 @@
 	padding: 70px 50px 45px 90px;
 	height: 577px;
 	position: relative;
+	&:hover {
+		.entertainment__bg {
+			display: none;
+		}
+	}
+	&.entertainment_children {
+		&:hover{
+			background: url(../../images/children-hover.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+	&.entertainment_aquarium {
+		&:hover{
+			background: url(../../images/aqua-hover.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+	&.entertainment_film  {
+		&:hover{
+			background: url(../../images/film-hover.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+}
+
+.entertainment__bg {
+	height: 50%;
+	width: 70%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 	.animated;
 	.animated_bottom;
 	&.visible {
 		.visible
 	}
 }
-.entertainment_children {
+
+.entertainment_children .entertainment__bg {
 	background: url(../images/balloons.png) no-repeat bottom right;
 	background-size: cover;
-	&:hover{
-		background: url(../../images/children-hover.jpg) no-repeat center;
-		background-size: cover;
-	}
 }
 
-.entertainment_aquarium {
+.entertainment_aquarium .entertainment__bg {
 	background: url(../images/fish.png) no-repeat bottom right;
 	background-size: cover;
-	&:hover{
-		background: url(../../images/aqua-hover.jpg) no-repeat center;
-		background-size: cover;
-	}
 }
 
-.entertainment_film {
+.entertainment_film .entertainment__bg {
 	background: url(../images/film.png) no-repeat bottom right;
 	background-size: cover;
-	&:hover{
-		background: url(../../images/film-hover.jpg) no-repeat center;
-		background-size: cover;
-	}
+}
+
+.entertainment__content, .bottom-line {
+	position: relative;
 }
 
 .entertainment__type {
@@ -113,9 +137,7 @@
 }
 
 @media screen and (max-width: 1439px) { 
-	.swiper-entertainment {
-		margin-top: 50px;
-	}
+	
 }
 
 @media screen and (max-width: 1023px) {
@@ -158,7 +180,11 @@
 }
 
 @media screen and (max-width: 639px) {
-	
+	.entertainment {
+		height: 360px;
+		width: 270px;
+		margin: 0 auto;
+	}
 	
 }
 

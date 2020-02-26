@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('template/head.html')
+<body>
+	<div class="container inner-page inner-page_">
+		@@include('template/menu-column.html')
+		<div class="inner-page__content content">
+			@@include('template/header.html')
+			@@include('template/shops-screen.html')
+			<div class="filters wrapper flex">
+				<select class="filters__select select2" name="state" style="width: 188px" data-placeholder="Все этажи">
+					<option></option>
+					<option value="a">1 этаж</option>
+					<option value="b">2 этаж</option>
+					<option value="a">3 этаж</option>
+					<option value="b">4 этаж</option>
+				</select>
+				<select class="filters__select select2" name="state" style="width: 227px" data-placeholder="Все категории">
+					<option></option>
+					<option value="a">Одежда</option>
+					<option value="b">Обувь</option>
+					<option value="a">Аксессуары</option>
+				</select>
+				<div class="alphabet-filter flex">
+					<a href="#" class="alphabet-filter__all">Все</a>
+					<a href="#" class="alphabet-filter__letter">A</a>
+					<a href="#" class="alphabet-filter__letter">B</a>
+					<a href="#" class="alphabet-filter__letter">C</a>
+					<a href="#" class="alphabet-filter__letter">D</a>
+					<a href="#" class="alphabet-filter__letter">E</a>
+					<a href="#" class="alphabet-filter__letter">F</a>
+					<a href="#" class="alphabet-filter__letter">G</a>
+					<a href="#" class="alphabet-filter__letter">J</a>
+					<a href="#" class="alphabet-filter__letter">K</a>
+					<a href="#" class="alphabet-filter__letter">L</a>
+					<a href="#" class="alphabet-filter__letter">M</a>
+					<a href="#" class="alphabet-filter__letter">N</a>
+					<a href="#" class="alphabet-filter__letter">O</a>
+					<a href="#" class="alphabet-filter__letter">P</a>
+					<a href="#" class="alphabet-filter__letter">S</a>
+					<a href="#" class="alphabet-filter__letter">T</a>
+					<a href="#" class="alphabet-filter__letter">V</a>
+					<a href="#" class="alphabet-filter__letter">W</a>
+					<a href="#" class="alphabet-filter__letter">Y</a>
+					<a href="#" class="alphabet-filter__letter">Z</a>
+					<a href="#" class="alphabet-filter__letter">Б</a>
+					<a href="#" class="alphabet-filter__letter">В</a>
+					<a href="#" class="alphabet-filter__letter">Д</a>
+					<a href="#" class="alphabet-filter__letter">К</a>
+					<a href="#" class="alphabet-filter__letter">О</a>
+					<a href="#" class="alphabet-filter__letter">Ф</a>
+					<a href="#" class="alphabet-filter__letter">Ц</a>
+					<a href="#" class="alphabet-filter__letter">Ю</a>
+				</div>
+			</div>
+			<div class="inner-page__main wrapper">
+				<div class="columns flex">
+					<div class="columns__left-column">
+						<div class="big-letter">А</div>
+					</div>
+					<div class="columns__right-column">
+						<div class="swiper-shops">
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_nb"></div>
+											<div>
+												<div class="shop-plate__name">New Balance</div>
+												<div class="shop-plate__category">Обувь</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide swiper-slide_big">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_oodji"></div>
+											<div>
+												<div class="shop-plate__name">Oodji</div>
+												<div class="shop-plate__category">Одежда</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_ecco"></div>
+											<div>
+												<div class="shop-plate__name">Ecco</div>
+												<div class="shop-plate__category">Ювелирные изделия</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_nb"></div>
+											<div>
+												<div class="shop-plate__name">New Balance</div>
+												<div class="shop-plate__category">Обувь</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide swiper-slide_big">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_oodji"></div>
+											<div>
+												<div class="shop-plate__name">Oodji</div>
+												<div class="shop-plate__category">Одежда</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_ecco"></div>
+											<div>
+												<div class="shop-plate__name">Ecco</div>
+												<div class="shop-plate__category">Ювелирные изделия</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide swiper-slide_big">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_oodji"></div>
+											<div>
+												<div class="shop-plate__name">Oodji</div>
+												<div class="shop-plate__category">Одежда</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="shop-plate">
+											<div class="shop-plate__logo shop-plate__logo_ecco"></div>
+											<div>
+												<div class="shop-plate__name">Ecco</div>
+												<div class="shop-plate__category">Ювелирные изделия</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="columns flex">
+					<div class="columns__left-column">
+						<div class="big-letter">Б</div>
+					</div>
+					<div class="columns__right-column">
+							<a href="#" class="shop-plate">
+								<div class="shop-plate__logo shop-plate__logo_nb"></div>
+								<div>
+									<div class="shop-plate__name">New Balance</div>
+									<div class="shop-plate__category">Обувь</div>
+								</div>
+							</a>
+					</div>
+				</div>
+				<div class="columns flex">
+					<div class="columns__left-column">
+					</div>
+					<div class="columns__right-column">
+						@@include('template/pagination.html')	
+					</div>
+				</div>
+			</div>
+			@@include('template/footer.html')	
+		</div>
+	</div>
+</body>
+</html> 

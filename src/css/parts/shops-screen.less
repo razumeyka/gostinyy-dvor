@@ -1,9 +1,17 @@
 .shops-screen {
 	background: #171717; /* Old browsers */
-	background: -moz-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, rgb(23,23,23) 0%, rgb(23,23,23) 45%, rgb(243,240,248) 45%, rgb(243,240,248) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, #f3f0ee 45%, #f3f0ee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(23,23,23) 0%, rgb(23,23,23) 45%, #f3f0ee 45%, #f3f0ee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(23,23,23) 0%, rgb(23,23,23) 45%, #f3f0ee 45%, #f3f0ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	position: relative;
+}
+
+.shops-screen .caption-background {
+	top: 25px;
+}
+
+.shops-screen .columns__left-column {
+    padding-top: 35px;
 }
 
 .shops-screen .swiper-container {
@@ -15,14 +23,15 @@
 }
 
 .shop-plate {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	box-sizing: border-box;
-	background: rgb(255,255,255);
-	height: 277px;
-	padding: 30px;
-	transition: all 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #fff;
+    height: 277px;
+	text-align: center;
+    padding: 50px 30px 30px;
+    transition: all .3s linear;
 	&:hover{
 		box-shadow: @box-shadow-hover;
 	}
@@ -45,6 +54,7 @@
 	}
 	.shop-plate__name {
 		font-size: 16px;
+		margin-bottom: 10px;
 	}
 	.shop-plate__category {
 		font-size: 12px;
@@ -56,42 +66,18 @@
 }
 
 .swiper-shops .swiper-pagination {
-    background: rgba(183,161,122,.25);
-    width: 204px;
-    height: 2px;
-    left: 50px;
-    top: 223px;
-}
-
-.swiper-shops .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-	background-color: rgb(241, 56, 54);
+    left: 55px;
+    top: 255px;
 }
 
 .swiper-shops .swiper-button-next, .swiper-shops .swiper-button-prev {
-    top: 230px;
+    top: 262px;
 	left: 0;
-    width: 30px;
-    height: 30px;
-    border: none;
 }
-
-.swiper-shops .swiper-button-next:after, .swiper-shops .swiper-button-prev:after {
-    color: #ffffff;
-    font-size: 10px;
-}
-
-.swiper-shops .swiper-button-next:hover, .swiper-shops .swiper-button-prev:hover {
-	background: none;
-}
-
-.swiper-shops .swiper-button-next:hover:after, .swiper-shops .swiper-button-prev:hover:after {
-	color: rgb(121, 95, 49);
-}
-
 
 .swiper-shops .swiper-button-next {
 	right: auto;
-	left: 270px;
+	left: 285px;
 }
 
 .swiper-shops .swiper-slide {
@@ -107,7 +93,19 @@
 }
 
 @media screen and (max-width: 1439px) {
+	.swiper-shops .swiper-pagination {
+		width: 140px;
+		left: 30px;
+		top: 210px;
+	}
 	
+	.swiper-shops .swiper-button-next, .swiper-shops .swiper-button-prev {
+		top: 218px;
+	}
+	
+	.swiper-shops .swiper-button-next {
+		left: 170px;
+	}
 }
 
 @media screen and (max-width: 1279px) {
@@ -120,20 +118,6 @@
 		background: -moz-linear-gradient(left,#171717 0,#171717 65%,#f3f0f8 65%,#f3f0f8 100%);
 		background: -webkit-linear-gradient(left,#171717 0,#171717 65%,#f3f0f8 65%,#f3f0f8 100%);
 		background: linear-gradient(to right,#171717 0,#171717 65%,#f3f0f8 65%,#f3f0f8 100%);
-	}
-	
-	.swiper-shops .swiper-pagination {
-		width: 140px;
-		left: 30px;
-		top: 130px;
-	}
-	
-	.swiper-shops .swiper-button-next, .swiper-shops .swiper-button-prev {
-		top: 138px;
-	}
-	
-	.swiper-shops .swiper-button-next {
-		left: 170px;
 	}
 	
 	.shop-plate:hover{
@@ -150,13 +134,58 @@
 		padding-bottom: 0;
 	}
 	
-	.shops-screen .columns__left-column {
-		padding: 0 20px;
+	.shops-screen .caption-background {
+		top: 10px;
 	}
 	
+	.shops-screen .columns__left-column {
+		padding: 0 20px 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.shops-screen .columns__right-column {
 		background: #f3f0f8;
-		padding: 80px 20px;
+		box-sizing: border-box;
+		padding: 100px 20px 40px;
+		position: relative;
+		&:before {
+			content: "";
+			background: #171717;
+			width: 100%;
+			height: 60px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	
+	.shop-plate {
+		height: 230px;
+		padding: 20px;
+	}
+	
+	.swiper-shops .swiper-slide {
+		width: 170px;
+	}
+	
+	.swiper-shops .swiper-pagination {
+		width: 140px;
+		left: 0;
+		top: 30px;
+		right: 0;
+		margin: 0 auto;
+	}
+	
+	.swiper-shops .swiper-button-next, .swiper-shops .swiper-button-prev {
+		top: 37px;
+		background: transparent;
+		left: calc(50% - 100px);
+	}
+	
+	.swiper-shops .swiper-button-next {
+		left: calc(50% + 70px);
 	}
 	
 }

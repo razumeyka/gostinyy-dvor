@@ -5,12 +5,12 @@
 }
 
 .swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
-    top: 72px;
+    top: 55px;
     left: 60px;
 }
 
 .swiper-events .swiper-button-prev {
-    top: 155px;
+    top: 140px;
 }
 
 .swiper-events .swiper-slide {
@@ -38,23 +38,23 @@
 	height: 259px;
 	&.film__poster_1 {
 		background: url(../images/film-1.jpg) no-repeat center;
-		background-size: cover;
+		background-size: contain;
 	}
 	&.film__poster_2 {
 		background: url(../images/film-2.jpg) no-repeat center;
-		background-size: cover;
+		background-size:  contain;
 	}
 	&.film__poster_3 {
 		background: url(../images/film-3.jpg) no-repeat center;
-		background-size: cover;
+		background-size:  contain;
 	}
 	&.film__poster_4 {
 		background: url(../images/film-4.jpg) no-repeat center;
-		background-size: cover;
+		background-size: contain;
 	}
 	&.film__poster_5 {
 		background: url(../images/film-5.jpg) no-repeat center;
-		background-size: cover;
+		background-size:  contain;
 	}
 }
 
@@ -110,6 +110,12 @@
 	
 	.film {
 		padding: 35px 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.film__caption {
+			font-size: 12px;
+		}
 	}
 	
 	.film__poster {
@@ -130,7 +136,6 @@
 		}
 
 		.film__caption {
-			font-size: 12px;
 			margin: 15px 0 20px;
 		}
 	}
@@ -139,6 +144,57 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
+		left: 5px;
+	}
+			
+	.film:hover {
+		box-shadow: @box-shadow-hover-small;
+	}
 	
+}
+
+
+@media screen and (max-width: 767px) {
+	.film {
+		padding: 20px;
+	
+		.film__caption {
+			font-size: 10px;
+			margin: 10px 0 30px;
+		}
+
+		.film__poster {
+			height: 190px;
+		}
+
+		.film__ticket {
+			font-size: 12px;
+			padding-left: 40px;
+			&:before {
+				width: 30px;
+				height: 30px;
+				top: -7px;
+			}
+		}
+	}
+	
+	.swiper-events .swiper-button-next, .swiper-events .swiper-button-prev {
+		top: 50%;
+		left: 5px;
+	}
+	
+	.swiper-events .swiper-button-next {
+		right: 5px;
+		left: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	
+	.film{
+		width: 190px;
+		margin: 0 auto;
+	}
 	
 }

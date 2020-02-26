@@ -85,6 +85,8 @@
 	transform: translate(0, 0);
 }
 
+/*common styles*/
+
 body{
     margin:0;
 	padding: 0;
@@ -98,8 +100,23 @@ body{
 
 button,input,select,textarea{
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-} 
+    font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+p {
+    line-height: 1.8;
+    margin: 25px 0;
+}
 
 .container {
     max-width:1900px;
@@ -110,6 +127,7 @@ button,input,select,textarea{
 
 .content {
 	margin-left: 170px;
+	position: relative;
 }
 
 .wrapper {
@@ -155,12 +173,6 @@ button,input,select,textarea{
 	width: 66%;
 }
 
-a {
-	font-family: 'Open Sans', sans-serif;
-	color: rgb(0, 0, 0);
-	text-decoration: none;
-}
-
 .common-name {
 	font-size: 12px;
 	color: rgb(241, 56, 54);
@@ -171,12 +183,12 @@ a {
 	font: 400 240px/1 "JOURNALISM";
 	color: rgba(106, 82, 40, 0.129);
 	position: absolute;
-	top: 80px;
-	left: 65px;
+	top: 85px;
+	left: 85px;
 }
 
 .caption-background_white {
-  color: rgba(255, 255, 255, 0.522);
+	color: rgba(255, 255, 255, 0.522);
 }
 
 .caption {
@@ -184,6 +196,7 @@ a {
 	color: rgb(12, 12, 12);
 	max-width: 350px;
     margin: 0 0 15px;
+	position: relative;
 }
 
 .caption_white {
@@ -255,10 +268,60 @@ a {
 /* swiper slider */
 
 .swiper-container {
+	height: 100%;
 	padding: 30px;
 	margin: -30px;
 	position: relative;
 }
+
+.swiper-pagination {
+    background: rgba(183,161,122,.25);
+    width: 204px;
+    height: 2px;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background-color: rgb(241, 56, 54);
+}
+
+.swiper-with-pagination .swiper-button-next, .swiper-with-pagination .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.swiper-with-pagination .swiper-button-next:after, .swiper-with-pagination .swiper-button-prev:after {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.swiper-with-pagination .swiper-button-next:hover, .swiper-with-pagination .swiper-button-prev:hover {
+	background: none;
+}
+
+.swiper-with-pagination .swiper-button-next:hover:after, .swiper-with-pagination .swiper-button-prev:hover:after {
+	color: rgb(121, 95, 49);
+}
+
+@media screen and (min-width: 768px) {
+	.swiper-only-mobile .swiper-wrapper {
+		flex-wrap: wrap;
+		margin: -16px;
+	}
+	
+	.swiper-only-mobile .swiper-slide {
+		box-sizing: border-box;
+		width: 33.3333%;
+		padding: 16px;
+	}
+	
+	.swiper-only-mobile .swiper-button-prev, .swiper-only-mobile .swiper-button-next {
+		display: none;
+	}
+}
+
+
+
 
 /* buttons */
 
@@ -287,7 +350,6 @@ a {
   box-shadow: 0px 6px 14.24px 1.76px rgb(238, 238, 238);
 }
 
-
 .button_brown {
 	background-color: rgb(121, 95, 49);
 	padding: 10px 35px;
@@ -301,6 +363,15 @@ a {
 	background-color: rgb(241, 56, 54);
 	padding: 14px 20px;
 	width: 150px;
+}
+
+.button_red.active {
+	border: 1px solid rgb(241, 56, 54);
+	background: transparent;
+	color: rgb(241, 56, 54);
+	&:hover {
+		background: transparent;
+	}
 }
 
 .button_red:hover {
@@ -446,18 +517,57 @@ a {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	
+	.padding-big {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	
+	.padding-small {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	.columns {
 		flex-direction: column;
+		align-items: center;
+		z-index: 2;
+	}
+	
+	.columns__left-column, .wrapper .columns__left-column {
+		width: auto;
 	}
 
-	.columns__left-column, .columns__right-column {
+	.columns__right-column, .wrapper .columns__right-column {
+		padding-top: 100px;
 		width: 100%;
+	}
+	
+	.caption-background {
+		font-size: 90px;
+		top: 10px;
+		left: 25%;
+		z-index: 1;
+	}
+	
+	.caption-center__background {
+		font-size: 90px;
+	}
+	
+	.caption-center__button {
+		margin-top: 5px;
+	}
+	
+	.caption-center__small-caption {
+		font-size: 20px;
 	}
 }
 
 @media screen and (max-width: 639px) {
-	
+	.button {
+		font-size: 11px;
+		padding: 4px 15px 6px;
+	}
 	
 }
 
