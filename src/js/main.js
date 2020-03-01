@@ -52,11 +52,51 @@ $(document).ready(function(){
 	
 // tabs
 	
-    $('.tabs__button').click(function(){ 
+	$('.tabs__button').click(function(){ 
+		var index=$(this).index();
+		var height=$(this).parent().next('.tabs__content').find('.tabs__item').eq(index).height();
 		$('.tabs__button').removeClass('active');
 		$(this).addClass('active');
-		$('.tabs__content').css('margin-left','-'+$(this).index()+'00%'); 
-    });
+		$('.tabs__content').css({
+			'margin-left': '-'+index+'00%',
+			'height': height + 'px'
+		});
+	});
+	
+	
+// scrolltop
+	
+	var height = $(window).height()*2;
+	$(window).scroll(function () {
+		var top = $(window).scrollTop();
+		if(top >= height){
+			$('.go-up').fadeIn('slow');
+		} else {
+			$('.go-up').fadeOut('slow');
+		}
+	});
+	
+	$('.go-up').click(function(){ 
+		var el = $(this);
+		var dest = el.attr('href'); // получаем направление
+		if(dest !== undefined && dest !== '') { // проверяем существование
+			$('html').animate({
+				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+			}, 500 // скорость прокрутки
+			);
+		}
+		return false;
+	});
+	
+//more-info open
+	
+	$('.more-button').click(function(){
+		var h1=$(this).parent().parent().height();
+		var h2=$(this).next('.more-info').height();
+		$(this).addClass('open');
+		$(this).next('.more-info').addClass('open');
+		$(this).parent().parent().parent().css('height', (h1 + h2) + 'px');
+	});
 	
 // mask
 	

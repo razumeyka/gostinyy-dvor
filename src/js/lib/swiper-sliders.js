@@ -50,7 +50,7 @@
 		slidesPerView: "auto",
 		spaceBetween: 20,
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.swiper-shops .swiper-pagination',
 			type: 'progressbar',
 		},
 		navigation: {
@@ -60,6 +60,29 @@
 		breakpoints: {
 			1024: {
 			  slidesPerView: "auto",
+			  spaceBetween:32,
+			},
+		}
+	})
+	
+	var funSwiper = new Swiper ('.swiper-fun .swiper-container', {
+		slidesPerView: "auto",
+		spaceBetween: 20,
+		pagination: {
+			el: '.swiper-fun .swiper-pagination',
+			type: 'progressbar',
+		},
+		navigation: {
+			nextEl: '.swiper-fun .swiper-button-next',
+			prevEl: '.swiper-fun .swiper-button-prev',
+		},
+		breakpoints: {
+			1024: {
+			  slidesPerView: "auto",
+			  spaceBetween:32,
+			},
+			1366: {
+			  slidesPerView: "2",
 			  spaceBetween:32,
 			},
 		}
@@ -279,12 +302,12 @@
 	function initProductsSwiper() {
 		var screenWidth = $(window).outerWidth();
 		if ( (screenWidth < (768)) && (ProductsSwiper == undefined)) {
-			ProductsSwiper = new Swiper ('swiper-products .swiper-container', {
+			ProductsSwiper = new Swiper ('.swiper-products .swiper-container', {
 				slidesPerView: 1,
 				spaceBetween: 20,
 				navigation: {
-					nextEl: 'swiper-products .swiper-button-next',
-					prevEl: 'swiper-products .swiper-button-prev',
+					nextEl: '.swiper-products .swiper-button-next',
+					prevEl: '.swiper-products .swiper-button-prev',
 				},
 				breakpoints: {
 					450: { 
@@ -300,8 +323,8 @@
 		} else if ((screenWidth > 767) && (ProductsSwiper != undefined)) {
 		  ProductsSwiper.destroy();
 		  ProductsSwiper = undefined;
-		  $('swiper-products .swiper-wrapper').removeAttr('style');
-		  $('swiper-products .swiper-slide').removeAttr('style');
+		  $('.swiper-products .swiper-wrapper').removeAttr('style');
+		  $('.swiper-products .swiper-slide').removeAttr('style');
 		}
 	}
 	initProductsSwiper();
