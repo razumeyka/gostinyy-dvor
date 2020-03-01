@@ -210,26 +210,30 @@
 	}
 	
 	.mosaic_mobile__item {
-		display: none;
 		position: relative;
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		height: 0;
+		opacity: 0;
 		img {
 			width: 100%;
-			height: 0;
-			-moz-transition: all 1s ease-in-out;
-			-webkit-transition: all 1s ease-in-out;
-			transition: all 1s ease-in-out;
+		}
+		.plus-button {
+			display: none;
 		}
 		&:first-child {
-			display: block;
-			img {
-				height: auto;
+			height: "auto";
+			opacity: 1;
+			.plus-button {
+				display: flex;
 			}
 		}
-			
 		&.active {
-			display: block;
-			img {
-				height: auto;
+			opacity: 1;
+			height: "auto";
+			.plus-button {
+				display: flex;
 			}
 		}
 	}

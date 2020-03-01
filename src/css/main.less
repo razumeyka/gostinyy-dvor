@@ -20,6 +20,12 @@
 .inner-page__header {
 	width: 100%;
 	height: 535px;
+	overflow: hidden;
+	.animated;
+	.animated_bottom;
+	&.visible {
+		.visible;
+	}
 }
 
 .inner-page__top-bg {
@@ -38,7 +44,7 @@
 	}
 }
 
-.inner-page .caption-background_white {
+.inner-page .caption-background_white, .caption-center__background_white {
 	color: rgba(255, 255, 254, 0.129);
 }
 
@@ -50,7 +56,7 @@
 
 .inner-page__main {
 	background: #ede9e6;
-	padding: 90px 10.4%;
+	padding: 100px 10.4% 120px;
 	position: relative;
 }
 
@@ -68,6 +74,9 @@
 .filters {
 	padding: 55px 10.4%;
 	align-items: center;
+	.filters__select.filters__select-only-mobile{
+		display: none;
+	}
 }
 
 .alphabet-filter {
@@ -78,6 +87,9 @@
 	display: block;
 	font-size: 18px;
 	margin: 0 8px;
+	&:hover {
+		color: rgb(241, 56, 54);
+	}
 }
 
 .alphabet-filter__all {
@@ -86,8 +98,26 @@
 
 .big-letter {
 	font-size: 330px;
+	line-height: 1;
 	font-family: "JOURNALISM";
 	color: rgb(0, 0, 0);
+	margin-top: -45px;
+	.animated;
+	-ms-transform: translate(100px, -100px);
+	-moz-transform: translate(100px, -100px);
+	-webkit-transform: translate(100px, -100px);
+	transform: translate(100px, -100px);
+	&.visible {
+		.visible;
+	}
+}
+
+.plates-group {
+	margin-bottom: 100px;
+}
+
+.inner-page_shops .swiper-only-mobile .swiper-slide {
+	width: 25%;
 }
 
 /*shop-page*/
@@ -98,22 +128,26 @@
 }
 
 .swiper-header .swiper-pagination {
+	background: rgba(255,255,255,.5);
 	left: auto;
 	top: auto;
     bottom: 20px;
-    right: 32%;
+    right: 31%;
+	.swiper-pagination-progressbar-fill {
+		height: 3px;
+	}
 }
 
 .swiper-header .swiper-button-next, .swiper-header .swiper-button-prev {
 	left: auto;
 	top: auto;
-    bottom: 5px;
-    right: calc(33% + 210px);
+    bottom: 6px;
+    right: calc(33% + 186px);
 	left: auto;
 }
 
 .swiper-header .swiper-button-next {
-    right: calc(33% - 40px);
+    right: calc(33% - 80px);
 }
 
 .swiper-header_oodji .swiper-slide {
@@ -159,17 +193,13 @@
 		}
 	}
 	
-	.plate__logo {
+	.plate__logo img {
 		display: block;
-		width: 130px;
-		height: 55px;
-		&.plate__logo_oodji {
-			background: url(../images/oodji-logo.png) no-repeat center;
-			background-size: contain;
-		}
+		max-width: 130px;
 	}
 	.plate__content {
 		position: relative;
+		z-index: 1;
 		box-sizing: border-box;
 		padding: 110px 50px 65px 95px;
 		.plate__category {
@@ -183,31 +213,33 @@
 			font-family: "JOURNALISM";
 			margin: 15px 0 40px;
 		}
-		.contact {
-			font-size: 16px;
+		.plate__contact-line{
+			align-items: center;
 			margin: 25px 0;
-			.animated;
-			.animated_right;
-			&:before {
+			svg {
 				.animated;
 				-ms-transform: translate(-100px, 0);
 				-moz-transform: translate(-100px, 0);
 				-webkit-transform: translate(-100px, 0);
 				transform: translate(-100px, 0);
-			}
-			&.visible {
-				.visible;
-				&:before {
-					.visible
+				&.visible {
+					.visible;
+				}
+				.cls-1 {
+					fill: #d6ad76;
 				}
 			}
-			&.contact_site:before {
-				background: url(../images/icons/globus.svg) no-repeat center;
-				background-size: contain;
+		}
+		.contact {
+			font-size: 16px;
+			padding-left: 15px;
+			&:before {
+				display: none;
 			}
-			&.contact_stage:before {
-				background: url(../images/icons/shema2.svg) no-repeat center;
-				background-size: contain;
+			.animated;
+			.animated_right;
+			&.visible {
+				.visible;
 			}
 		}
 		.plate__location {
@@ -219,7 +251,12 @@
 			.button {
 				margin-left: 10px;
 				width: auto;
-				padding: 2px 15px;
+				padding: 4px 15px 5px;
+				.animated;
+				.animated_right;
+				&.visible {
+					.visible;
+				}
 			}
 		}
 		.plate__social {
@@ -242,6 +279,7 @@
 	position: relative;
 	overflow: hidden;
 	.tabs__buttons {
+		padding-left: 56%;
 		margin-bottom: 50px;
 	}
 
@@ -266,6 +304,12 @@
 		float: left;
 		overflow: hidden; 
 		box-sizing: border-box;
+		&.tabs__item__about .tabs__inner {
+			padding-left: 56%;
+		}
+		&.tabs__item_products .tabs__inner {
+			padding-left: 12%;
+		}
 		p:first-child {
 			font-size: 24px;
 			line-height: 1.3;
@@ -274,20 +318,33 @@
 	}
 }
 
+.inner-page_shop .swiper-only-mobile .swiper-slide {
+    width: 25%;
+}
+
 .goods-plate {
 	background: rgb(255,255,255);
+	.animated;
+	.animated_bottom;
+	&.visible {
+		.visible;
+	}
+	&:hover {
+		box-shadow: @box-shadow-hover;
+	}
 	.goods-plate__photo {
 	}
 	img {
 		width: 100%;
 	}
 	.goods-plate__text {
-		padding: 40px;
+		padding: 30px 30px 40px 40px;
 	}
 	.goods-plate__caption {
+		display: block;
 		font-size: 24px;
 		color: rgb(121, 95, 49);
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 	.goods-plate__detail {
 		color: rgb(63, 45, 41);
@@ -310,11 +367,45 @@
 	}
 }
 
+
 /*news-page*/
 
 .inner-page_news .inner-page__main {
 	padding: 90px 10px 90px 10.4%;
 }
+
+/*restaurants-page*/
+
+
+
+/*services-page*/
+
+
+.inner-page_services .simple-plate {
+    height: 210px;
+	justify-content: space-between;
+	&:hover {
+		background: #fff;
+		.simple-plate__caption {
+			color: #000;
+		}
+	}
+	.simple-plate__logo {
+		height: 100px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.inner-page__simple-top-bg {
+	width: 100%;
+	height: 537px;
+	&.inner-page__simple-top-bg_service {
+		background: url(../images/auto-bg.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
 
 
 /*contacts-page*/
@@ -341,26 +432,310 @@
 
 /*media*/ 
 
-@media screen and (max-width: 1921px) {
-		
+@media screen and (max-width: 1823px) {
+	.inner-page_shops .swiper-only-mobile .swiper-slide {
+		width: 33.3333%;
+	}
+	
+	.plate {
+		padding: 20px 20px 20px 30px;
+		.plate__content {
+    		padding: 30px 10px 30px 40px;
+			.plate__caption {
+				font-size: 74px;
+				margin: 10px 0 25px;
+			}
+			.plate__contact-line {
+				align-items: center;
+				margin: 15px 0;
+				.contact {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	
+	.tabs .tabs__buttons {
+		padding-left: 50%;
+	}
+	
+	.tabs .tabs__item.tabs__item__about .tabs__inner {
+		padding-left: 50%;
+	}
+	
+	.tabs .tabs__item.tabs__item_products .tabs__inner {
+		padding-left: 0;
+	}
+	
+	.goods-plate .goods-plate__text {
+		padding: 15px 15px 20px 20px;
+	}
+	
+	.goods-plate .goods-plate__caption {
+		font-size: 20px;
+	}
+	
+	.goods-plate .goods-plate__detail {
+		font-size: 12px;
+	}
+	
+	.goods-plate .goods-plate__price {
+		font-size: 14px;
+	}
+	
+	.goods-plate .goods-plate__reserv {
+		font-size: 12px;
+	}
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1439px) {
+//	.inner-page_shop .inner-page__main {
+//		padding-right: 20px;
+//	}
 	
+	.restaurants-screen .swiper-restaurants-page .swiper-button-prev, .restaurants-screen .swiper-restaurants-page .swiper-button-next {
+		display: none;
+	}
+	
+	.inner-page footer {
+		padding-top: 88px;
+	}
+	
+	.inner-page_shops .swiper-only-mobile .swiper-slide {
+		width: 50%;
+	}
+	
+	.filters {
+		flex-direction: column;
+		padding: 30px 10.4%;
+	}
+	
+	.alphabet-filter {
+		margin-top: 25px;
+		margin-left: 0;
+	}
 	
 }
 
 @media screen and (max-width: 1279px) {
+	.inner-page_shop .inner-page__main {
+		padding-top: 200px;
+	}
+	
+	.inner-page_shop .swiper-container {
+		margin: -45px;
+	}
+	
+	.inner-page_shop .swiper-only-mobile .swiper-wrapper {
+		margin: 0;
+	}
+	
+	.tabs .tabs__buttons {
+		padding-left: 0;
+		justify-content: center;
+	}
+	
+	.tabs .tabs__item.tabs__item__about .tabs__inner {
+		padding-left: 0;
+	}
+	
+	.inner-page_shop .swiper-only-mobile .swiper-slide {
+		width: 33.3333%;
+		&:first-child {
+			display: none;
+		}
+		&:nth-child(10000n-9998) {
+			display: none;
+		}
+	}
+	
+	.plate {
+		width: 100%;
+		max-width: 410px;
+	}
+	
+	.inner-page_restaurants .finger {
+		display: none;
+	}
+	
+	.inner-page__top-bg {
+		background: url(../images/broun-bg.png) no-repeat center top;
+		background-size: cover;
+		height: 400px;
+	}
+	
+	.inner-page footer {
+		padding-top: 30px;
+	}
+	
+	.alphabet-filter a {
+		font-size: 14px;
+		margin: 0px 6px;
+	}
+	
+	.inner-page_shops .inner-page__main {
+		padding-right: 0;
+	}
+	
+	.big-letter {
+		font-size: 260px;
+		margin-top: -35px;
+	}
+	
+	.inner-page_shops .shop-plate {
+		height: 200px;
+		padding: 30px 20px 20px;
+	}
+	
+	.inner-page_shops .shop-plate .shop-plate__logo {
+		width: 100px;
+		height: 60px;
+	}
+	.swiper-restaurants-page {
+		margin-top: 20px;
+	}
 
 }
 
 @media screen and (max-width: 1023px) {
 	
+	.inner-page__top-bg {
+		top: 65px;
+	}
+	
+	.inner-page_services .services-screen .swiper-only-mobile .swiper-wrapper {
+		height: 670px;
+		.swiper-slide {
+			height: 210px;
+			padding: 0;
+		}
+	}
+		
+	.inner-page .caption-center__small-caption {
+		font-size: 76px;
+	}
+	.inner-page footer {
+		padding-top: 82px;
+	}
+	
+	.alphabet-filter a {
+		font-size: 12px;
+		margin: 0px 5px;
+	}
+	
+	.inner-page_shops .swiper-container {
+		margin: -30px; 
+	}
 	
 }
 
 @media screen and (max-width: 767px) {
-    
+	.inner-page__header {
+		height: 250px;
+	}
+	
+	.inner-page_shop .inner-page__main {
+		padding-top: 360px;
+	}
+	
+	.tabs .tabs__item p:first-child {
+		font-size: 18px;
+		margin: 0 0 25px;
+	}
+	
+	.plate {
+		width: 100%;
+		max-width: 280px;
+		left: 20px;
+		padding: 25px;
+		.plates__back-link {
+			font-size: 10px;
+			padding-left: 17px;
+		}
+		.plate__logo img {
+			max-width: 90px;
+		}
+		.plate__content {
+			padding: 30px 0 0;
+			.plate__category {
+				font-size: 10px;
+			}
+
+			.plate__caption {
+				font-size: 54px;
+				margin: 0 0 20px;
+			}
+			
+			.plate__contact-line {
+				margin: 10px 0;
+				.contact {
+					font-size: 10px;
+				}
+			}
+			
+			.plate__social {
+				margin: 30px 0 15px;
+			}
+		}
+		
+		
+	}
+	
+	.inner-page_services .services-screen .swiper-only-mobile .swiper-wrapper {
+		height: auto;
+	}
+	
+	.inner-page__top-bg {
+		top: 95px;
+	}
+	.inner-page_restaurants .finger {
+		display: block;
+	}
+	
+	.inner-page .caption-center__small-caption {
+		font-size: 46px;
+	}
+	
+	.inner-page .restaurants-screen {
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+	
+	.inner-page footer {
+		padding-top: 0;
+	}
+	
+	.inner-page_shops .inner-page__main {
+		padding-right: 20px;
+	}
+	
+	.filters__select-group {
+		flex-direction: column;
+		align-items: center;
+		.filters__select {
+			margin-bottom: 15px;
+			&.filters__select-only-mobile {
+				display: block;
+			}
+		}
+	}
+	
+	.alphabet-filter {
+		display: none;
+	}
+	
+	.inner-page__main {
+		padding: 40px 20px;
+	}
+	
+    .big-letter {
+		font-size: 170px;
+		margin-top: 0;
+	}
+	
+	.inner-page_shops .inner-page__main .columns__right-column {
+		padding-top: 0;
+	}
 }
 
 @media screen and (max-width: 639px) {

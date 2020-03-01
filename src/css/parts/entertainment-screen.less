@@ -44,8 +44,8 @@
 }
 
 .entertainment__bg {
-	height: 50%;
-	width: 70%;
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -58,17 +58,17 @@
 
 .entertainment_children .entertainment__bg {
 	background: url(../images/balloons.png) no-repeat bottom right;
-	background-size: cover;
+	background-size: contain;
 }
 
 .entertainment_aquarium .entertainment__bg {
 	background: url(../images/fish.png) no-repeat bottom right;
-	background-size: cover;
+	background-size: 70%;
 }
 
 .entertainment_film .entertainment__bg {
 	background: url(../images/film.png) no-repeat bottom right;
-	background-size: cover;
+	background-size: 70%;
 }
 
 .entertainment__content, .bottom-line {
@@ -136,8 +136,14 @@
 	}
 }
 
-@media screen and (max-width: 1439px) { 
+@media screen and (max-width: 1279px) { 
+	.entertainment-screen .swiper-button-next, .entertainment-screen .swiper-button-prev {
+		display: none;
+	}
 	
+	.swiper-entertainment {
+		margin-top: 20px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
@@ -157,12 +163,6 @@
 		}
 	}
 	
-	.swiper-button-prev {
-		left: -59px;
-	}
-		.swiper-button-next {
-		right: -59px;
-	}
 }
 
 @media screen and (max-width: 767px) {
@@ -171,12 +171,6 @@
 		padding-right: 20px;
 	}
 	
-	.swiper-button-prev {
-		left: -15px;
-	}
-		.swiper-button-next {
-		right: -15px;
-	}
 }
 
 @media screen and (max-width: 639px) {

@@ -117,27 +117,18 @@ footer {
 
 
 .social-icon {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 50%;
-	background: url(../../images/icons/vk.svg) no-repeat center ,rgb(243, 240, 238);
+	background: rgb(243, 240, 238);
 	width: 40px;
 	height: 40px;
-	&:hover {
-		background: url(../../images/icons/vk-hover.svg) no-repeat center ,rgb(243, 240, 238);
+	svg .cls-1 {
+		fill: #795f31;
 	}
-}
-
-.social-icon_insta {
-	background: url(../../images/icons/insta.svg) no-repeat center ,rgb(243, 240, 238);
-	&:hover {
-		background: url(../../images/icons/insta-hover.svg) no-repeat center ,rgb(243, 240, 238);
-	}
-}
-
-.social-icon_fb {
-	background: url(../../images/icons/fb.svg) no-repeat center ,rgb(243, 240, 238);
-	&:hover {
-		background: url(../../images/icons/fb-hover.svg) no-repeat center ,rgb(243, 240, 238);
+	&:hover svg .cls-1{
+		fill: #544d41;
 	}
 }
 
@@ -338,7 +329,7 @@ footer {
 
 @media screen and (max-width: 767px) {
 	footer.no-wrapper {
-		padding: 20px 0;
+		padding: 0 0 20px;
 	}
 	
 	.footer-bg {
@@ -356,7 +347,7 @@ footer {
 	
 	.footer-info__contact {
 		font-size: 12px;
-		color: #d7af76;
+		color: #e5c59a;
 		margin: 12px 0;
 		text-align: left;
 		&.address:before {
@@ -376,6 +367,9 @@ footer {
 		padding-left: 0;
 		flex-direction: column;
 		align-items: center;
+	}
+	.developers {
+		margin-left: 0;
 	}
 }
 

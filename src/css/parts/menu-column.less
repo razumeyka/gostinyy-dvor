@@ -35,54 +35,37 @@
 			padding: 55px 10px 25px;
 			border-left: 1px solid #f3f0ee;
 			position: relative;
-			&:hover{
-				background: rgb(237, 233, 230);
-				border-left: 1px solid rgb(121, 95, 49);
-			}
-			&:before {
-				content: "";
-				background: url(../../images/icons/akcii.svg) no-repeat center;
-				background-size: contain;
-				width: 28px;
-				height: 28px;
+			svg {
 				position: absolute;
-				top: 22px;
 				left: 0;
 				right: 0;
+				top: 10px;
 				margin: 0 auto;
+				z-index: 10;
+				.cls-1 {
+					fill: #715625;
+				}
+			}
+		}
+		&:hover{
+			a {
+				background: rgb(237, 233, 230);
+				border-left: 1px solid rgb(121, 95, 49);
+				svg .cls-1 {
+					fill: #f13836;
+				}
+			}
+		}
+		&.active{
+			a {
+				background: rgb(237, 233, 230);
+				border-left: 1px solid rgb(121, 95, 49);
+				svg .cls-1 {
+					fill: #f13836;
+				}
 			}
 		}
 	}
-}
-
-.menu li.menu__item_shops a:before {
-	background: url(../../images/icons/magazini.svg) no-repeat center;
-	background-size: contain;
-}
-
-.menu li.menu__item_events a:before {
-	background: url(../../images/icons/sobitiya.svg) no-repeat center;
-	background-size: contain;
-}
-
-.menu li.menu__item_restaurants a:before {
-	background: url(../../images/icons/cafe.svg) no-repeat center;
-	background-size: contain;
-}
-
-.menu li.menu__item_entertainment a:before {
-	background: url(../../images/icons/razvlecheniya.svg) no-repeat center;
-	background-size: contain;
-}
-
-.menu li.menu__item_services a:before {
-	background: url(../../images/icons/uslugi.svg) no-repeat center;
-	background-size: contain;
-}
-
-.menu li.menu__item_contacts a:before {
-	background: url(../../images/icons/kontakty.svg) no-repeat center;
-	background-size: contain;
 }
 
 .menu-column__contacts {
@@ -101,14 +84,9 @@
 
 @media screen and (max-width: 1439px) {
 	.menu li a {
-			padding: 40px 10px 15px;
-			font-size: 12px;
-			&:before {
-				width: 24px;
-				height: 24px;
-				top: 10px;
-			}
-		}
+		padding: 40px 10px 15px;
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
@@ -127,14 +105,21 @@
 @media screen and (max-width: 767px) {
 	
 	.menu-column {
-		display: none;
+		display: flex;
+		flex-direction: column;
 		background: #f7f6f4;
 		box-sizing: border-box;
 		width: 100%;
-		height: auto;
 		padding-bottom: 40px;
 		z-index: 1000;
-		transition: all 0.5s linear;
+		.animated;
+		left: -100%;
+		.navbar {
+			 margin-top: 20px;
+		}
+		&.visible {
+			left: 0;
+		}
 	}
 	
 	.menu-column .logo {
@@ -145,27 +130,23 @@
 		margin-right: 20px;
 	}
 	
-	.navbar {
-		margin-top: 20px;
-	}
-	
-	.menu li a {
-		text-align: left;
-		font-size: 14px;
-		padding: 13px 10px 13px 60px;
-		&:before {
-			width: 28px;
-			height: 28px;
-			top: 8px;
-			left: 20px;
-			right: auto;
-			margin: 0;
+	.menu li {
+		a {
+			text-align: left;
+			font-size: 14px;
+			padding: 13px 10px 13px 60px;
+			svg {
+				top: 9px;
+				left: 20px;
+				right: auto;
+				margin: 0;
+			}
 		}
 	}
 	
 	.menu-column__contacts {
 		display: flex;
-		margin-top: 40px;
+		margin: auto 0 0;
 		.contact {
 			font-size: 14px;
 			margin-bottom: 15px;

@@ -6,7 +6,7 @@
 	padding-bottom: 170px;
 }
 
-.swiper-restaurants {
+.swiper-restaurants, .swiper-restaurants-page{
 	margin-top: 95px;
     .animated;
 	.animated_bottom;
@@ -15,7 +15,7 @@
 	}
 }
 
-.swiper-restaurants .swiper-button-prev, .swiper-restaurants .swiper-button-next {
+.restaurants-screen .swiper-button-prev, .restaurants-screen .swiper-button-next {
     display: none;
 }
 
@@ -69,7 +69,7 @@
 		margin-top: 50px;
 	}
 	
-	.swiper-restaurants .swiper-button-prev, .swiper-restaurants .swiper-button-next {
+	.restaurants-screen .swiper-button-prev, .restaurants-screen .swiper-button-next {
 		display: flex;
 		left: -60px;
 		border: 3px solid #68532c;
@@ -79,29 +79,36 @@
 		}
 	}
 	
-	.swiper-restaurants .swiper-button-next {
+	.restaurants-screen .swiper-button-next {
 		right: -60px;
 		left: auto;
 	}
 	
 }
 
-@media screen and (max-width: 1280px) {
-	.swiper-restaurants .swiper-button-next, .swiper-restaurants .swiper-button-prev {
-		width: 35px;
-		height: 35px;
-		background: #171717;
-		border: 1px solid #68532c;
-		left: -45px;
-		&:hover {
-			background: #171717;
-			border: 1px solid #68532c;
-		}
+@media screen and (max-width: 1279px) {
+//	.restaurants-screen .swiper-button-next, .restaurants-screen .swiper-button-prev {
+//		width: 35px;
+//		height: 35px;
+//		background: #171717;
+//		border: 1px solid #68532c;
+//		left: -45px;
+//		&:hover {
+//			background: #171717;
+//			border: 1px solid #68532c;
+//		}
+//	}
+//	
+//	.restaurants-screen .swiper-button-next {
+//		right: -45px;
+//		left: auto;
+//	}
+	.restaurants-screen .swiper-button-prev, .restaurants-screen .swiper-button-next {
+		display: none;
 	}
 	
-	.swiper-restaurants .swiper-button-next {
-		right: -45px;
-		left: auto;
+	.swiper-restaurants {
+		margin-top: 20px;
 	}
 }
 
@@ -127,11 +134,11 @@
 		padding-right: 20px;
 	}
 	
-	.swiper-restaurants .swiper-button-next, .swiper-restaurants .swiper-button-prev {
+	.restaurants-screen .swiper-button-next, .restaurants-screen .swiper-button-prev {
 		left: -15px;
 	}
 	
-	.swiper-restaurants .swiper-button-next {
+	.restaurants-screen .swiper-button-next {
 		right: -15px;
 		left: auto;
 	}

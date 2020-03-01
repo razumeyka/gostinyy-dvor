@@ -1,7 +1,19 @@
 .pagination-line {
-    margin: 45px 0 0;
+    margin: 100px 0 0;
 	.button {
 		margin-right: 45px;
+		padding: 10px 50px 10px 20px;
+		width: 184px;
+		position: relative;
+		&:before {
+			content: "";
+			background: url(../../images/icons/arrow-dawn.svg) no-repeat center;
+			width: 8px;
+			height: 12px;
+			position: absolute;
+			right: 32px;
+			top: 14px;
+		}
 	}
 }
 
@@ -17,10 +29,21 @@
 	color: rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
-	margin: 5px;
+	margin: 0 2px;
 	&:hover{
 		background-color: rgb(121, 95, 49);
 		color:rgb(255,255,255);
+	}
+	&.prev{
+		background: url(../../images/icons/arrow%20back.svg) no-repeat center, rgb(245, 246, 250);
+		margin-right: 15px;
+	}
+	&.next {
+		background: url(../../images/icons/arrow-black.svg) no-repeat center, rgb(245, 246, 250);
+		margin-left: 15px;
+	}
+	&.unactive {
+		opacity: 0.5;
 	}
 }
 
@@ -28,3 +51,41 @@
 	background-color: rgb(121, 95, 49);
 	color:rgb(255,255,255);
 }
+
+/*media*/
+
+@media screen and (max-width: 1279px) { 
+	.pagination-line {
+		margin: 50px 0 0;
+		flex-direction: column;
+		align-items: center;
+		.button {
+			margin-bottom: 70px;
+			margin-right: 0;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 1023px) {
+	
+	
+}
+
+
+@media screen and (max-width: 767px) {
+	.page-numbers {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+	}
+
+}
+
+
+@media screen and (max-width: 639px) {
+
+
+}
+

@@ -16,27 +16,34 @@
 	background: rgb(255, 255, 255);
 	padding: 20px;
 	opacity: 0;
+	.animated;
+	-moz-transition: background 0.3s ease-in-out 0.1s;
+	-webkit-transition: background 0.3s ease-in-out 0.1s;
+	transition: background 0.3s ease-in-out 0.1s;
+	&:hover {
+		background: rgb(0, 0, 0);
+	}
 	&.visible {
 		.visible
 	}
 }
 
 .swiper-slide:nth-child(2n) .simple-plate {
-	-moz-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out 0.1s;
+	-webkit-transition: all 0.3s ease-in-out 0.1s;
 	transition: all 0.3s ease-in-out 0.1s;
 }
 
 .swiper-slide:nth-child(3n) .simple-plate {
-    -moz-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out 0.2s;
+	-webkit-transition: all 0.3s ease-in-out 0.2s;
 	transition: all 0.3s ease-in-out 0.2s;
+	-moz-transition: background 0.3s ease-in-out 0.1s;
+	-webkit-transition: background 0.3s ease-in-out 0.1s;
+	transition: background 0.3s ease-in-out 0.1s;
 }
 
-.simple-plate:hover {
-	background: rgb(0, 0, 0);
-}
-
+.simple-plate
 .simple-plate__caption {
 	font-size: 16px;
 	margin-bottom: 8px;
@@ -110,6 +117,7 @@
 }
 
 @media screen and (max-width: 767px) {
+	
 	.services-screen .wrapper {
 		padding-right: 20px;
 	}
@@ -120,6 +128,18 @@
 	
 	.services-screen .swiper-only-mobile .swiper-wrapper {
 		height: auto;
+	}
+	
+	.services-screen .swiper-only-mobile .swiper-slide {
+		height: auto;
+		padding: 0;
+	}
+	
+	.simple-plate {
+		height: auto;
+		max-width: 170px;
+		margin: 0 auto;
+		padding: 20px 10px;
 	}
 
 }
