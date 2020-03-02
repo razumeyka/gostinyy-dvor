@@ -65,6 +65,25 @@
 		}
 	})
 	
+	var simrestSwiper = new Swiper ('.swiper-simrest .swiper-container', {
+		slidesPerView: "auto",
+		spaceBetween: 20,
+		pagination: {
+			el: '.swiper-simrest .swiper-pagination',
+			type: 'progressbar',
+		},
+		navigation: {
+			nextEl: '.swiper-simrest .swiper-button-next',
+			prevEl: '.swiper-simrest .swiper-button-prev',
+		},
+		breakpoints: {
+			1024: {
+			  slidesPerView: "auto",
+			  spaceBetween:32,
+			},
+		}
+	})
+	
 	var funSwiper = new Swiper ('.swiper-fun .swiper-container', {
 		slidesPerView: "auto",
 		spaceBetween: 20,
@@ -81,7 +100,7 @@
 			  slidesPerView: "auto",
 			  spaceBetween:32,
 			},
-			1366: {
+			1440: {
 			  slidesPerView: "2",
 			  spaceBetween:32,
 			},
@@ -141,10 +160,6 @@
 	var sightSwiper = new Swiper ('.swiper-sight .swiper-container', {
 		slidesPerView: 1,
 		spaceBetween: 20,
-		navigation: {
-			nextEl: '.swiper-sight .swiper-button-next',
-			prevEl: '.swiper-sight .swiper-button-prev',
-		},
 		breakpoints: {
 			500: { 
 				slidesPerView: 2,
@@ -152,7 +167,7 @@
 			},
 			640: { 
 				slidesPerView: 3,
-				slidesPerColumn: 2,
+				slidesPerColumn: 1,
 				slidesPerColumnFill: "row",
 				spaceBetween: 20,
 			},

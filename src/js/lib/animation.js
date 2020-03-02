@@ -114,6 +114,18 @@
 		repeat: true,
 	});
 
+	$('.event-banner').viewportChecker({
+		classToAdd: 'visible',
+		offset: 10,
+		repeat: true,
+	});
+
+	$('.inner-page__right-text p').viewportChecker({
+		classToAdd: 'visible',
+		offset: 10,
+		repeat: true,
+	});
+
 
 
 

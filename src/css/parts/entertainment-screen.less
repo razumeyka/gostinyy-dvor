@@ -18,9 +18,13 @@
 	padding: 70px 50px 45px 90px;
 	height: 577px;
 	position: relative;
+	overflow: hidden;
+//	-moz-transition: background 0.3s linear;
+//	-webkit-transition: background 0.3s linear;
+//	transition: background 0.3s linear;
 	&:hover {
 		.entertainment__bg {
-			display: none;
+			opacity: 0;
 		}
 	}
 	&.entertainment_children {
@@ -49,7 +53,9 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	.animated;
+	-moz-transition: opacity 0.5ms linear, transform 0.5s linear;
+	-webkit-transition: opacity 0.5ms linear, transform 0.5s linear;
+	transition: opacity 0.5ms linear, transform 0.5s linear;
 	.animated_bottom;
 	&.visible {
 		.visible

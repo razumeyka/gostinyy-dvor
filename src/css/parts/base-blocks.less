@@ -306,13 +306,14 @@ p {
 }
 
 .go-up {
-	display: block;
+	display: none;
 	background: url(../../images/icons/arrow-up.svg) no-repeat center, #795f31;
 	width: 63px;
 	height: 63px;
 	position: fixed;
 	bottom: 50px;
-	left: calc(((100% - 1900px)/ 2) + 345px);
+	left: calc(((100% - 1900px)/ 2) + 349px);
+	z-index: 10000;
 }
 
 .bottom-line {
@@ -393,8 +394,6 @@ p {
 }
 
 
-
-
 /* buttons */
 
 .button {
@@ -416,51 +415,49 @@ p {
 .button_white {
 	background-color: rgb(255, 255, 255);
 	color: rgb(241, 56, 54);
-}
-
-.button_white:hover {
-  box-shadow: 0px 6px 14.24px 1.76px rgb(238, 238, 238);
+	&:hover {
+		box-shadow: 0px 6px 14.24px 1.76px rgb(238, 238, 238);
+	}
 }
 
 .button_brown {
 	background-color: rgb(121, 95, 49);
 	padding: 10px 35px;
-}
-
-.button_brown:hover {
-  background-color: rgb(241, 56, 54);
+	&:hover {
+	  background-color: rgb(241, 56, 54);
+	}
 }
 
 .button_red {
+	border: 1px solid rgb(241, 56, 54);
 	background-color: rgb(241, 56, 54);
-	padding: 14px 20px;
+	padding: 13px 20px;
 	width: 150px;
+	&:hover {
+		border: 1px solid #d6ad76;
+		background-color: #d6ad76;
+	}
 }
 
 .button_red.active {
-	border: 1px solid rgb(241, 56, 54);
 	background: transparent;
 	color: rgb(241, 56, 54);
+	cursor: default;
 	&:hover {
 		background: transparent;
 	}
 }
 
-.button_red:hover {
-	background-color: #d6ad76;
-}
 
 .button_biege {
     background-color: #f3f0ee;
     color: #f13836;
     width: 150px;
     padding: 7px 10px;
+	&:hover {
+		color: rgb(1, 1, 1);
+	}
 }
-
-.button_biege:hover {
-	color: rgb(1, 1, 1);
-}
-
 
 
 /*media*/
@@ -492,8 +489,8 @@ p {
 	}
 	
 	.caption-background {
-		font-size: 180px;
-		top: 25px;
+		font-size: 160px;
+		top: 10px;
 		left: 50px;
 	}
 	
@@ -616,7 +613,6 @@ p {
 	
 	.go-up {
 		left: 10px;
-		z-index: 10000;
 	}
 	
     .content {

@@ -2,7 +2,7 @@
 <html lang="ru">
 @@include('template/head.html')
 <body>
-	<div class="container inner-page inner-page_entertainment inner-page_with-plate">
+	<div class="container inner-page inner-page_restaurant inner-page_with-plate">
 		<div class="menu-column">
 			<div class="flex_between">
 				<a href="/" class="logo"></a>
@@ -59,7 +59,7 @@
 							События
 						</a>
 					</li>
-					<li class="menu__item menu__item_restaurants">
+					<li class="menu__item menu__item_restaurants active">
 						<a href="restaurants.html">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="25.531" height="26.094" viewBox="0 0 25.531 26.094">
 							<defs></defs>
@@ -68,7 +68,7 @@
 							Рестораны
 						</a>
 					</li>
-					<li class="menu__item menu__item_entertainment active">
+					<li class="menu__item menu__item_entertainment">
 						<a href="entertainments.html">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.094" height="26.094" viewBox="0 0 21.094 26.094">
 							  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -125,21 +125,21 @@
 		</div>
 		<div class="inner-page__content content">
 			@@include('template/header.html')
-			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_film"></div>
+			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_restaurant"></div>
 			<div class="plate">
 				<div class="caption-background">
-					<div>до</div>
-					<div>суг</div>
+					<div>ресто</div>
+					<div>раны</div>
 				</div>
 				<div class="plate__top-line flex_between">
 					<a href="#" class="plates__back-link">вернуться к списку</a>
 					<a href="#" class="plate__logo">
-						<img src="images/logo/logo-car-wash.png" alt="">
+						<img src="images/logo/logo-plate.png" alt="">
 					</a>
 				</div>
 				<div class="plate__content">
-					<div class="plate__category">кинотеатр</div>
-					<div class="plate__caption">Киносити</div>
+					<div class="plate__category">европейская кухня</div>
+					<div class="plate__caption">Тарелка</div>
 					<div class="plate__contact-line flex">
 						<svg xmlns="http://www.w3.org/2000/svg" width="19.03" height="19" viewBox="0 0 19.03 19">
 						  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -233,110 +233,107 @@
 							</svg>
 						</a>
 					</div>
-					<div class="plate__hashtag">#кино</div>
+					<div class="plate__hashtag">#ресторантарелка</div>
 				</div>
 			</div>
-			<div class="inner-page__main">
+			<div class="inner-page__main inner-page__main_black">
 				<div class="tabs">
 					<div class="tabs__buttons flex">
-						<div class="tabs__button button button_red active">О кинотеатре</div>
-						<div class="tabs__button button button_red ">Афиша</div>
+						<div class="tabs__button button button_red active">О ресторане</div>
+						<div class="tabs__button button button_red ">Акции</div>
 					</div>
 					<div class="tabs__content">
 						<div class="tabs__item tabs__item__about">
 							<div class="tabs__inner">
-								<p>Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров открывается накануне Нового Года, в самом центре города в ТРЦ «Гостиный двор» по адресу ул. Советская, д. 47, 5 эт.</p>
-								<p>Основной «изюминкой» кинотеатра является цифровое кинопроекционное оборудование на все 6 залов. Выбор сделан в пользу американского производителя «Christie», что обеспечивает изображение высокого качества со стопроцентной яркостью, разрешающей способностью и контрастностью. Все шесть залов оснащены системой показа 3D и новейшим звуковым оборудованием системы «Dolby». Впервые в Росси к весне будет введена в эксплуатацию новейшая технология реалистичной передачи звука Dolby Atmos. Экраны в залах – парящие, максимально размещённые от стены до стены каждого зала.</p>
-								<div class="more-button">Читать дальше</div>
-								<div class="more-info">
-									<p>Основной «изюминкой» кинотеатра является цифровое кинопроекционное оборудование на все 6 залов. Выбор сделан в пользу американского производителя «Christie», что обеспечивает изображение высокого качества со стопроцентной яркостью, разрешающей способностью и контрастностью. Все шесть залов оснащены системой показа 3D и новейшим звуковым оборудованием системы «Dolby». Впервые в Росси к весне будет введена в эксплуатацию новейшая технология реалистичной передачи звука Dolby Atmos. Экраны в залах – парящие, максимально размещённые от стены до стены каждого зала.</p>
-								</div>
+								<p>"Тарелка". Это кафе. И это что-то новое. Открытием кафе в ТРЦ Гостиный двор "Тарелке" удалось занять в Туле свободную нишу качественных, но очень доступных заведений с актуальным итерьером и кухней.</p>
+								<p>"Тарелка" - это место, где не шутят с едой. Мы готовим просто и правильно. Пиццу - в настоящей дровяной печи. Шашлык - на настоящем мангале. А еще здесь есть все, чтобы хорошо провести время - алкоголь (или лимонад), зона для курящих, бесплатный wi-fi, большие панорамные окна, детский городок и, говорят, у нас играет хорошая музыка. Нашу еду можно брать с собой.</p>
+								<p>Но самая главная радость - это наши неприлично радостные цены. Кстати, у "Тарелки" большие планы. Мы готовимся расширяться и углубляться. И в будущем захватить мир!))</p>
 							</div>
 						</div>
-						<div class="tabs__item tabs__item_products tabs__item_actions ">
-							<div class="tabs__inner flex">
-								<div class="new-item"></div>
-								<div class="new-item"></div>
-								<div class="new-item">
-									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
-										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
-									</a>
-								</div>
-								<div class="new-item">
-									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
-										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
-									</a>
-								</div>
+						<div class="tabs__item">
+							<div class="tabs__inner">
+							
 							</div>
 						</div>
 					</div>
 				</div>
 				<a href="#header" class="go-up"></a>
 			</div>
-			<div class="entertainment-slider padding-small">
+			<div class="black-slider no-wrapper padding-small">
+				<div class="caption-background">
+					<div>ресто</div>
+					<div>раны</div>
+				</div>
 				<div class="columns flex">
 					<div class="columns__left-column">
 						<div class="caption-center">
-							<div class="caption-center__background caption-center__background_white">Досуг</div>
-							<div class="caption-center__small-caption">
-								<div class="caption-center__mini-caption">Другие</div>
-								<div>Развлечения</div>
-							</div>
+							<div class="common-name">Похожие</div>
+							<div class="caption caption_white">Рестораны</div>
 						</div>
 					</div>
 					<div class="columns__right-column">
-						<div class="swiper-fun swiper-with-pagination">
+						<div class="swiper-simrest swiper-with-pagination">
 							<div class="swiper-pagination"></div>
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_children">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Детский центр</div>
-												<div class="entertainment__caption">Jumanji</div>
-												<div class="entertainment__description">
-													<ul>
-														<li>Лабиринт </li>
-														<li>Игровые аппараты</li>
-														<li>Яркие детские праздники с аниматорами</li>
-													</ul>
-												</div>
+										<a href="#" class="dark-plate">
+											<div>
+												<div class="dark-plate__caption">Charte Bar</div>
+												<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
 											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
+											<div class="dark-plate__bottom-line bottom-line">
+												<div class="bottom-line__stage">4 этаж</div>
 												<div class="bottom-line__icon"></div>
 											</div>
 										</a>
 									</div>
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_aquarium">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Досуг</div>
-												<div class="entertainment__caption">Аквариум</div>
-												<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. Чтобы увидеть больше придётся заказать столик в ресторане Марлин.</div>	
+										<a href="#" class="dark-plate">
+											<div>
+												<div class="dark-plate__caption">Charte Bar</div>
+												<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
 											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
+											<div class="dark-plate__bottom-line bottom-line">
+												<div class="bottom-line__stage">4 этаж</div>
 												<div class="bottom-line__icon"></div>
 											</div>
 										</a>
 									</div>
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_aquarium">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Досуг</div>
-												<div class="entertainment__caption">Аквариум</div>
-												<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. Чтобы увидеть больше придётся заказать столик в ресторане Марлин.</div>	
+										<a href="#" class="dark-plate">
+											<div>
+												<div class="dark-plate__caption">Charte Bar</div>
+												<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
 											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
+											<div class="dark-plate__bottom-line bottom-line">
+												<div class="bottom-line__stage">4 этаж</div>
+												<div class="bottom-line__icon"></div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="dark-plate">
+											<div>
+												<div class="dark-plate__caption">Charte Bar</div>
+												<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
+											</div>
+											<div class="dark-plate__bottom-line bottom-line">
+												<div class="bottom-line__stage">4 этаж</div>
+												<div class="bottom-line__icon"></div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="dark-plate">
+											<div>
+												<div class="dark-plate__caption">Charte Bar</div>
+												<div class="dark-plate__description">Фаст-фуд, напитки, Гриль, морепродукты</div>
+											</div>
+											<div class="dark-plate__bottom-line bottom-line">
+												<div class="bottom-line__stage">4 этаж</div>
 												<div class="bottom-line__icon"></div>
 											</div>
 										</a>
@@ -347,7 +344,7 @@
 					</div>
 				</div>
 			</div>
-			<footer class="no-wrapper footer-margin-top">
+			<footer class="no-wrapper">
 				<div class="footer-bg"></div>
 				<div class="footer-content flex">
 					<div class="footer-info">

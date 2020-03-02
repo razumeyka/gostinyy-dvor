@@ -11,7 +11,6 @@
 	outline: none;
 	font-size: 18px;
 	color: rgb(255, 255, 255);
-	padding: 0 30px;
 	margin-right: 8px;
 	z-index: 1000000; 
 }
@@ -44,23 +43,34 @@
 	background-color: transparent;
 	box-sizing: border-box;
 	border-radius: 30px;
-00
-	box-shadow: 0px 12px 25.81px 3.19px rgba(225, 214, 207, 0.4);
 	display: block;
 	position: absolute;
 	left: -100000px;
 	top: 0;
 	width: 100%;
 	z-index: 1000; 
+	
 }
 
 .select-new-dropdown {
 	background-color: white;
 	box-sizing: border-box;
 	border-radius: 30px;
-00
-	box-shadow: 0px 12px 25px 3px rgb(225, 214, 207);
+	padding: 20px 10px;
+	box-shadow: 0px 12px 14px 0px rgb(225, 214, 207);
+	margin-top: 2px;
 	
+}
+
+.select2-container--default .select-new-dropdown .select2-results__option {
+    font-size: 13px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.select2-container--open .select-new-dropdown.select2-dropdown--above {
+    box-shadow: 0px -12px 12px 0px rgb(225, 214, 207);
 }
 
 .select2-container:hover, .select2-container:focus {
@@ -72,6 +82,7 @@
     cursor: pointer;
     display: block;
     height: 59px;
+	padding: 0 30px;
     user-select: none;
     -webkit-user-select: none; 
 }
@@ -203,7 +214,7 @@
 	height: 59px;
     line-height: 59px;
     font-size: 13px;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 .select2-container--default .select2-selection--single:focus {
