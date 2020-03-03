@@ -2,7 +2,7 @@
 @@include('./lib/swiper.js')
 @@include('./lib/jquery.viewportchecker.js')
 @@include('./lib/select2.full.js')
-@@include('./lib/jquery.maskedinput.js')
+@@include('lib/inputmask.js')
 
 
 $(document).ready(function(){
@@ -35,6 +35,18 @@ $(document).ready(function(){
 		});
 	});
 	
+	var w3= $('.photo-info_big').width();
+	$('.photo-info_big').css({
+		'height': w3 + 'px'
+	});
+	
+	$(window).resize(function(){
+		var w4= $('.photo-info_big').width();
+		$('.photo-info_big').css({
+			'height': w4 + 'px'
+		});
+	});
+	
 //text open
 	
 	$('.more-info').click(function(){
@@ -50,6 +62,12 @@ $(document).ready(function(){
 		dropdownCssClass: 'select-new-dropdown'
 	});
 	
+	$(window).resize(function() {
+		if ( window.innerWidth < 768 ) {
+			$('.select2').css('width', "250px");
+		}
+	});
+
 // tabs
 	
 	$('.tabs__button').click(function(){ 
@@ -98,9 +116,18 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().css('height', (h1 + h2) + 'px');
 	});
 	
+//calendar
+	
+	$('.calendar__line').click(function(){
+		$('.calendar__line').removeClass('active');
+		$(this).addClass('active');
+	});
+	
+	
+	
 // mask
 	
-	$('input[type="tel"]').mask("8-999-999-99-99");
+	$('input[name="mail"]').inputmask("email");
 
 	
 	$(window).resize();
@@ -126,7 +153,7 @@ function initMap() {
 
 	marker = new google.maps.Marker({
 		icon: markerImage,
-		position: {lat: 54.192193, lng: 37.617769},
+		position: {lat: 54.191588, lng: 37.617697},
 		map: map,
 		title:"ТРЦ Гостиный двор"
 	});		
@@ -139,10 +166,10 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		disableDefaultUI: true,
 		scrollwheel: false,
-		center: {lat: 54.192223, lng: 37.619049},
-		zoom: 18,
+		center: {lat:54.191749, lng: 37.617311},
+		zoom: 17,
 		styles:[
-		  {
+		  {  
 			"elementType": "geometry",
 			"stylers": [
 			  {
@@ -157,15 +184,22 @@ function initialize() {
 				"color": "#63533e"
 			  },
 			  {
-				"lightness": -40
-			  },
-			  {
 				"visibility": "on"
 			  },
 			  {
 				"weight": 1.5
 			  }
 			]
+		  },
+			{
+			"featureType": 'landscape.humanmade', // обводка домов и зданий
+			"elementType": 'geometry.stroke',
+			"stylers": [{color: '#6e5c43'}] 
+		  },
+		{
+			featureType: 'administrative.land_parcel', // номера домов
+			elementType: 'labels.text.fill',
+			stylers: [{color: '#6e5c43'}]
 		  },
 		  {
 			"elementType": "labels.icon",
