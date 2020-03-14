@@ -98,6 +98,10 @@ body{
 	min-width: 320px;
 }
 
+body.hidden {
+	overflow: hidden;
+}
+
 button,input,select,textarea{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -313,7 +317,11 @@ p {
 	position: fixed;
 	bottom: 50px;
 	left: calc(((100% - 1900px)/ 2) + 349px);
-	z-index: 10000;
+	z-index: 1000;
+}
+
+.go-up.shadow {
+	box-shadow: 0 0px 5px 0px rgba(216,205,199,.7);
 }
 
 .bottom-line {
@@ -445,6 +453,7 @@ p {
 	cursor: default;
 	&:hover {
 		background: transparent;
+		border: 1px solid rgb(241, 56, 54);
 	}
 }
 
@@ -567,7 +576,6 @@ p {
 	.caption-center__button {
 		margin-top: 10px;
 	}
-	
 	
 	.button_red {
 		padding: 7px 20px;

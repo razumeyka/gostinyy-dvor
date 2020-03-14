@@ -16,6 +16,7 @@
 @import "parts/footer.less";
 @import "parts/popup.less";
 @import "parts/pagination.less";
+@import "parts/scheme.less";
 
 .inner-page__header {
 	width: 100%;
@@ -316,6 +317,7 @@
 
 	.tabs__content {
 		display: flex;
+		align-items: flex-start;
 		position: relative;
 		width: 500%;
 		top: 0;
@@ -446,9 +448,9 @@
 }
 
 .calendar {
+	position: relative;
 	.calendar__line {
-		margin-bottom: 10px;
-		position: relative;
+		margin-bottom: 17px;
 		cursor: pointer;
 	}
 	.calendar__year {
@@ -470,9 +472,11 @@
 		position: absolute;
 		top: 0;
 		left: 110px;
+		z-index: 10;
 	}
-	.calendar__line:last-child .calendar__months {
-		top: -150px;
+	.calendar__line:last-child .calendar__months, .calendar__line:nth-child(4n) .calendar__months {
+		top: auto;
+		bottom: 0;
 	}
 	
 	.calendar__line {
@@ -749,15 +753,6 @@
 /*contacts-page*/
 
 .inner-page_contacts footer{
-	margin-top: -70px;
-	.footer-bg {
-		z-index: 2;
-	}
-	.footer-info {
-		position: relative;
-		z-index: 3;
-	}
-	
 	.footer-contacts__line_phones .contact_phone{
 		margin: 5px 0;
 		&:before {
@@ -779,6 +774,13 @@
 	z-index: 1;
 }
 
+
+.gm-style-mtc > div,
+.gmnoprint > div,
+.gm-svpc {
+  display: none !important;
+}
+
 /*media*/ 
 
 @media screen and (max-width: 1823px) {
@@ -788,9 +790,6 @@
 	}
 
 	.calendar {
-		.calendar__line {
-			margin-bottom: 0;
-		}
 		.calendar__year {
 			font-size: 26px;
 		}
@@ -801,10 +800,6 @@
 		
 		 .calendar__months {
 			padding: 5px 0 0;
-		}
-		
-		.calendar__line:last-child .calendar__months {
-			top: -100px;
 		}
 	
 		 a {
@@ -903,9 +898,6 @@
 }
 
 @media screen and (max-width: 1439px) {
-	.inner-page_contacts .footer-bg {
-		height: 570px;
-	}
 	.swiper-fun .swiper-slide {
 		width: 300px;
 	}
@@ -966,6 +958,10 @@
 			right: 20px;
 			bottom: 20px;
 		}
+	}
+	
+	.news-mosaic .caption {
+		font-size: 56px;
 	}
 	
 }
@@ -1116,18 +1112,19 @@
 		width: 35px;
 		height: 35px;
 	}
+	
+	.news-mosaic .caption {
+		font-size: 44px;
+		margin-bottom: 10px;
+	}
 
 }
 
 @media screen and (max-width: 1023px) {
-	.news-mosaic .caption {
-		font-size: 46px;
-	}
+	
 
 	.calendar {
-		.calendar__line {
-			margin-bottom: 0;
-		}
+
 		.calendar__year {
 			font-size: 20px;
 		}
@@ -1138,15 +1135,16 @@
 		
 		 .calendar__months {
 			padding: 0;
-			 left: 74px;
+			left: 74px;
 		}
 		
-		.calendar__line:last-child .calendar__months {
-			top: -100px;
+		.calendar__line {
+			margin-bottom: 7px;
 		}
 	
 		 a {
-			font-size: 8px;
+			font-size: 9px;
+			 padding: 1px 0;
 		}
 	}
 	
@@ -1278,20 +1276,28 @@
 			padding: 15px;
 		}
 	}
-	
-	.inner-page_contacts .inner-page footer {
-		padding-top: 40px;
-	}
-	
 }
 
 @media screen and (max-width: 767px) {
 	.map {
 		height: 400px;
 	}
+	.tabs {
+		margin: 0;
+	}
 	
-	.inner-page_contacts footer {
-		margin-top: -50px;
+	.tabs .tabs__button {
+		width: 130px;
+		margin: 0 5px;
+	}
+	
+	.inner-page_shops .shop-plate {
+		max-width: 280px;
+		margin: 0 auto;
+	}
+	.inner-page_shops .columns__left-column{
+		width: 100%;
+		text-align: center;
 	}
 	.inner-page_news .inner-page__main {
 		padding: 40px 20px;

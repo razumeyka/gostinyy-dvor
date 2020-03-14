@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('template/head.html')
+<body>
+	<div class="container inner-page inner-page_scheme">
+		@@include('template/menu-column.html')
+		<div class="inner-page__content content">
+			@@include('template/header.html')
+			<div class="scheme-filters flex">
+				<select class="filters__select select2" name="state" style="width: 227px" data-placeholder="Все категории">
+					<option></option>
+					<option value="a">Одежда</option>
+					<option value="b">Обувь</option>
+					<option value="a">Аксессуары</option>
+				</select>
+				<form class="search-form" action="">
+					<input type="text" name="search" id="input-search-scheme" placeholder="Найти" class="input-search">
+				</form>
+			</div>
+			<div class="tabs">
+				<div class="tabs__buttons flex">
+					<div class="tabs__button button button_red">Этаж 1</div>
+					<div class="tabs__button button button_red">Этаж 2</div>
+					<div class="tabs__button button button_red">Этаж 3</div>
+					<div class="tabs__button button button_red">Этаж 4</div>
+					<div class="tabs__button button button_red">Этаж 5</div>
+				</div>
+				<div class="tabs__content">
+					<div class="tabs__item">
+					@@include('template/scheme1.html')
+					</div>
+					<div class="tabs__item">
+					@@include('template/scheme2.html')
+					</div>
+					<div class="tabs__item">
+					@@include('template/scheme3.html')
+					</div>
+					<div class="tabs__item">
+					@@include('template/scheme4.html')
+					</div>
+					<div class="tabs__item">
+					@@include('template/scheme5.html')
+					</div>
+				</div>
+			</div>
+			@@include('template/footer.html')
+		</div>
+	</div>
+</body>
+</html> 

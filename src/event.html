@@ -2,7 +2,7 @@
 <html lang="ru">
 @@include('template/head.html')
 <body>
-	<div class="container inner-page inner-page_contacts">
+	<div class="container inner-page inner-page_event">
 		<div class="menu-column">
 			<div class="flex_between">
 				<a href="/" class="logo"></a>
@@ -43,7 +43,7 @@
 							Магазины
 						</a>
 					</li>
-					<li class="menu__item menu__item_events">
+					<li class="menu__item menu__item_events active">
 						<a href="events.html">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.313" height="21.531" viewBox="0 0 23.313 21.531">
 							  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -100,7 +100,7 @@
 							Услуги
 						</a>
 					</li>
-					<li class="menu__item menu__item_contacts active">
+					<li class="menu__item menu__item_contacts">
 						<a href="contacts.html">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.156" height="26.094" viewBox="0 0 22.156 26.094">
 							  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -125,39 +125,121 @@
 		</div>
 		<div class="inner-page__content content">
 			@@include('template/header.html')
-			<div class="map" id="map"></div>
-			<footer class="no-wrapper">
+			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_event">
+				<div class="caption-center">
+					<div class="caption-center__small-caption">
+						<div class="caption-center__mini-caption">02 апреля 2020</div>
+						<div>ТРЦ гостинный двор расширяет границы</div>
+					</div>
+				</div>
+			</div>
+			<div class="inner-page__main flex">
+				<div class="event-banner">
+					<img src="images/main-ostin.jpg" alt="">
+				</div>
+				<div class="inner-page__right-text">
+					<p>Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров открывается накануне Нового Года, в самом центре города в ТРЦ «Гостиный двор» по адресу ул. Советская, д. 47, 5 эт.Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров открывается накануне Нового Года, в самом центре города в ТРЦ «Гостиный двор» по адресу ул. Советская, д. 47, 5 эт.</p>
+					<p>Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров открывается накануне Нового Года, в самом центре города в ТРЦ «Гостиный двор» по адресу ул. Советская, д. 47, 5 эт.Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров открывается накануне Нового Года, в самом центре города в ТРЦ «Гостиный двор» по адресу ул. Советская, д. 47, 5 эт.</p>
+				</div>
+				<a href="#header" class="go-up"></a>
+			</div>
+			<div class="shares-events no-wrapper padding-small">
+				<div class="caption-background caption-background_white">
+					<div>новос</div>
+					<div>ти</div>
+				</div>
+				<div class="columns flex">
+					<div class="columns__left-column">
+						<div class="common-name">Другие</div>
+						<div class="caption">Новости и&nbsp;события</div>
+						<a href="#" class="button button_brown">Все акции</a>
+					</div>
+					<div class="columns__right-column">
+						<div class="swiper-shares">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#" class="photo-info">
+											<div class="photo-info__photo photo-info__photo_maltina"></div>
+											<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
+										</a>
+									</div>
+									<div class="swiper-slide swiper-slide_big">
+										<a href="#" class="photo-info photo-info_big"></a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="photo-info">
+											<div class="photo-info__photo photo-info__photo_isabel"></div>
+											<div class="photo-info__info">ISABEL MARANT Открытие бутика</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="photo-info">
+											<div class="photo-info__photo photo-info__photo_maltina"></div>
+											<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#" class="photo-info">
+											<div class="photo-info__photo photo-info__photo_maltina"></div>
+											<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
+										</a>
+									</div>
+								</div>
+								<!-- Add Arrows -->
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="no-wrapper footer-margin-top">
 				<div class="footer-bg"></div>
 				<div class="footer-content flex">
 					<div class="footer-info">
 						<a href="/" class="footer-logo"></a>
-						<div class="form">
-							<div class="form__caption">Быстрая связь</div>
-							<div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="ru-RU" dir="ltr">
-								<form class="wpcf7-form flex">
-									<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_input">
-										<input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-required="true" aria-invalid="false" placeholder="Имя" required>
-									</span>
-									<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_input">
-										<input type="mail" name="mail" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-required="true" aria-invalid="false" placeholder="E-mail" required>
-									</span>
-									<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_textarea">
-										<textarea name="ucomment" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Cообщение" required></textarea>
-									</span>
-									<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_button">
-										<button type="submit" class="form__button button button_red">Отправить</button>
-										<span class="ajax-loader"></span>
-									</span>
-									<div class="wpcf7-response-output wpcf7-display-none"></div>
-								</form>
-								<div class="thx" id="thx">
-									Спасибо, ваше сообщение отправлено
-								</div>
-								<div class="err" id="err">
-									Произошла ошибка, попробуйте позже
-								</div>
+						<div class="footer-info__mobile">
+							<div class="footer-info__contact flex">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23">
+								  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+								   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+									  <rdf:Description rdf:about=""/>
+								   </rdf:RDF>
+								</x:xmpmeta>
+								<?xpacket end="w"?></metadata>
+								<defs></defs>
+								  <path id="Фигура_1" data-name="Фигура 1" class="cls-1" d="M216.516,32a11.234,11.234,0,0,1,3.22.269l0.805,0.09v0.09h0.269v0.09h0.357v0.089h0.179v0.09l0.537,0.09V32.9l0.537,0.179v0.09H222.6v0.089h0.179v0.089l0.536,0.18,0.09,0.179,0.357,0.09,0.09,0.18h0.179l0.179,0.269h0.179l0.179,0.269h0.178l0.537,0.627h0.179l0.268,0.359h0.09v0.18l0.626,0.538v0.179l0.268,0.179v0.179l0.269,0.179v0.179l0.179,0.09c0.029,0.119.059,0.239,0.089,0.358l0.179,0.09c0.03,0.12.06,0.239,0.089,0.359h0.09v0.179H227.7v0.179h0.09q0.088,0.269.179,0.538h0.089v0.268h0.09v0.179h0.089c0.06,0.27.119,0.538,0.179,0.807H228.5v0.269h0.09v0.359h0.089v0.448h0.09v0.448h0.089V42.49a6.053,6.053,0,0,1,.09,1.972h-0.09v0.807h-0.089l-0.09.9h-0.089v0.359H228.5v0.269h-0.089v0.269h-0.09V47.33h-0.089V47.6h-0.089v0.179h-0.09v0.269h-0.089c-0.06.179-.12,0.359-0.179,0.538H227.7v0.179h-0.089c-0.06.179-.119,0.359-0.179,0.538l-0.179.089c-0.03.12-.06,0.239-0.089,0.359l-0.179.09v0.179l-0.179.09-0.09.268-0.268.179v0.18l-0.537.448-0.447.628h-0.179l-0.537.627h-0.178l-0.179.269h-0.179l-0.179.269h-0.179l-0.09.179-0.357.09-0.09.18h-0.179v0.089h-0.179V53.6h-0.178v0.09H222.6v0.09H222.42v0.09l-0.537.179v0.09l-0.537.09v0.09h-0.268v0.089H220.81V54.5h-0.269v0.09h-0.358v0.089h-0.447v0.09h-0.447v0.09h-0.8v0.09a6.02,6.02,0,0,1-1.968-.09h-0.8V54.77l-0.9-.09V54.59h-0.357V54.5H214.19v-0.09h-0.268V54.322h-0.268v-0.09h-0.269v-0.09h-0.179v-0.09h-0.268v-0.09l-0.537-.179v-0.09h-0.179V53.6l-0.536-.178-0.09-.18-0.358-.09c-0.029-.06-0.059-0.119-0.089-0.179H210.97l-0.179-.269h-0.179l-0.179-.269h-0.179l-0.626-.716h-0.179v-0.09l-0.268-.179V51.274l-0.626-.538v-0.18l-0.268-.179V50.2l-0.269-.179V49.84l-0.179-.09c-0.03-.12-0.059-0.239-0.089-0.359l-0.179-.089-0.09-.359h-0.089V48.764H207.3V48.584h-0.09c-0.059-.178-0.119-0.358-0.179-0.538h-0.089V47.778h-0.09V47.6h-0.089c-0.06-.268-0.119-0.538-0.179-0.806H206.5V46.523h-0.09V46.164h-0.089V45.716h-0.09V45.268H206.14V44.461a6.052,6.052,0,0,1-.09-1.972h0.09V41.683h0.089l0.09-.9h0.089V40.428h0.09V40.159h0.089V39.89h0.089V39.621h0.09v-0.27h0.089V39.173h0.09V38.9h0.089q0.09-.269.179-0.538h0.09V38.187h0.089c0.06-.179.119-0.358,0.179-0.538l0.179-.09c0.03-.119.059-0.239,0.089-0.358l0.179-.09V36.932l0.269-.179V36.573l0.268-.179V36.215l0.626-.538V35.5l0.626-.448,0.447-.538h0.179l0.179-.269,0.269-.09c0.029-.06.059-0.12,0.089-0.179h0.179c0.03-.06.06-0.12,0.089-0.18l0.358-.09,0.09-.179,0.536-.18V33.257H212.4V33.168l0.537-.179V32.9l2.326-.717A5.207,5.207,0,0,0,216.516,32Zm0.089,1.344a4.822,4.822,0,0,1-1.252.18l-2.147.717v0.089h-0.179c-0.029.06-.059,0.12-0.089,0.18H212.67l-0.09.179-0.358.089c-0.029.06-.059,0.12-0.089,0.179h-0.179v0.09l-0.268.09-0.09.179h-0.179l-0.268.359a10.061,10.061,0,0,0-3.22,4.392v0.269h-0.09v0.269H207.75v0.358h-0.09v0.359h-0.089v0.538a8.147,8.147,0,0,0,.179,4.123v0.359h0.089l0.09,0.538h0.089v0.18h0.09V47.33H208.2l0.09,0.358h0.089v0.269h0.089v0.179h0.09v0.179l0.179,0.09c0.03,0.119.059,0.239,0.089,0.358L209,48.853v0.18h0.09c0.029,0.089.059,0.179,0.089,0.269l0.179,0.089v0.179l0.358,0.269v0.179l0.447,0.358,0.805,0.9h0.179l0.268,0.359H211.6l0.09,0.179,0.268,0.09V51.99h0.179l0.089,0.18H212.4v0.09h0.179v0.09h0.179v0.089h0.179c0.03,0.06.06,0.12,0.089,0.18H213.3v0.089l0.358,0.09v0.09h0.268v0.09H214.1v0.09l0.626,0.09v0.09H215v0.09h0.358v0.09l1.252,0.089a5.3,5.3,0,0,0,1.789.089V53.515h0.716V53.426h0.537v-0.09h0.358v-0.09h0.357v-0.09h0.269v-0.09H220.9a10.1,10.1,0,0,0,4.383-3.227l0.358-.269V49.391l0.179-.089c0.03-.09.06-0.18,0.089-0.269H226v-0.18l0.179-.09c0.059-.179.119-0.358,0.179-0.537l0.178-.09V47.957h0.09V47.688h0.089l0.09-.358h0.089V47.061h0.09v-0.18h0.089l0.09-.627h0.089V45.985h0.09V45.627h0.089V45.089a8.235,8.235,0,0,0-.268-4.392l-0.09-.628h-0.089V39.89h-0.09q-0.178-.537-0.358-1.075l-0.178-.09q-0.09-.269-0.179-0.538L226,38.1V37.918h-0.09c-0.029-.09-0.059-0.18-0.089-0.27l-0.179-.09V37.38l-0.358-.269V36.932l-0.894-.807c-0.12-.149-0.239-0.3-0.358-0.447h-0.179l-0.268-.359H223.4l-0.09-.179-0.268-.09V34.96h-0.179c-0.03-.059-0.06-0.119-0.089-0.179l-0.358-.089-0.09-.179h-0.179v-0.09h-0.179v-0.09H221.7V34.243h-0.179v-0.09l-0.358-.09V33.974l-0.536-.09A10.92,10.92,0,0,0,216.605,33.346Zm0.269,1.345h1.252a4.556,4.556,0,0,1,.09,1.344,4.533,4.533,0,0,1-1.342.09A2.664,2.664,0,0,1,216.874,34.691Zm-5.1,2.151a4.3,4.3,0,0,1,.984.986l-0.626.538c-0.09.119-.179,0.239-0.268,0.359a5.06,5.06,0,0,1-.984-0.986l0.178-.09Q211.418,37.247,211.775,36.842Zm11.36,0a4.265,4.265,0,0,1,.984.986l-0.626.538-0.268.359a5.06,5.06,0,0,1-.984-0.986l0.179-.09Zm-6.351.628h1.432v4.123a2.108,2.108,0,0,1,.8.628l0.179,0.09V42.49h0.089v0.179h0.089v0.09h0.09v0.09h2.773V44.1a10.234,10.234,0,0,1-2.863.089c-0.419.97-1.066,1.279-2.5,1.255-0.182-.209-0.585-0.317-0.805-0.538s-0.327-.624-0.537-0.806V42.848h0.089V42.668h0.09c0.03-.119.06-0.239,0.089-0.358l0.179-.09,0.269-.359,0.536-.269V37.47Zm-7.961,5.288h1.253a4.6,4.6,0,0,1,.089,1.345,4.534,4.534,0,0,1-1.342.089A2.666,2.666,0,0,1,208.823,42.758Zm16.1,0h1.253a4.6,4.6,0,0,1,.089,1.345,4.534,4.534,0,0,1-1.342.089A2.676,2.676,0,0,1,224.924,42.758Zm-7.782.09a1.248,1.248,0,0,0-.268.986,1.239,1.239,0,0,0,.984.269,1.247,1.247,0,0,0,.268-0.986A1.24,1.24,0,0,0,217.142,42.848Zm-5.367,5.378a4.318,4.318,0,0,1,.984.986l-0.626.538q-0.135.179-.268,0.359a5.051,5.051,0,0,1-.984-0.987l0.178-.089Zm11.36,0a4.278,4.278,0,0,1,.984.986l-0.626.538-0.268.359a5.051,5.051,0,0,1-.984-0.987l0.179-.089Zm-6.261,2.6h1.252a4.56,4.56,0,0,1,.09,1.345,4.533,4.533,0,0,1-1.342.09A2.666,2.666,0,0,1,216.874,50.825Z" transform="translate(-206 -32)"/>
+								</svg>
+								<div class="contact">Ежедневно с 10:00 до 22:00</div>
 							</div>
+							<div class="footer-info__contact flex">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 19.03 16">
+								  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+								   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+									  <rdf:Description rdf:about=""/>
+								   </rdf:RDF>
+								</x:xmpmeta>
+								<?xpacket end="w"?></metadata>
+								<defs></defs>
+								  <path class="cls-1" d="M1383.66,47.777l-3.8-3.8a1.171,1.171,0,0,0-1.65,0l-0.99.989a1.168,1.168,0,0,0-.29,1.146l-0.37.372h0c-0.27.265-1.92-.141-3.91-2.135s-2.4-3.642-2.14-3.907h0l0.38-.373a1.121,1.121,0,0,0,.32.045,1.138,1.138,0,0,0,.82-0.34l0.99-.988a1.171,1.171,0,0,0,0-1.645l-3.8-3.8a1.158,1.158,0,0,0-1.64,0l-0.99.989a1.173,1.173,0,0,0-.3,1.146l-0.33.339c-1.05,1.169-1.25,3.008-.55,5.209a16.534,16.534,0,0,0,4.14,6.424,16.563,16.563,0,0,0,6.43,4.143,7.992,7.992,0,0,0,2.41.41,4.015,4.015,0,0,0,2.93-1.086l0.2-.208a1.25,1.25,0,0,0,.33.046,1.152,1.152,0,0,0,.82-0.341l0.99-.988A1.172,1.172,0,0,0,1383.66,47.777ZM1368.4,34.163l3.8,3.8-0.99.989h0l-0.01-.014-1.89-1.887-1.9-1.9Zm12.09,15.928h0c-0.83.837-2.31,0.975-4.16,0.389a15.322,15.322,0,0,1-5.95-3.857,15.444,15.444,0,0,1-3.86-5.953c-0.59-1.849-.45-3.329.39-4.166h0l0.1-.105,2.95,2.949-0.27.271h0c-1.12,1.122.23,3.642,2.14,5.552,1.43,1.43,3.2,2.543,4.47,2.543a1.456,1.456,0,0,0,1.08-.409h0l0.27-.27,2.95,2.95Zm1.36-.5-3.8-3.8,0.99-.988,3.8,3.8Z" transform="translate(-1365 -33)"/>
+								</svg>
+								<a href="tel:74957272424" class="contact">+7 495 727 24 24</a>
+							</div>
+							<div class="footer-info__contact flex">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="16.06" height="19" viewBox="0 0 16.06 19">
+								  <defs></defs>
+								  <path d="M15.539,10.378 C15.295,11.010 14.903,11.630 14.377,12.214 L8.557,18.765 C8.425,18.914 8.232,18.999 8.029,18.999 C7.826,18.999 7.633,18.914 7.502,18.765 L1.680,12.212 C1.156,11.631 0.764,11.012 0.518,10.374 C-0.404,8.038 -0.056,5.394 1.450,3.306 C2.963,1.207 5.361,0.003 8.029,0.003 C10.697,0.003 13.096,1.207 14.609,3.306 C16.115,5.394 16.462,8.038 15.539,10.378 ZM13.468,4.061 C12.218,2.327 10.235,1.332 8.029,1.332 C5.824,1.332 3.841,2.327 2.590,4.061 C1.343,5.791 1.054,7.977 1.816,9.908 C2.006,10.402 2.314,10.884 2.732,11.348 L8.029,17.310 L13.324,11.352 C13.325,11.350 13.326,11.349 13.327,11.348 C13.745,10.884 14.053,10.401 14.241,9.913 C15.005,7.977 14.716,5.791 13.468,4.061 ZM8.029,11.383 C5.889,11.383 4.148,9.715 4.148,7.663 C4.148,5.613 5.889,3.944 8.029,3.944 C10.169,3.944 11.911,5.613 11.911,7.663 C11.911,9.715 10.170,11.383 8.029,11.383 ZM8.029,5.273 C6.654,5.273 5.534,6.346 5.534,7.663 C5.534,8.982 6.654,10.055 8.029,10.055 C9.405,10.055 10.525,8.982 10.525,7.663 C10.525,6.346 9.405,5.273 8.029,5.273 Z" class="cls-1"/>
+								</svg>
+								<div class="contact">г. Тула, улица Советская, дом 47</div>
+							</div>
+							<a href="#order" data-fancybox="" class="button button_biege">Обратная связь</a>
 						</div>
+						<div class="footer-info__medium-text">ТЦ "Гостиный двор" является одним из самых больших торговых центров в Туле.</div>
+						<div class="footer-info__small-text">Площадь составляет 51 000 кв.м, здесь есть все для шоппинга и развлечений! Торговый центр находится в самом сердце города, в 100 м от Тульского Кремля. </div>
+						<a href="#" class="button button_red">Подробнее</a>
 					</div>
 					<a href="#" class="scheme-link">
 						<div class="scheme-link__icon"></div>
@@ -172,12 +254,8 @@
 								</defs><title>ВК</title><path id="Behance" class="cls-1" d="M134.35,377a2.39,2.39,0,0,1,.35,1.32,2.61,2.61,0,0,1-.4,1.43,2.49,2.49,0,0,1-1.65,1.16,6.27,6.27,0,0,1-1.27.12h-4v-9h4.34a2.76,2.76,0,0,1,2.33,1,2.28,2.28,0,0,1,.41,1.37,2,2,0,0,1-.41,1.32,2.09,2.09,0,0,1-.68.51A2,2,0,0,1,134.35,377Zm-4.94-1.41h1.9a1.83,1.83,0,0,0,.95-.22.86.86,0,0,0,.37-.79.8.8,0,0,0-.48-.83,3.38,3.38,0,0,0-1.06-.14h-1.67Zm3.4,2.6a1,1,0,0,0-.57-1,2.24,2.24,0,0,0-.9-.15h-1.93v2.39h1.9a2.09,2.09,0,0,0,.91-.16A1.13,1.13,0,0,0,132.81,378.19Z" transform="translate(-127.34 -372.04)"/></svg>
 							</a>
 						</div>
-						<div class="footer-contacts__line footer-contacts__line_phones">
-							<div>
-								<a href="tel:7872362436" class="footer-contacts__contact contact  contact_phone">+7 (4872) 36-24-36 <span>добавочный (914)</span></a>
-								<a href="tel:74957272424" class="footer-contacts__contact contact  contact_phone">+7 495 727 24 24</a>
-								<a href="tel:74957272424" class="footer-contacts__contact contact  contact_phone">+7 495 727 24 24</a>
-							</div>
+						<div class="footer-contacts__line">
+							<a href="tel:74957272424" class="footer-contacts__contact contact  contact_phone">+7 495 727 24 24</a>
 							<a href="#" class="social-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14.97 15.22">
 								  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -210,13 +288,14 @@
 								</svg>
 							</a>
 						</div>
+						<a href="#order" data-fancybox="" class="footer-contacts__button button button_biege">Обратная связь</a>
 					</div>
 				</div>
 				<div class="footer-bottom flex">
 					<div class="copyright">Гостинный двор &copy; 2019 Все права защищены</div> 
 					<div class="developers">Разработано c <span></span>в <a href="#">Advensys</a></div>
 				</div>
-			</footer>
+			</footer>	
 		</div>
 	</div>
 </body>
