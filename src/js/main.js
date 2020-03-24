@@ -29,15 +29,6 @@ $(document).ready(function(){
 		}
 	});
 	
-// menu-column fix
-	
-//	$('.search-button').click( function() { 
-//		var scrollbarWidth = $('.container').offsetWidth - $('.container').clientWidth;
-//		console.log(scrollbarWidth);
-//		$('.menu-column').css({
-//			'left': 'calc((100% - 1900 - ' + scrollbarWidth + 'px)/2)'
-//		});
-//	});
 	
 // plus-button
 	
@@ -98,6 +89,14 @@ $(document).ready(function(){
 
 	
 // tabs
+	
+	
+	$('.tabs__content').each(function( index ) {
+		var h=$(this).find('.tabs__item:first-child').height();
+		$(this).css({
+			'height': h + 'px'
+		});
+	});
 	
 	$('.tabs__button').click(function(){ 
 		var index=$(this).index();
@@ -196,36 +195,21 @@ $(document).ready(function(){
 	
 // schema
 	
-	// Клик по магазину - открывается подсказка
-	$('.scheme .cls-1').click(function(){
-//		alert ( "Привет, Аня" );
-//		$('.hover-plate').removeClass('hover');
-//		$('.scheme .cls-1').removeClass('active');
-//		$(this).addClass('active');
-//		var hoverPlate = $('.hover-plate[data-id=' + $(this).data('id') + ']');
-//		var leftWidth = hoverPlate.innerWidth();
-//		var topHeight = hoverPlate.innerHeight();
-//		var offsetTop = $(this).offset().top - $('.scheme').offset().top ;
-//		var offsetLeft = $(this).offset().left - $(this).closest('.scheme').offset().left;
-//		$('.scheme').offset().top ;
-//		var centerLeft = parseInt($(this)[0].getBoundingClientRect().right - $(this)[0].getBoundingClientRect().left);
-//		hoverPlate.addClass('hover').css({
-//			'top': (offsetTop - topHeight) + 'px',
-//			'left': (offsetLeft - leftWidth/2 + centerLeft/2) + 'px'
-//		});
-	});
+	document.addEventListener("touchstart", function(){}, true);
 	
 	// Ховер по магазину - открывается подсказка
-	$('.scheme .cls-1').mouseover(function(){
+	$('.scheme .cls-1').mouseenter(function(){
+		$('.hover-plate').removeClass('hover');
+		$('.scheme .cls-1').removeClass('active');
 		$(this).addClass('active');
 		var hoverPlate = $('.hover-plate[data-id=' + $(this).data('id') + ']');
+		hoverPlate.addClass('hover');
 		var leftWidth = hoverPlate.innerWidth();
 		var topHeight = hoverPlate.innerHeight();
 		var offsetTop = $(this)[0].getBoundingClientRect().top - $('.scheme')[0].getBoundingClientRect().top;
 		var offsetLeft = $(this)[0].getBoundingClientRect().left - $(this).closest('.scheme')[0].getBoundingClientRect().left;
 		var centerLeft = parseInt($(this)[0].getBoundingClientRect().right - $(this)[0].getBoundingClientRect().left);
-//		alert ("Привет, Аня :) Заскринь это плиз! " + offsetTop + " " + topHeight + " " + offsetLeft + " " + leftWidth + " " + centerLeft);
-		hoverPlate.addClass('hover').css({
+		hoverPlate.css({
 			'top': (offsetTop - topHeight) + 'px',
 			'left': (offsetLeft - leftWidth/2 + centerLeft/2) + 'px'
 		});
@@ -247,44 +231,24 @@ $(document).ready(function(){
 	});
 	
 	
-//	// Клик по лого - открывается подсказка
-//	$('.scheme #LOGO g').click(function(){
-//		var path = $('.scheme .cls-1[data-id=' + $(this).data('id') + ']');
-//		$('.scheme .cls-1').removeClass('active');
-//		path.addClass('active');
-//		$('.hover-plate').removeClass('click').removeClass('hover-plate__full');
-//		var offsetTop = path.offset().top - $('.scheme').offset().top;
-//		var offsetLeft = path.offset().left -$('.scheme').offset().left;
-//		$('.hover-plate[data-id=' + $(this).data('id') + ']').addClass('click').addClass('hover-plate__full').css({
-//			'top': (offsetTop + 100) + 'px',
-//			'left': (offsetLeft - 20) + 'px'
-//		});
-//	});
-	
 	// Ховер по лого - открывается подсказка
-//	$('.scheme #LOGO g').mouseover(function(){
-//		var path = $('.scheme .cls-1[data-id=' + $(this).data('id') + ']');
-//		var offsetTop = path.offset().top - $('.scheme').offset().top;
-//		var offsetLeft = path.offset().left -$('.scheme').offset().left;
-//		$('.hover-plate[data-id=' + $(this).data('id') + ']').addClass('hover').css({
-//			'top': (offsetTop +100) + 'px',
-//			'left': (offsetLeft - 20) + 'px'
-//		});
-//	});
-	
-//	$('.scheme #LOGO g').mouseleave(function(){
-//		$('.hover-plate').removeClass('hover');
-//	});
-
-
-	// Клик вне магазинов все закрывает.
-	$("body").click(function(e) {
-		if ($(e.target).closest(".scheme .cls-1, .hover-plate, .scheme #LOGO g").length == 0) {
-			$('.hover-plate').removeClass('hover');
-			$('.scheme .cls-1').removeClass('active');
-		}
+	$('.scheme #LOGO g').mouseenter(function(){
+		$('.hover-plate').removeClass('hover');
+		$('.scheme .cls-1').removeClass('active');
+		var path = $('.scheme .cls-1[data-id=' + $(this).data('id') + ']');
+		path.addClass('active');
+		var hoverPlate = $('.hover-plate[data-id=' + $(this).data('id') + ']');
+		hoverPlate.addClass('hover');
+		var leftWidth = hoverPlate.innerWidth();
+		var topHeight = hoverPlate.innerHeight();
+		var offsetTop = path[0].getBoundingClientRect().top - $('.scheme')[0].getBoundingClientRect().top;
+		var offsetLeft = path[0].getBoundingClientRect().left - $(this).closest('.scheme')[0].getBoundingClientRect().left;
+		var centerLeft = parseInt(path[0].getBoundingClientRect().right - path[0].getBoundingClientRect().left);
+		hoverPlate.css({
+			'top': (offsetTop - topHeight) + 'px',
+			'left': (offsetLeft - leftWidth/2 + centerLeft/2) + 'px'
+		});
 	});
-	
 	
 // animation
 	
@@ -623,10 +587,6 @@ $(document).ready(function(){
 			el: '.swiper-header .swiper-pagination',
 			type: 'progressbar',
 		},
-//		pagination: {
-//			el: '.swiper-pagination',
-//			type: 'fraction',
-//		},
 	})
 	
 	var servicesSwiper = undefined;
@@ -813,20 +773,6 @@ function initialize() {
 			  }
 			]
 		  },
-//		  {
-//			"elementType": "labels",
-//			"stylers": [
-//			  {
-//				"color": "#63533e"
-//			  },
-//			  {
-//				"visibility": "on"
-//			  },
-//			  {
-//				"weight": 1.5
-//			  }
-//			]
-//		  },
 			{
 			"featureType": 'landscape.humanmade', // обводка домов и зданий
 			"elementType": 'geometry.stroke',

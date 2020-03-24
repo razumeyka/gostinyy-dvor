@@ -50,12 +50,29 @@
 	box-sizing: border-box;
 	position: relative;
 	padding: 0 10.4%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
 	.hover-plate {
 		opacity: 0;
 		position: absolute;
-		z-index: 0;
+		z-index: 2;
+		display: none;
 		padding-bottom: 20px;
-		.animated;
+		-moz-transition: opacity 0.5s ease-in-out 0.2s;
+		-webkit-transition: opacity 0.5s ease-in-out 0.2s;
+		transition: opacity 0.5s ease-in-out 0.2s;
+		&.hover-plate_bottom2 {
+			margin-top: 7.5%;
+		}
+		&.hover-plate_bottom3 {
+			margin-top: 6%;
+		}
+		&.hover-plate_bottom3a {
+			margin-top: 5.5%;
+		}
+		&.hover-plate_bottom5 {
+			margin-top: 25%;
+		}
 		.hover-plate__wr {
 			flex-direction: column;
 			align-items: center;
@@ -105,94 +122,104 @@
 			}
 		}
 		.button {
+			background: #d6ad76;
+			box-shadow: 0 6px 14.24px 1.76px #d5cbbe;
 			font-size: 14px;
 			padding: 3px 20px 5px;
+			&:hover {
+				background: #f13836;
+			}
 		}
 		&.hover {
+			display: block;
 			opacity: 1;
-			z-index: 2;
 		}
 	}
 	
 	svg {
+		margin: auto;
 		position: relative;
 		z-index: 1;
 	}
 
 	.cls-1, .cls-10 {
-		fill: #795e36;
-	}
+        fill: #795e36;
+      }
 
-	.cls-1, .cls-2, .cls-3 {
-		stroke: #795e36;
-	}
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #795e36;
+      }
 
-	.cls-1, .cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-8, .cls-9 {
-		stroke-miterlimit: 10;
-	}
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
 
-	.cls-1, .cls-2, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
-		stroke-width: 0.25px;
-	}
+      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0.25px;
+      }
 
-	.cls-1, .cls-10, .cls-12, .cls-2, .cls-3, .cls-6, .cls-8 {
-		fill-rule: evenodd;
-	}
+      .cls-1, .cls-10, .cls-12, .cls-2, .cls-3, .cls-6, .cls-8 {
+        fill-rule: evenodd;
+      }
 
-	.cls-2 {
-		fill: #42362a;
-	}
+      .cls-2 {
+        fill: #42362a;
+      }
 
-	.cls-3 {
-		fill: #4f3f2e;
-	}
+      .cls-3 {
+        fill: #4f3f2e;
+      }
 
-	.cls-4 {
-		fill: #fff;
-	}
+      .cls-4 {
+        fill: #fff;
+      }
 
-	.cls-5 {
-		fill: #030304;
-	}
+      .cls-5 {
+        fill: #030304;
+      }
 
-	.cls-11, .cls-12, .cls-6, .cls-7 {
-		fill: none;
-	}
+      .cls-11, .cls-12, .cls-6, .cls-7 {
+        fill: none;
+      }
 
-	.cls-6, .cls-7 {
-		stroke: #ffdf7a;
-		stroke-linejoin: bevel;
-	}
+      .cls-6, .cls-7 {
+        stroke: #ffdf7a;
+        stroke-linejoin: bevel;
+      }
 
-	.cls-8, .cls-9 {
-		fill: #884640;
-		stroke: #997a4a;
-	}
-	
-	.cls-10 {
-		stroke: #957a50;
-	}
+      .cls-8, .cls-9 {
+        fill: #884640;
+        stroke: #997a4a;
+      }
 
-	.cls-10, .cls-11, .cls-12 {
-		stroke-width: 1.5px;
-	}
+      .cls-10 {
+        stroke: #957a50;
+      }
 
-	.cls-11, .cls-12 {
-		stroke: #967a50;
-	}
+      .cls-10, .cls-11, .cls-12 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-11, .cls-12 {
+        stroke: #967a50;
+      }
 	
 	.cls-1{
-		cursor: pointer;
 		.animated;
 		&.active {
 			fill: #f13836;
 			stroke: #f13836;
 		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			outline: none;
+		}
 	}
 	
-	g#logo>g:hover>.cls-1{
-		fill: #f13836;
-		stroke: #f13836;
+	g#logo>g:hover{
+
 	}
 }
 
@@ -258,7 +285,7 @@
 
 
 .scheme_2 {
-	.cls-1, .cls-12 {
+	.cls-1, .cls-14 {
         fill: #795e36;
       }
 
@@ -266,15 +293,15 @@
         stroke: #795e36;
       }
 
-      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-2, .cls-3, .cls-4 {
+      .cls-1, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-2, .cls-3, .cls-4 {
         stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-10, .cls-11, .cls-2, .cls-3, .cls-4, .cls-8, .cls-9 {
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-2, .cls-3, .cls-4 {
         stroke-width: 0.25px;
       }
 
-      .cls-1, .cls-10, .cls-12, .cls-14, .cls-2, .cls-3, .cls-4, .cls-8 {
+      .cls-1, .cls-10, .cls-12, .cls-14, .cls-16, .cls-2, .cls-3, .cls-4 {
         fill-rule: evenodd;
       }
 
@@ -286,7 +313,7 @@
         fill: #4f3f2e;
       }
 
-      .cls-13, .cls-14, .cls-4, .cls-8, .cls-9 {
+      .cls-10, .cls-11, .cls-15, .cls-16, .cls-4 {
         fill: none;
       }
 
@@ -295,16 +322,95 @@
       }
 
       .cls-6 {
-        fill: #030304;
+        fill: #040000;
       }
 
       .cls-7 {
+        fill: #fdfdfd;
+      }
+
+      .cls-8 {
+        fill: #030304;
+      }
+
+      .cls-9 {
         fill: #fefefe;
       }
 
-      .cls-8, .cls-9 {
+      .cls-10, .cls-11 {
         stroke: #ffdf7a;
         stroke-linejoin: bevel;
+      }
+
+      .cls-12, .cls-13 {
+        fill: #884640;
+        stroke: #997a4a;
+      }
+
+      .cls-14 {
+        stroke: #957a50;
+      }
+
+      .cls-14, .cls-15, .cls-16 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-15, .cls-16 {
+        stroke: #967a50;
+      }
+}
+
+.scheme_1 {
+	.cls-1, .cls-12 {
+        fill: #795e36;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #795e36;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-2, .cls-3 {
+        stroke-width: 0.25px;
+      }
+
+      .cls-1, .cls-10, .cls-12, .cls-14, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #42362a;
+      }
+
+      .cls-3 {
+        fill: #4f3f2e;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-13, .cls-14, .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #040000;
+      }
+
+      .cls-7 {
+        fill: #222e38;
+      }
+
+      .cls-8 {
+        fill: #fdfefd;
+      }
+
+      .cls-9 {
+        fill: #fefefe;
       }
 
       .cls-10, .cls-11 {
@@ -325,8 +431,8 @@
       }
 }
 
-.scheme_1 {
-	.cls-1, .cls-7 {
+.scheme_5 {
+	.cls-1, .cls-9 {
         fill: #795e36;
       }
 
@@ -334,15 +440,15 @@
         stroke: #795e36;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+      .cls-1, .cls-10, .cls-11, .cls-2, .cls-3, .cls-7, .cls-8, .cls-9 {
         stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6 {
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6, .cls-7, .cls-8 {
         stroke-width: 0.25px;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-5, .cls-7, .cls-9 {
+      .cls-1, .cls-11, .cls-2, .cls-3, .cls-5, .cls-7, .cls-9 {
         fill-rule: evenodd;
       }
 
@@ -358,21 +464,29 @@
         fill: #fff;
       }
 
+      .cls-10, .cls-11, .cls-5, .cls-6 {
+        fill: none;
+      }
+
       .cls-5, .cls-6 {
+        stroke: #ffdf7a;
+        stroke-linejoin: bevel;
+      }
+
+      .cls-7, .cls-8 {
         fill: #884640;
         stroke: #997a4a;
       }
 
-      .cls-7 {
+      .cls-9 {
         stroke: #957a50;
       }
 
-      .cls-7, .cls-8, .cls-9 {
+      .cls-10, .cls-11, .cls-9 {
         stroke-width: 1.5px;
       }
 
-      .cls-8, .cls-9 {
-        fill: none;
+      .cls-10, .cls-11 {
         stroke: #967a50;
       }
 }
@@ -480,6 +594,22 @@
 	
 	.inner-page_scheme .select2-container {
 		margin-bottom: 0;
+	}
+	
+	.scheme .hover-plate.hover-plate_bottom2 {
+		margin-top: 9%;
+	}	
+
+	.scheme .hover-plate.hover-plate_bottom3 {
+		margin-top: 8%;
+	}
+	
+	.scheme .hover-plate.hover-plate_bottom3a {
+		margin-top: 7%;
+	}
+	
+	.scheme .hover-plate.hover-plate_bottom5 {
+		margin-top: 30%;
 	}
 }
 

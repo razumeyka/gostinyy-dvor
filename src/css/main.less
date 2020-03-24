@@ -313,6 +313,12 @@
 		padding: 10px 15px;
 		width: 145px;
 		margin-right: 10px;
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			outline: none;
+		}
 	}
 
 	.tabs__content {
@@ -335,7 +341,8 @@
 		&.tabs__item__about .tabs__inner {
 			padding-left: 56%;
 		}
-		&.tabs__item_products .tabs__inner {
+		&.tabs__item_plates .tabs__inner {
+			flex-wrap: wrap;
 			padding-left: 10%;
 			margin: -16px;
 		}
@@ -350,12 +357,7 @@
 		margin: 0 0 45px;
 	}
 	
-	.tabs__item_actions .tabs__inner {
-		margin: -16px;
-		flex-wrap: wrap;
-	}
-	
-	.new-item {
+	.item-wr {
 		box-sizing: border-box;
 		width: 25%;
 		padding: 16px;
@@ -367,6 +369,12 @@
 }
 
 .goods__plate-wr {
+	box-sizing: border-box;
+	width: 25%;
+	padding: 16px;
+}
+
+.plate-blank {
 	box-sizing: border-box;
 	width: 25%;
 	padding: 16px;
@@ -633,7 +641,6 @@
 	width: 275px;
 }
 
-
 .inner-page.inner-page_restaurant footer {
 	background: rgb(23,23,23); /* Old browsers */
 	background: -moz-linear-gradient(top, rgb(23,23,23) 0%, rgb(23,23,23) 60%, rgb(255,255,255) 60%, rgba(255,255,255) 100%); /* FF3.6-15 */
@@ -774,7 +781,6 @@
 	z-index: 1;
 }
 
-
 .gm-style-mtc > div,
 .gmnoprint > div,
 .gm-svpc {
@@ -837,7 +843,7 @@
 		padding-left: 50%;
 	}
 	
-	.tabs .tabs__item.tabs__item_products .tabs__inner {
+	.tabs .tabs__item.tabs__item_plates .tabs__inner {
 		padding-left: 0;
 	}
 	
@@ -873,22 +879,8 @@
 		padding-left: 0;
 	}
 	
-	.goods__plate-wr {
-		&:first-child {
-			display: none;
-		}
-		&:nth-child(10000n-9998) {
-			display: none;
-		}
-	}
-	
-	.new-item {
-		&:first-child {
-			display: none;
-		}
-		&:nth-child(10000n-9998) {
-			display: none;
-		}
+	.plate-blank {
+		display: none;
 	}
 	
 	.entertainment-slider .entertainment {
@@ -1014,7 +1006,7 @@
 		justify-content: center;
 	}
 	
-	.goods__plate-wr, .tabs .new-item{
+	.goods__plate-wr, .tabs .item-wr {
 		width: 33.3333%;
 	}
 	
@@ -1230,11 +1222,11 @@
 		padding-top: 390px;
 	}
 	
-	.tabs .tabs__item.tabs__item_products .tabs__inner {
+	.tabs .tabs__item.tabs__item_plates .tabs__inner {
 		margin: -15px -15px 0;
 	}
 	
-	.goods__plate-wr, .tabs .new-item {
+	.goods__plate-wr, .tabs .item-wr {
 		width: 50%;
 	}
 	
@@ -1514,7 +1506,7 @@
 }
 
 @media screen and (max-width: 500px) {
-	.goods__plate-wr, .tabs .new-item {
+	.goods__plate-wr, .tabs .item-wr {
 		width: 100%;
 	}
 }
