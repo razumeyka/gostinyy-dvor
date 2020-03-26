@@ -39,10 +39,6 @@
 	height: 20px;
 }
 
-header .contact_phone {
-	font-size: 16px;
-}
-
 .search-button {
 	display: block;
 	font-size: 14px;
@@ -63,10 +59,13 @@ header .contact_phone {
 
 .header__right-part {
 	align-items: center;
+	.social-icon {
+		margin-left: 10px;
+	}
 }
 
 .header__button {
-	margin: 0 10px 0 30px;
+	margin: 0 10px 0 20px;
 }
 
 .header__link {
@@ -116,6 +115,16 @@ header .contact_phone {
 	.header__link {
 		display: none;
 	}
+	
+	.header__left-part {
+		width: 100%;
+		justify-content: space-between;
+	}
+	
+	.header__right-part .social-icon {
+		display: none;
+	}
+
 }
 
 @media screen and (max-width: 1023px) {
