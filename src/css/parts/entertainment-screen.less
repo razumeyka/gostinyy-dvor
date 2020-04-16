@@ -19,9 +19,6 @@
 	height: 577px;
 	position: relative;
 	overflow: hidden;
-//	-moz-transition: background 0.3s linear;
-//	-webkit-transition: background 0.3s linear;
-//	transition: background 0.3s linear;
 	&:hover {
 		.entertainment__bg {
 			opacity: 0;
@@ -29,19 +26,31 @@
 	}
 	&.entertainment_children {
 		&:hover{
-			background: url(../../images/children-hover.jpg) no-repeat center;
+			background: url(../images/children-hover.jpg) no-repeat center;
 			background-size: cover;
 		}
 	}
 	&.entertainment_aquarium {
 		&:hover{
-			background: url(../../images/aqua-hover.jpg) no-repeat center;
+			background: url(../images/aqua-hover.jpg) no-repeat center;
 			background-size: cover;
 		}
 	}
 	&.entertainment_film  {
 		&:hover{
-			background: url(../../images/film-hover.jpg) no-repeat center;
+			background: url(../images/film-hover.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+	&.entertainment_carousel  {
+		&:hover{
+			background: url(../images/carousel-hover.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+	&.entertainment_lounge  {
+		&:hover{
+			background: url(../images/lounge-hover.jpg) no-repeat center;
 			background-size: cover;
 		}
 	}
@@ -75,6 +84,16 @@
 .entertainment_film .entertainment__bg {
 	background: url(../images/film.png) no-repeat bottom right;
 	background-size: 70%;
+}
+
+.entertainment_carousel .entertainment__bg {
+	background: url(../images/karusel2.png) no-repeat bottom right;
+	background-size: 60%;
+}
+
+.entertainment_lounge .entertainment__bg {
+	background: url(../images/lounge.png) no-repeat bottom right;
+	background-size: 60%;
 }
 
 .entertainment__content, .bottom-line {

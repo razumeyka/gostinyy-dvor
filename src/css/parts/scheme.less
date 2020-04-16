@@ -1,3 +1,7 @@
+.inner-page_scheme {
+	overflow: hidden;
+}
+
 .inner-page_scheme .inner-page__main {
 	background: #fff;
 }
@@ -14,11 +18,46 @@
 	}
 	.input-search {
 		background: #f3f0ee;
-		height: 60px;
+		height: 59px;
+		line-height: 59px;
 		color: #42352a;
-		&:focus {
-			color: #42352a;
+		&.is-open {
+			border-radius: 40px 40px 0 0;
+			border-bottom: 1px solid #dcd9d7;
 		}
+	}
+}
+
+.ui-menu {
+	background: #f3f0ee;
+	border-radius: 0 0 40px 40px;
+    z-index: 10;
+    margin: 0;
+    padding: 9px 0;
+    overflow: hidden;
+	border: none;
+	.ui-menu-item {
+		list-style: none;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		padding: 10px 40px;
+		cursor: pointer;
+		.ui-state-hover, .ui-state-active {
+			background: none;
+			border: none;
+			color: #f13836;
+		}
+	}
+	.ui-widget-content.ui-menu-divider {
+		display: none;
+	}
+}
+
+input.input-search:not([type=submit]):focus {
+    border-bottom: none;
+    color: #42352a;
+	&.is-open {
+		border-bottom: 1px solid #dcd9d7;
 	}
 }
 
@@ -72,6 +111,15 @@
 		}
 		&.hover-plate_bottom5 {
 			margin-top: 25%;
+		}
+		&.hover-plate_top2 {
+			margin-top: 2.5%;
+		}
+		&.hover-plate_top5 {
+			margin-top: 5%;
+		}
+		&.hover-plate_top8 {
+			margin-top: 8%;
 		}
 		.hover-plate__wr {
 			flex-direction: column;
@@ -154,7 +202,7 @@
         stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
+      .cls-2, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
         stroke-width: 0.25px;
       }
 
@@ -208,7 +256,7 @@
 		.animated;
 		&.active {
 			fill: #f13836;
-			stroke: #f13836;
+			stroke: #957a50;
 		}
 		&:focus {
 			outline: none;
@@ -221,6 +269,10 @@
 	g#logo>g:hover{
 
 	}
+}
+
+.scheme_4 {
+	
 }
 
 .scheme_3 {
@@ -373,7 +425,7 @@
         stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-10, .cls-11, .cls-2, .cls-3 {
+      .cls-10, .cls-11, .cls-2, .cls-3 {
         stroke-width: 0.25px;
       }
 
@@ -571,6 +623,21 @@
 			}
 		}
 	}
+	
+	.search-form .input-search {
+		&.is-open {
+			border-radius: 25px 25px 0 0;
+		}
+	}
+
+	.ui-menu {
+		border-radius: 0 0 25px 25px;
+		padding: 7px 0;
+		.ui-menu-item {
+			font-size: 14px;
+			padding: 5px 25px;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -582,6 +649,14 @@
 	
 	.scheme-filters {
 		padding:  40px 20px 0;
+	}
+	
+	.scheme-filters {
+		align-items: center;
+		padding: 100px 10.4% 0;
+		.select2-container {
+			margin-right: 20px;
+		}
 	}
 	
 	.inner-page_scheme .tabs .tabs__buttons {

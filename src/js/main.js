@@ -3,6 +3,7 @@
 @@include('./lib/jquery.viewportchecker.js')
 @@include('./lib/select2.full.js')
 @@include('./lib/jquery.validate.js')
+@@include('./lib/jquery-ui.min.js')
 
 
 $(document).ready(function(){
@@ -52,14 +53,14 @@ $(document).ready(function(){
 		});
 	});
 	
-	var w3= $('.photo-info_big').width();
-	$('.photo-info_big').css({
+	var w3= $('.news-mosaic__item_big').width();
+	$('.news-mosaic__item_big').css({
 		'height': w3 + 'px'
 	});
 	
 	$(window).resize(function(){
-		var w4= $('.photo-info_big').width();
-		$('.photo-info_big').css({
+		var w4= $('.news-mosaic__item_big').width();
+		$('.news-mosaic__item_big').css({
 			'height': w4 + 'px'
 		});
 	});
@@ -89,7 +90,6 @@ $(document).ready(function(){
 
 	
 // tabs
-	
 	
 	$('.tabs__content').each(function( index ) {
 		var h=$(this).find('.tabs__item:first-child').height();
@@ -141,7 +141,7 @@ $(document).ready(function(){
 		return false;
 	});
 	
-//more-info open
+// more-info open
 	
 	$('.more-button').click(function(){
 		var h1=$(this).parent().parent().height();
@@ -161,6 +161,13 @@ $(document).ready(function(){
 
 	
 // validate
+	
+	$('.tabs__content').each(function( index ) {
+		var h=$(this).find('.tabs__item:first-child').height();
+		$(this).css({
+			'height': h + 'px'
+		});
+	});
 	
 	$('.wpcf7-form').validate({
 		rules: {
@@ -193,7 +200,7 @@ $(document).ready(function(){
 	});
 	
 	
-// schema
+// scheme
 	
 	document.addEventListener("touchstart", function(){}, true);
 	
@@ -230,7 +237,6 @@ $(document).ready(function(){
 		$('.scheme .cls-1[data-id=' + $(this).data('id') + ']').removeClass('active');
 	});
 	
-	
 	// Ховер по лого - открывается подсказка
 	$('.scheme #LOGO g').mouseenter(function(){
 		$('.hover-plate').removeClass('hover');
@@ -250,6 +256,91 @@ $(document).ready(function(){
 		});
 	});
 	
+// scheme search
+	
+	var availableShops = [];
+	$('.hover-plate').each(function() {
+		var num = $(this).data('id');
+		var names = $(this).data('name');
+		var name = $(this).find('.hover-plate__name').html();
+		availableShops.push({id: num, label: names, value: name});
+	});
+
+	$( "#input-search-scheme" ).autocomplete({
+		source: availableShops,
+		response:function(event,ui){
+			for ( var i=0; i<ui.content.length; i++ ) {
+				var newVal = ui.content[i].value;
+				var newLabel = ui.content[i].value;
+				var newId = ui.content[i].id;
+				ui.content[i] = ({id: newId, label: newLabel, value: newVal})
+			}
+		},
+		open:function(event,ui){
+			$("#input-search-scheme").addClass("is-open");
+		},
+		close:function(event,ui){
+			$( "#input-search-scheme" ).removeClass("is-open");
+		},
+		focus:function(event,ui){
+			$('.hover-plate').removeClass('hover');
+			$('.scheme .cls-1').removeClass('active');
+			var shopId = ui.item.id;
+			var hoverPlate = $('.hover-plate[data-id=' + shopId + ']');
+			var scheme = hoverPlate.closest('.scheme');
+			var index = scheme.closest('.tabs__item').index();
+			var height = scheme.closest('.tabs__item').height();
+			$('.tabs__button').removeClass('active');
+			$('.tabs__button').eq(index).addClass('active');
+			$('.tabs__content').css({
+				'margin-left': '-'+index+'00%',
+				'height': height + 'px'
+			});
+			var path = $('.scheme .cls-1[data-id=' + shopId + ']');
+			path.addClass('active');
+			hoverPlate.addClass('hover');
+			var leftWidth = hoverPlate.innerWidth();
+			var topHeight = hoverPlate.innerHeight();
+			var offsetTop = path[0].getBoundingClientRect().top - scheme[0].getBoundingClientRect().top;
+			var offsetLeft = path[0].getBoundingClientRect().left - scheme[0].getBoundingClientRect().left;
+			var centerLeft = parseInt(path[0].getBoundingClientRect().right - path[0].getBoundingClientRect().left);
+			hoverPlate.css({
+				'top': (offsetTop - topHeight) + 'px',
+				'left': (offsetLeft - leftWidth/2 + centerLeft/2) + 'px'
+			});
+		},
+		select:function(event,ui){
+			$('.hover-plate').removeClass('hover');
+			$('.scheme .cls-1').removeClass('active');
+			var shopId = ui.item.id;
+			var path = $('.scheme .cls-1[data-id=' + shopId + ']');
+			var hoverPlate = $('.hover-plate[data-id=' + shopId + ']');
+			var scheme = hoverPlate.closest('.scheme');
+			
+			var index = scheme.closest('.tabs__item').index();
+			var height = scheme.closest('.tabs__item').height();
+			$('.tabs__button').removeClass('active');
+			$('.tabs__button').eq(index).addClass('active');
+			$('.tabs__content').css({
+				'margin-left': '-'+index+'00%',
+				'height': height + 'px'
+			});
+			var leftWidth = hoverPlate.innerWidth();
+			var topHeight = hoverPlate.innerHeight();
+			var offsetTop = path[0].getBoundingClientRect().top - scheme[0].getBoundingClientRect().top;
+			var offsetLeft = path[0].getBoundingClientRect().left - scheme[0].getBoundingClientRect().left;
+			var centerLeft = parseInt(path[0].getBoundingClientRect().right - path[0].getBoundingClientRect().left);	
+			$('html').animate({scrollTop: offsetTop
+			}, 500 );
+			path.addClass('active');
+			hoverPlate.addClass('hover');
+			hoverPlate.css({
+				'top': (offsetTop - topHeight) + 'px',
+				'left': (offsetLeft - leftWidth/2 + centerLeft/2) + 'px'
+			});
+		}
+	})
+
 // animation
 	
 	$('.mosaic__group_first').viewportChecker({

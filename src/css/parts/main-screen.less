@@ -4,6 +4,7 @@
 
 .mosaic {
     margin: -16px;
+	position: relative;
 }
 
 .mosaic__group {
@@ -131,12 +132,49 @@
 	}
 }
 
+.mosaic__button {
+	position: absolute;
+    top: calc(50% - 23px);
+	right: -30px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+	background: #ffffff;
+    border: 1px solid #d2c9c2;
+	box-shadow: 0 0px 8px 2px rgba(216,205,199,.7);
+    outline: 0;
+	.animated;
+	&:hover {
+		background: #d2c9c2;
+	}
+	svg {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		.cls-1 {
+			fill: #d2c9c2;
+			fill-rule: evenodd;
+		}
+	}	
+	
+	&:hover svg .cls-1 {
+		fill: #ffffff;
+	}
+}
+
 .mosaic_mobile {
 	display: none;
 }
 
 .main-screen__button {
-	display: block;
+	display: none;
 	width: 150px;
 	margin: 30px auto 0;
 }
@@ -155,6 +193,8 @@
 	.mosaic__item-wr {
 		padding: 10px;
 	}
+	
+	
 }
 
 @media screen and (max-width: 1679px) {
@@ -224,6 +264,14 @@
 	.mosaic__group_second.active  {
 		height: 510px
 	}
+	
+	.mosaic__button {
+		display: none;
+	}
+
+	.main-screen__button {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -266,5 +314,9 @@
 				display: flex;
 			}
 		}
+	}
+	
+	.main-screen__button {
+		width: 110px;
 	}
 }
