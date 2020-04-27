@@ -7,39 +7,169 @@
 		<div class="inner-page__content inner-page__content_about content">
 			@@include('template/header.html')
 			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_about">
-				<div class="caption-center">
-					<div class="caption-center__background caption-center__background_white">Гостиный</div>
-					<div class="caption-center__background caption-center__background_white">двор</div>
-					<div class="caption-center__small-caption">
-						<div class="caption-center__mini-caption"></div>
-						<div>О ТРЦ</div>
+				<img src="images/about-top-bg.jpg" alt="" class="inner-page_bg-img">
+				<div class="wrapper flex_between">
+					<div class="about-top-column">
+						<div class="common-name">Новый формат отдыха и развлечений</div>
+						<h1 class="caption caption_white">ТРЦ Гостинный двор</h1>
+					</div>
+					<div class="about-top-column">
+						<div class="big-description">ТРЦ "Гостиный Двор" – это один из самых масштабных торгово-развлекательных центров, расположенный одновременно в историческом и деловом центре города.</div>
+						<div class="small-description">Благодаря усовершенствованной инфраструктуре и современным технологиям, которыми оснащена каждая отдельная зона торгового пространства, "Гостиный Двор" предлагает покупателям совершенно новый формат отдыха и развлечений.</div>
 					</div>
 				</div>
 			</div>
-			<div class="wrapper">
-				<div class="article">
-					<h2 class="article__caption">Заголовок</h2>
-					<p>ТРЦ "Гостиный двор" является одним из самых больших торговых центров в Туле. Его площадь составляет 51 000 кв.м, здесь есть все для шоппинга и развлечений!</p>
-					<p>Торговый центр находится в самом сердце города, в 100 м от Тульского Кремля.</p>
-					<p>Гостиный двор ждет взрослых и детей каждый день с 10:00 до 22:00!</p>
-					<div class="article__images flex">
-						<a href="#">
-							<img src="/images/about.jpg" alt="">
-						</a>
-						<a href="#">
-							<img src="/images/about2.jpg" alt="">
-						</a>
-						<a href="#">
-							<img src="/images/about3.jpg" alt="">
-						</a>
+			<div class="squares flex">
+				<div class="squares__item">
+					<div class="squares__caption">Уникальный</div>
+					<p class="squares__big-text">ТРЦ «Гостиный двор» - инновационный, не имеющий аналогов в России торговый центр, который представляет необычные архитектурные решения.</p>
+					<p class="squares__small-text">Обилие таких уникальных для города крупных брендов, как ZARA, Stradivarius, Bershka, Offprice, Mango, Intimissimi, Oysho, United Colors Of Benetton и даже первый в России шоурум Hoff Smart, дает уникальную возможность каждому идти в ногу со временем, не отставая от постоянно меняющихся трендов в моде и технологиях.</p>
+				</div>
+				<div class="squares__item">
+					<div class="figures">
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">6</div>
+								<div class="figures__text">этажей</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="56" height="55" viewBox="0 0 56 55">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA3CAMAAABuDnn5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABvFBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAADEZhvOAAAAknRSTlMADTAMAds2oO2rwdmIYw/54pNd2v0UWpEC5vcOLb2tPT5+bQn16gOU0xpSmbDMwMjSI6NIIHd1BfHw73Yc0ZpR4OSiUBt99N7+vz84uKy+FthYjWEVtzQ3tDxuYFuQE3B5EGr2f2xTmLqGgwZ03UlAM5vQ33IsJx7OxNwSXDnpgLWna9boOxE6sq7GMQTCeOzK+1y4XOUAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAADdklEQVRIx82WaVtSQRiG3wiizArzlJioKWJqqG3Gwagsl3CptEwrIiXLFitK27TFrWzTyucXN+9AbGfmxNWn7g8w18zc42Gc551DlMsWhw1bSYvTBRtcTq24DS73duwowU53DjtRsgPb3S5s04ql2LV7j8dZhr25vXtR5vTs2b0LpVqx3Ni3HxXeygNVub1VByq9Fdi/zyjXeT5UUw1qa1GT31+Dg9xXDZ9GrEO9vyHQeMi6LxWNgQZ/Peo0YhOaW3CYgmhty6MdbjqMlmYcUXtH0U7HcFyIjvyBE0I8jmPUjqNKsQMnQ2Y4pBZDnWboJE4pRbEgr6sW+Vn4kRREcJrO4CyLlV15nMN5om6codPoUYj16G0M9PnJeSEaLiB6wUn+vkBjL+oVYj98A/wfHMRQ4dAQBokuYsCHS1bvsjFMZRghuoKrhWNXcYVoBGU0bIxaRHEU+USS/CiAD7D8EIfZIl7D2DiuE92AGbRg4gbRdYyP4ZpqUbneTXUYY9lnyucW4uQybhNNYDJh4Q6Ltw0XxXGrQBSp4HCwOGHduRiLHA9LcvxTAe9d3LMX7+GuNzDlzxuZxn1qijZLsSRu4YEUm6NNdB/TeWL2JD5Ub84jHvtzmrPMmJ2hDjzm5hPjadLCU+MJjz1Gh0jJTI6YTdszuUMWqvGMsonN8hzdEcxyS3U2UueKv2YR6cbzbDenQoRDtJxzeBFT8AJzXI5FPDglGXEAF0U4XorWK30hfy2GX6KfU5IRRSo4HAIH3sSUzOMEjw8blzklaXLqtANBUuJOielan+4cFKkQ4ShG5HiIlKQ7c5ZxYD6pZCgl5l8iC8bbdyIcTFK/Oe/lhDjevRUpkfjwYbEVtbK9hOW4kmUsyQm1aF38kL5EVni9Tm/q16561b/Ru8oFS3xP8ewV2TeBQ8mPXbI5VHD2c5hOF79wX7I0nTxOYJcUP2F1LaFhbRWfpRgW6SwUv8CWr1pxFktBPWizEROk578Sj8AM68E3neiLNnTZ0BD1acSgLIJaYjI5CvE7ytftxPVyfFeKQb4d7RjhP2kVx4CNNls2INKeFWcmxf3k8SR+oAh+JExT3F2ToiiPmpneCfoLscxUc1QUi5+pBxkuRlxIzf0oXoUy5SlWjJie4paiJ/UiPI9f7r+QmbIgxJ7NYjalkE3xihVx/AMR+g1Adhyw7IJ64gAAAABJRU5ErkJggg==" width="56" height="55"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>51 000</div>
+									<div class="figures__num-unit">кв.м.</div>
+								</div>
+								<div class="figures__text">общая площадь</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="54" height="45" viewBox="0 0 54 45">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAtCAMAAADSimi3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU1BMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAACcjYEGAAAAb3RSTlMABmO02IIo19DAGOakJzehjBAM+eWc9PBAkINO08SAUGJIoPP49TA5pwXoHnDHDgO22UQInvxY+i843d+6Ck0znRIa7yWSYEpUfgcr+2ocvf7L3P3RmkbxT9Tk4AmvyF3qX5Q6mDsV2wLasXTyc7wecQWSAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAb5JREFUSMfV1VdTwkAUBeCLBUEUBYFgQSwo9t6wgQhixRIUe0UUUc//f3PDAjJInF1mfPA87Nzs3G8nyWY2RESGmtq6ehJKfV1tjYGXxgYAJjFmZq0NRq1qtKCpWZxZm2BpZFULWonEmY1a0UJkb3MY5JjB0WYnK5zsEi6zUBTGyAkrudGuMeEw1oHOAuuyCcWjsW54C0zi2f4x6zHppvcX1od+pRgfBtg4AB8bXazzNzb4fVNaB5EfQ2x0y7LhEd9oFYzGMD5RBZucwrR3RprR7BwwX5Et5F/eIpZ+MqKAc7ki68YK353VtVK2XqzdOsxLPxIMbVTDSvNnLOwp+xo9YRHmLj8KNiNirL18A/RZdCuXmCQrJCzHQmO5bBM7PHfEWckGBHerYrMkwmxlbG//QI/Fi8x/eIRj0Q04OvRzdqIicXomxs5OE1C7cgzJ80odpDN5ngRnsXzHRfF/ZMIlL65Yx/VNYZKvFePsli92p1b6L7mMZLvP1+oD77zNsUeSTJSxJ6RkWQrPlFZfXuXUa0ZNE70hK8eyeGNjREE0Lo7iUSgRrQhYgHdFMO+AJcAXsH98Zq4Ek/n8sDPyBfGm8RInJs5KAAAAAElFTkSuQmCC" width="54" height="45"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>29 000</div>
+									<div class="figures__num-unit">кв.м.</div>
+								</div>
+								<div class="figures__text">торговые точки</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="53" height="55" viewBox="0 0 53 55">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA3CAMAAACb8PJJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACwVBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAACQFQW6AAAA6XRSTlMAA0CKwuf747uANwp24vPKsaey0PfYZwZT5uqJNT2V8JpyCBCE+P2DAcEbKdOgH2YFBFcMlnefjwnDZf7HJc8iIK8wVI0oDhT2IQIqrUMPbEtP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" width="53" height="55"/>
+								</svg>
+							</div>
+						</div>
 					</div>
-					<p>ТРЦ "Гостиный двор" является одним из самых больших торговых центров в Туле. Его площадь составляет 51 000 кв.м, здесь есть все для шоппинга и развлечений!</p>
-					<p>
-						<img src="/images/about2.jpg" alt="">
-					</p>
-					<p>Торговый центр находится в самом сердце города, в 100 м от Тульского Кремля.</p>
-					<p>Гостиный двор ждет взрослых и детей каждый день с 10:00 до 22:00!</p>
-					<p>ТРЦ "Гостиный двор" является одним из самых больших торговых центров в Туле. Его площадь составляет 51 000 кв.м, здесь есть все для шоппинга и развлечений!</p>
+				</div>
+			</div>
+			<div class="squares flex">
+				<div class="squares__item">
+					<div class="figures">
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>1</div>
+									<div class="figures__num-unit">мин</div>
+								</div>
+								<div class="figures__text">от пл. Ленина</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="58" height="56" viewBox="0 0 58 56">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA4CAMAAACbrRsRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACwVBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAACQFQW6AAAA6XRSTlMAMn2AVgFJ/Za6YIhwoGSsWMRH3wzQQDCQILBiSOAL/JOhBy98uNhSAwioppW2DRXFzs9+izdKbtobJ92zFMM4hO/6y1MJsr3lMT/uGBnk456x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" width="58" height="56"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>170</div>
+								</div>
+								<div class="figures__text">машиномест</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="58" height="50" viewBox="0 0 58 50">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAyCAMAAAA6Njh3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACtVBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAAChM1lOAAAA5XRSTlMAYs7g3rAbJP315KtPZuPdUGCJoJh0QQgMEAEJbNPynioi/uxtTvmvaDogKVGNlw8w4j0Dk4oU1dsreYSnBYbuLEdaVo7fug2UsrukcV34RAZlde20I9C/8Yg4BB7I80zYgIxc9igC6DzrwC4c6Xhb2WsmxX5yGZlCpbXnyQ5NNJqisaqFcKa9Su/CRlVUP/tjEuUXB+qpdp1pqPRnJ7hZth38lYEyGrdYuX+PIRNkxlP3hyV3NW6c3NrHkAv6Ci0YFkBI1pGzgnOtScR75osvPjbXkqNvYVdLFfBFajcxy8yu0Ts5EgXXWwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAQmSURBVEjHpZaNW1NVHMePe4GRQFtTYCNfQBqIqGMTQQQFEhErGM3WYrxE8hpixosJKoJQCJIEsQwhE8zEhHBBhQ0ho7QCiyx7sVer7//RvdtlbuPey56n7/Psub/zPedz7+/8znnOGSEeaYlA6CqR2Msz0lvi44Y+gKWeob7wc7f8H/QMlULmbgmFrOnJHpLLly0PCFyABikUCiUnGvzwCjBauWq1KxoSSrlrwjjQR/yhCo9YG+m1Lmq9EKEbNjqjakTLl6qgYUO1m6CK2TzfUkpjEbfFBRUTEo+tbGgCVqxzbiduw/Yk6pmMFAf6KHawoak70+jp+u5K3/3Y496080RGFJ1Npm4eTQtHFmvC9O9JPVOmPU8x1rzUNtsQzFHhjU/D+Ex2milHlou8fNc+NZ4tKEgJ5Fqc5xDO1Em5t1Clc0PFfFuiyK/4/tAlTJBUUuoBSstrWWrZ81FOBrM45Yui+ypQEivB/gWo9gX1ImjIgReLSWVV9QLUWRwJL9D/QPNR4+boSg54hh4sxAK95BlKDtWKadXhsABHbGHMUQ9RRgqIZZBy9eZo6qXzql8b4jF6rKHEbUYVjRpP0Jzj1NCm5pcdqtn6SjTQkrQoeqIVbSe1q9tl9/VqufZUHVT7tfyorKPwtc6CLreE16x/Pb8LVd48aHcz9NknzDC+cVomq6ZG2BT2JuX0bD6D3j4lB2pKiYXorT5JRnUQ3VSjYL5HF6HHWa+3t+NcPwvqHdbUioHzindgvmB3nFBC3r0I/aDXJeQtD3ZH35MAwstDW6ogYmbkihJlRC/ODGe1oqyhzwWNguh9CpGqIB4mrCiV1wgOXxluNlNls4jwwShzd+wcGKUfgkKnU8EdJdoxC3WEFn/4USN1BADmj+mzkoxftXV+ojpvte4ooqKTVmstcq1uqoPB/pYJTU1tF671UKHQbiXn0at4morSwa4Ep9lfKcOgAyWT5Wr1lIkKgtSsSjI5z6DSaPzUgbooSy7fcJ3wyQ/b2FEBleBnvGi3T5sDTTtUX+TomIiMPMhK9E9nMv9cPhcx6OQXKupDgmzeL5HIc3S9btBbkhiEdnQiF1dvfvmVRPU1Hzlqxkz87AhuDdnR8Tjq+Q1WJX6bPHHKp4zvsJpBmGmutLgGLXa0CQnlupWp3bsA/6Ex9HCT36FpcgRoC0zHFCG3RaSfqqYA30/BsAkN+/ADN3oHURGgztMff0IfKZXsprbGzy1AwTSaf8FZHTrucioDATcx7YvZTFiMkPxqe98cbhzVw4LfNLhl4NQ47vweeq1D8kc84gzpmUwufw4cu3DprzFTC0q5E+60RHe2V81Ir5f0OhUzQKIfTCSVe3CPb3Fm8fc/RDl32/Xu2quCpQK4yHuRKK3AXSMQo3SxQy4fib3XriT80jQaDPJ/mcZ/6hsV31tu3EkAAAAASUVORK5CYII=" width="58" height="50"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>12</div>
+									<div class="figures__num-unit">час/день</div>
+								</div>
+								<div class="figures__text">без выходных работаем для вас</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="58" height="54" viewBox="0 0 58 54">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA2CAMAAAChp3phAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC0FBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAACUrfJuAAAA7nRSTlMAIBcQJAIFJwsdGg0DEcKZAXr81SE15fVeCbSpBmr34CyOxNlUMue3sdb+rPL4FXnM0Wkf7a/Iv0WJYGcKxT+dTvtT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" width="58" height="54"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="squares__item">
+					<div class="squares__caption">Доступный</div>
+					<p class="squares__big-text">ТРЦ «Гостиный двор» находится в самом центре города, в шаговой доступности от Площади Ленина и Тульского Кремля.</p>
+					<p class="squares__small-text">Для гостей ТРЦ круглосуточно работает охраняемая подземная парковка.
+					ТРЦ «Гостиный двор» работает ежедневно с 10:00 до 22:00 без выходных, чтобы гости имели возможность комфортно располагать временем на шопинг.</p>
+				</div>
+			</div>
+			<div class="squares flex">
+				<div class="squares__item">
+					<div class="squares__caption">Развлекательный</div>
+					<p class="squares__big-text">В центральной зоне отдыха для посетителей расположен 15-метровый графический фонтан, не имеющий аналогов в Туле.</p>
+					<p class="squares__small-text">Гастрономическое пространство торгового центра включает в себя такие заведения, как ресторан "Другое Дело", гриль-бар "Дружба", популярную сеть кофеен BARY, крафтовую кофейню MyYummy, рестораны быстрого питания Макдоналдс и Burger King, а также, крупную зону фудктортов с самыми знаковыми сетями быстрого питания. На 5 этаже ТРЦ находится первый мультикомплекс КиноСити, оборудованный самыми последними версиями цифровых проекторов для комфортного просмотра кино в 3D с отдельным залом для эксклюзивных премьерных показов.Большой акцент в развлекательной работе центра делается на профессиональные детские анимационные программы, проводящиеся в атриуме на 1 этаже. Для удобства родителей, на территории ТРЦ расположен развлекательно- развивающий центр для детей под названием "Джуманджи" с профессиональными аниматорами, мастер-классами и шоу-программами.</p>
+				</div>
+				<div class="squares__item">
+					<div class="figures">
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>120</div>
+								</div>
+								<div class="figures__text">магазинов</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="63" height="53" viewBox="0 0 63 53">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA1CAMAAADBGsOLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACSVBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAAAAYQUAAAAAwXRSTlMAC4ba7MFJVcbt1nwGCMdlerkDe9mHcfJhNqH0ESD8lDVq+FyZvHfeUc2Lp/F2Y/3g+uru9fcdtMkw81e/fswb1SbwsGDAASwtAmxrNLL5ghcWgbbQ69PdaP7R9qYyxYAxrFCoDO+zvkAaCjdMPw3nB5CgR+NKmL3c6URzkivXDkhbOm+l4s7EDzMYVHUkcLXUjuU4ja1YnejfnhDhiaPmIftDaU15QoSPuq5aGVMVL3QJuyqWVk+TBMM9hUEuPORmMqqDvgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAPuSURBVEjHpZb5QxtFFMefJaiEQmnagGndFHqoVUpSmiUEChSSLtCWVE2kBCvYyI0CUjzQaFWM1arxaIs9PBLvo6X3fX7/M2c22WUXzLKp3x9233wzn817byeTIdLroWV5lvyHF5j0yKMF1sLltLSKisG1Qu+WyOZK238RtlWr8+zqo0tR9phjDdY+rp0iOLGuvGI9NujA5fa81atsZOeP3qiYm/AEe+STeEo7cwU2s+vTeEbHb+SgnSqxpQoud0ZbUc2u62Fxa7QNHna1QNSabheqtqCSXCivwYOpphwu8kL0oNZXh3qfqu1o8C1SAxrVuB51vlp4RHipqRHY0Uwt8M2X5kdgcaMD2KnGPrRQ8w6gsYlIam1rJz2/CbsW87tRq+Opva1VUh0Nv6cDCO59Vk8/93wQCDm0vE6cD4W5XgBcnaw7++RRF3Xx274I0O0ELHwQysK70219cf9L7Rt6Mj3upd50EA5ILx/YKofurHxhNOrFK3zc14+SaHRA5gej0aFhedbI6KvRQgN+iOg1oEuisQMYnyB6XeYndTOHDPiD6XU5VVwH1xssflPh6wd2cr1lHzHg38Y0a7Ctdy3v3jvMfDeCBpl3qGsuZsC/9z4q21h86IMPP+K/1Rng4z7Gx/1hfBLgiqHAfzgrT5/Wwjq/S3zmxDJ2S/ffL1tRw/4THdmGLtUahJevLx/73v0qH2ejz7Py9AXCivMlIs1KnFD5sMH64wkARzJOBXooZ569w68m0/oa3+TOS99q9odY7vxRiL0ZrUFcypk/huOK0yfiaK68FMesah3HsVx5ln6fas3OF2CW16SvK8Akr0tfW4BJXpe+tgCTvC59bQHm+AXpawpIoDPB9Z0hvyB9TQEJdU0a8QvS1xSQQHzyME5MDhryJ3FKb57+Hj+o9fP/L+P6WZY/jmm8NisqW3Pg+X750y6lBcl1KXk/zYGnn08CYmjvL4GZ2GbWrNBw5tNf/b/R7/4/aNT/pyFPRYk8pdORvw5SNmXff0jyzZzybv879k8TkXn+TBBnybzOInhGO5ZWAuNzpvG5cXYalDRGKYJxDEgmcWkA8SBK541zQZx3pFBhkq9AynEewXPK+IIVFyV2SBUvmcIviSgh6SKsFzLGZVjYi7blo3vCBD7RjXz27zpsweW0cQW4yu81/bh2fUn8+jX01/DgKnCF9/IGUJDkRhE780zdXAK/OQX0FPEoWQDcmKMOpEQUc+MWXB5UjxjiI9XwuHCLh8UQU+ggJ0aTEfB334mqsWncNuRvY3qsCp08b0SSo3AScEcow11BEO5hVrDivmCk+7AKs7jHorsoE+4A9IBnb0XU8v/0L3nRrDfP3kiAAAAAAElFTkSuQmCC" width="63" height="53"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>13</div>
+								</div>
+								<div class="figures__text">ресторанов и кафе</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="65" height="41" viewBox="0 0 65 41">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAApCAMAAABdjrRAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACH1BMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAACoz8AJAAAAs3RSTlMAGszgtwRq3N1uUO8Mm8C6IA4DH0qwMIB0QgLKHYrWBg/VYOysSGSc1GYWQEE7JuKm/NfoybbB+vupbdqJRBQFLLGnuQHIZQpS353wPG+XXfmDEPcHjXBD63Eh5tHYJKtRRv2BvLjPMlUJmpP0DS3+FYIb55+I0z/S5E8ZIt6Upb8SNFaQ85UeKqqML8I+xfU54Xyjjwsjrl41h+12eFQIxNk6E6C+26jp6oTQa81pxi4cWMEsH2UAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAACyUlEQVRIx62V51cTQRTFB0ITA0biBggtQKKGIlUSICpiARQ1GkFFQV0pCkKwYFcsoGJD7IrdxFAEhPsPOju7IVkO5GQT74eZee+d+Z2ZO7OzhJCISBVVVDSJiVX5KW4VCVbxELRaTRIgU6ICwhqNRrOWkCStxqd1igjcMlndfyCokqlSUvWhEySlpYe3hgwVMrPC88GQjZxQCbkcxxlNZD02hOVD9grloAgb4+PNUIVDoD5oREKeLt9UULgpKyRCUWHx4jUvKS3OyVNMYCor38xxFZkWOrRW5gVPoD5UAdW2LVul1LYa83YLahWexY6d8nQBsGt3nRJC2pJ0vZBs0AdBqNsD7M1oRNmS/D7sP5AYFcQaNKWwHzxEiAOH5YUmNAvdkaPHAhNajuNEjTBoRZu8chKnhO40jzMBCTa0i251wCSvdKKL9Wd567lAhG7vmfWgSl45j17W98HZH4Bwgd6/dMm4HlnlIi6Jg8tAa8uKhAHwV9DEhiZ0yEpXUcH6CEvJNVxvW4GQAvuNPjhuCuNbuC2reR+LOxg03EXsvWUJ93k8IITDkBDoh2HwLz4E+w89sjgfE3UnRpYlVOAJbZ86HWybz/Dcv/gChaILg7TVjqKRZV9irNmnV8hlbr8WuW/EGyRJP8q/ZTPs74QwWdqTPk3+t3svuj7MrsIHGP0IXfTVoxMiMcDCj4gU8+pPiBvyqtabTcGYQbBy3O8z+owE2n5BkZqFX9EuFfL9nPg2Lr3uSd9hpJ/2D6T6COWoJ+SnBQUs+lUt+pra4+pAkWtR1XCOsIEbiHK5fiN7seQBKl2uCUyKYQPQTfFmhCczmcRUTuiawiRxWmVXRqEMVidxY2JakDGa/OmcVqoJuIl2RtzPcC/xhGDDjJaupGUWczpdPz3IvzpFmsOs9IHP89aYfOWKsfLzXj9sIZ6kzWfpgodTLs8Cm/sPxGLgabxoD0cAAAAASUVORK5CYII=" width="65" height="41"/>
+								</svg>
+							</div>
+						</div>
+						<div class="figures__line flex_between">
+							<div class="figures__num-wr">
+								<div class="figures__num">
+									<div>6</div>
+								</div>
+								<div class="figures__text">кинозалов</div>
+							</div>
+							<div class="figures__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="61" height="61" viewBox="0 0 61 61">
+									<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACplBMVEUAAABxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViVxViUAAABSA4+KAAAA4HRSTlMAMcDy0UwX7/01atIqtvjVUXW/Zz133jcDxgEIWjSwn57x80EkkKkKvn2jV/lbGGPdFQv7h1/Ey4AGu+sQ6fX2Qg9rpDLW4UXPUmTF9GL+GScriXEh5I5haElliLe4jTwoAgUJs6hTI8K8tfDoBC3Z/KtQINcfdlSMl9DsHUP608qhzBuGFCU4nSaairFwXqfHf02U5e3D4oubhTvqL+ClB9xs95U+un7mec29KW6W5yxEyA1gqoGZgpKThKB0eK+0ZnJWVTNOIkASERow7jpvFi5YnDZ7DsEM2HpzrGnJov0KIFMAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAFEklEQVRIx52X+19URRjGR9QWawEFZGEJQnDjKgmELrBcywsXSVKLIAQFRF0wYKFiVYg1U0rBLJAKiS4QWQEqUZnZTROT0koyuz5/SjNnzjl7PRw+Pr/M+75nvnN25sz7ziwhalrgtXDRYtVeCrpHA8B7yV3S9+I+rQ98/ZbeFb0M/iSAvT5wPr2XB+kc3eAQ+OpD7w8LxwPzoSOwwhFfisgoQlYGG/DgfOjoGCc8FnGExCMBWDWviTI8UfYewuqk5BAg5WFFIHXNWmOaHU/PSJIdUyYSspCdk6sI59ElxSMKDx9dB6zfIHlRG/OdHxcUFsGwqRiPKeD6zSXBkp2TjcedHm5hL96anI0S9SWhcEy0U2QbnniylDwFlHnorit/em3F9krRq3KDSQLCduwkaRHQVMux0Lyawtpd+roKcO3W8iVI2eMCk70wZ9bnkgYz9kmhumcExkuDxqaA5rJaX2TlCA9yd7j+OEsL7VhKtN5oFSNpfsh89rnn6QZZVMVHC0HkSoWlaAhsQ7E1CzFSIBX7D9DmYHuHSYxEv4AaxaVs6KSvtx2S3Di8KLSHQ+Ue2mJUKX+Kl/KP2Kfkgzy3DhVY5uDpV9Ue1XkcqMsfLjuCKRYvO3ivsHz3VK1yspByrMstfBzh8ou7expRHg6bO6wtwokuD4O+iv0nRfM1+uLXiQ697r0K0VftASZLTsG7WbAOFaP/jVLyJsytrp0CkWDxvK6hPegVPuBbGNDT5vQgal379ONtoqChd/Aua03vYffG9wkZRoZrlxEEKNHkA/QIbYE30J5I8jHK4/EGqg/ZBz+DGoOSRvAR7/7xJy04VVuEMe6OC0mxmVo2zKU90s+YGKVeoViszhqpCpiVjnCjICu8uGE8h3PcqECTPIvzk7HNwW5z+xRbuDEGoxgyiLueTDltN0/6DJ9LzHYxdFQa5wsPG9hZ5bjAjS9hEEMX8RU34nBJhV4uFWajfGx9jePc+GaOr8n1LfZy4zt0iqFj2MSNQnyvQl9GCDfsOeWFSW6swwYV+ixauDEpl6I+8OyguyJMhb6Cem50w0sMWfEDN3xRp0JfRQI3mlEohvwwLbTVwDUV+keA1/vFsIqhQfCj5DqgV6EJwEvrtLQAdLozQlsCjRpMfsKE0P6MQTFiBj+GKhGkSq8GvxrNIFOMJIBXm5M4o0rbxBWuglmeC7+GdNsTVFHpSBVaC1J4IBng59ENhwRVkpSiNwEeMAH8RqOeoPYUpdB5wTggDTNHgv5yRLwySSnaIPzgncPTv8J3WlAFfpt2lVDRD6+hp8MtgZJTFOw4n8XcEmpyJ7IHsF43RBxSdCG2sgqTYVVWB59UJg7+HgmMVzqkqJltMYNcYTzJJND6UVo1bjdqMD5kT9FBXOG0fmJGEr0NXJWdayJ9A/S4HzL9oYHOnqJBLLUYXWafZidZYHf8RPoO/iTkVuqudnq7kFPUyioJo40oGmSi589fJDGDLhXzttG9yGkzThP9OD8r5BS1sZLC6YvMvwSU02ZfBjqShL0o0X3w0fUjJWgsl9hT1AvxEv23xWKZFeCbDQKutVgqZXq6kc1DvNVIKTrCiiGnuSj8j/eJXIYLkmgy7D9gEwsnTdHLFqYRzFosEZSOqjdT9U5RmDL/UvwOC5j/k2hHuZyiDt+bwk0rGO78vZ001ehEt5kk0b8AbXodxa9LkVZ32kkG55FoVaS4o+ak49vtHYsvCCVVl+EA3/4fjuv2Dr3bB8IAAAAASUVORK5CYII=" width="61" height="61"/>
+								</svg>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			@@include('template/footer.html')

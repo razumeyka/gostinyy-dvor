@@ -1,0 +1,62 @@
+/**
+ * @license zoom-svg.css v1.0
+ * Updated: Mon Feb 20 2017
+ * First Release
+ * Copyright (c) Laurent SOUEF Consulting
+ * Released under the MIT license
+ * https://github.com/LaurentSouefConsulting/jquery.zoom-svg/blob/master/MIT-License.txt
+ */
+ .zoom-svg-container {
+	position: relative;
+	display: block;
+}
+
+.zoom-svg-container:hover svg {
+
+}
+
+.zoom-svg-zoom {
+	background-color: #f3f0ee;
+	color: #795e36;
+	height: 50px;
+	line-height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+	z-index: 10;
+	position: absolute;
+	left: 10.4%;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+}
+
+.zoom-svg-zoom-in {	
+	top: 70px;
+}
+
+.zoom-svg-zoom-out {
+	line-height: 45px;
+	top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+	.zoom-svg-zoom {
+		height: 35px;
+		line-height: 35px;
+		width:35px;
+		left: 20px;
+	}
+	
+	.zoom-svg-zoom-in {	
+		top: 45px;
+	}
+	
+	.zoom-svg-zoom-out {
+		line-height: 30px;
+	}
+}

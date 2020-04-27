@@ -23,42 +23,28 @@
 		.entertainment__bg {
 			opacity: 0;
 		}
-	}
-	&.entertainment_children {
-		&:hover{
-			background: url(../images/children-hover.jpg) no-repeat center;
-			background-size: cover;
-		}
-	}
-	&.entertainment_aquarium {
-		&:hover{
-			background: url(../images/aqua-hover.jpg) no-repeat center;
-			background-size: cover;
-		}
-	}
-	&.entertainment_film  {
-		&:hover{
-			background: url(../images/film-hover.jpg) no-repeat center;
-			background-size: cover;
-		}
-	}
-	&.entertainment_carousel  {
-		&:hover{
-			background: url(../images/carousel-hover.jpg) no-repeat center;
-			background-size: cover;
-		}
-	}
-	&.entertainment_lounge  {
-		&:hover{
-			background: url(../images/lounge-hover.jpg) no-repeat center;
-			background-size: cover;
+		.entertainment__bg_hover {
+			opacity: 1;
 		}
 	}
 }
 
-.entertainment__bg {
-	height: 100%;
+.entertainment__bg_hover {
+	display: block;
 	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	-moz-transition: opacity 0.5ms linear, transform 0.5s linear;
+	-webkit-transition: opacity 0.5ms linear, transform 0.5s linear;
+	transition: opacity 0.5ms linear, transform 0.5s linear;
+}
+
+.entertainment__bg {
+	display: block;
+	width: 70%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -69,31 +55,15 @@
 	&.visible {
 		.visible
 	}
-}
-
-.entertainment_children .entertainment__bg {
-	background: url(../images/balloons.png) no-repeat bottom right;
-	background-size: contain;
-}
-
-.entertainment_aquarium .entertainment__bg {
-	background: url(../images/fish.png) no-repeat bottom right;
-	background-size: 70%;
-}
-
-.entertainment_film .entertainment__bg {
-	background: url(../images/film.png) no-repeat bottom right;
-	background-size: 70%;
-}
-
-.entertainment_carousel .entertainment__bg {
-	background: url(../images/karusel2.png) no-repeat bottom right;
-	background-size: 60%;
-}
-
-.entertainment_lounge .entertainment__bg {
-	background: url(../images/lounge.png) no-repeat bottom right;
-	background-size: 60%;
+	&.entertainment__bg_ballons {
+		width: 100%;
+	}
+	&.entertainment__bg_lounge {
+		width: 60%;
+	}
+	&.entertainment__bg_carousel {
+		width: 60%;
+	}
 }
 
 .entertainment__content, .bottom-line {
@@ -108,6 +78,7 @@
 
 .entertainment__caption {
 	font-size: 30px;
+	line-height: 1.2;
 	margin: 15px 0 45px;
 }
 

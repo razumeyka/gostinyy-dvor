@@ -125,7 +125,9 @@
 		</div>
 		<div class="inner-page__content content">
 			@@include('template/header.html')
-			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_film"></div>
+			<div class="inner-page__simple-top-bg inner-page__simple-top-bg_film">
+				<img src="images/film-bg.jpg" alt="" class="inner-page_bg-img">
+			</div>
 			<div class="plate">
 				<div class="caption-background">
 					<div>до</div>
@@ -233,11 +235,10 @@
 							</svg>
 						</a>
 					</div>
-					<div class="plate__hashtag">#кино</div>
 				</div>
 			</div>
 			<div class="inner-page__main">
-				<div class="tabs">
+				<div class="tabs tabs_dif-height">
 					<div class="tabs__buttons flex">
 						<div class="tabs__button button button_red active">О кинотеатре</div>
 						<div class="tabs__button button button_red ">Афиша</div>
@@ -255,41 +256,51 @@
 						</div>
 						<div class="tabs__item tabs__item_plates">
 							<div class="tabs__inner flex">
-								<div class="plate-blank"></div>
-								<div class="plate-blank"></div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
 								<div class="item-wr">
 									<a href="#" class="photo-info">
-										<div class="photo-info__photo photo-info__photo_maltina"></div>
+										<div class="photo-info__photo">
+											<img src="images/news-maltina.jpg" alt="">
+										</div>
 										<div class="photo-info__info">Новая Коллекция Maltina Accessories</div>
 									</a>
 								</div>
@@ -303,7 +314,7 @@
 				<div class="columns flex">
 					<div class="columns__left-column">
 						<div class="caption-center">
-							<div class="caption-center__background caption-center__background_white">Досуг</div>
+							<div class="caption-center__background caption-background_light">Досуг</div>
 							<div class="caption-center__small-caption">
 								<div class="caption-center__mini-caption">Другие</div>
 								<div>Развлечения</div>
@@ -318,55 +329,98 @@
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_children">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Детский центр</div>
-												<div class="entertainment__caption">Jumanji</div>
-												<div class="entertainment__description">
-													<ul>
-														<li>Лабиринт </li>
-														<li>Игровые аппараты</li>
-														<li>Яркие детские праздники с аниматорами</li>
-													</ul>
+										<div class="swiper-slide-wr">
+											<a href="#" class="entertainment">
+												<img class="entertainment__bg_hover" src="images/children-hover.jpg" alt="">
+												<img class="entertainment__bg entertainment__bg_ballons" src="images/balloons.png" alt="">
+												<div class="entertainment__content">
+													<div class="entertainment__type">Детский центр</div>
+													<div class="entertainment__caption">Jumanji</div>
+													<div class="entertainment__description">
+														<ul>
+															<li>Лабиринт </li>
+															<li>Игровые аппараты</li>
+															<li>Яркие детские праздники с аниматорами</li>
+														</ul>
+													</div>
 												</div>
-											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
-												<div class="bottom-line__icon"></div>
-											</div>
-										</a>
+												<div class="bottom-line">
+													<div class="bottom-line__stage">5 этаж</div>
+													<div class="bottom-line__icon"></div>
+												</div>
+											</a>
+										</div>
 									</div>
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_aquarium">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Досуг</div>
-												<div class="entertainment__caption">Аквариум</div>
-												<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. Чтобы увидеть больше придётся заказать столик в ресторане Марлин.</div>	
-											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
-												<div class="bottom-line__icon"></div>
-											</div>
-										</a>
+										<div class="swiper-slide-wr">
+											<a href="#" class="entertainment">
+												<img class="entertainment__bg_hover" src="images/aqua-hover.jpg" alt="">
+												<img class="entertainment__bg" src="images/fish.png" alt="">
+												<div class="entertainment__content">
+													<div class="entertainment__type">Досуг</div>
+													<div class="entertainment__caption">Аквариум</div>
+													<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. Чтобы увидеть больше придётся заказать столик в ресторане Марлин.</div>	
+												</div>
+												<div class="bottom-line">
+													<div class="bottom-line__stage">5 этаж</div>
+													<div class="bottom-line__icon"></div>
+												</div>
+											</a>
+										</div>
 									</div>
 									<div class="swiper-slide">
-										<a href="#" class="entertainment entertainment_aquarium">
-											<div class="entertainment__bg"></div>
-											<div class="entertainment__content">
-												<div class="entertainment__type">Досуг</div>
-												<div class="entertainment__caption">Аквариум</div>
-												<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. Чтобы увидеть больше придётся заказать столик в ресторане Марлин.</div>	
-											</div>
-											<div class="bottom-line">
-												<div class="bottom-line__stage">5 этаж</div>
-												<div class="bottom-line__icon"></div>
-											</div>
-										</a>
+										<div class="swiper-slide-wr">
+											<a href="#" class="entertainment">
+												<img class="entertainment__bg_hover" src="images/film-hover.jpg" alt="">
+												<img class="entertainment__bg" src="images/film.png" alt="">
+												<div class="entertainment__content">
+													<div class="entertainment__type">Кинотеатр</div>
+													<div class="entertainment__caption">Киносити</div>
+													<div class="entertainment__description">Новый кинотеатр «КИНО СИТИ» на шесть залов и 850 посадочных мест общей площадью более 2 тысяч квадратных метров. </div>
+												</div>
+												<div class="bottom-line">
+													<div class="bottom-line__stage">5 этаж</div>
+													<div class="bottom-line__icon"></div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide-wr">
+											<a href="#" class="entertainment">
+												<img class="entertainment__bg_hover" src="images/carousel-hover.jpg" alt="">
+												<img class="entertainment__bg entertainment__bg_carousel" src="images/karusel2.png" alt="">
+												<div class="entertainment__content">
+													<div class="entertainment__type">Детский центр</div>
+													<div class="entertainment__caption">Карусель</div>
+													<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма.</div>
+												</div>
+												<div class="bottom-line">
+													<div class="bottom-line__stage">5 этаж</div>
+													<div class="bottom-line__icon"></div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide-wr">
+											<a href="#" class="entertainment">
+												<img class="entertainment__bg_hover" src="images/lounge-hover.jpg" alt="">
+												<img class="entertainment__bg entertainment__bg_lounge" src="images/lounge.png" alt="">
+												<div class="entertainment__content">
+													<div class="entertainment__type">Досуг</div>
+													<div class="entertainment__caption">Панорамный Лаунж-бар SMOK.E.AT</div>
+													<div class="entertainment__description">Объём  аквариума более 350 кубических метров. Наблюдатели бесплатно могут видеть не весь аквариум, а только половину его объёма. </div>
+												</div>
+												<div class="bottom-line">
+													<div class="bottom-line__stage">5 этаж</div>
+													<div class="bottom-line__icon"></div>
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
-							</div>							
+							</div>
 						</div>
 					</div>
 				</div>

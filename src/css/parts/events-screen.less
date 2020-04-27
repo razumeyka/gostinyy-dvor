@@ -18,7 +18,8 @@
 }
 
 .film {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	box-sizing: border-box;
 	background: rgb(243, 240, 238);
 	padding: 45px 55px;
@@ -33,29 +34,9 @@
 }
 
 .film__poster {
-	background: #795f31;
-	width: 100%;
-	height: 259px;
-	&.film__poster_1 {
-		background: url(../images/film-1.jpg) no-repeat center;
-		background-size: contain;
-	}
-	&.film__poster_2 {
-		background: url(../images/film-2.jpg) no-repeat center;
-		background-size:  contain;
-	}
-	&.film__poster_3 {
-		background: url(../images/film-3.jpg) no-repeat center;
-		background-size:  contain;
-	}
-	&.film__poster_4 {
-		background: url(../images/film-4.jpg) no-repeat center;
-		background-size: contain;
-	}
-	&.film__poster_5 {
-		background: url(../images/film-5.jpg) no-repeat center;
-		background-size:  contain;
-	}
+	display: block;
+	height: 250px;
+	margin: 0 auto;
 }
 
 .film__caption {
@@ -119,7 +100,7 @@
 	}
 	
 	.film__poster {
-		height: 250px;
+		height: 200px;
 	}
 	
 }
@@ -130,10 +111,7 @@
 	}
 	
 	.film {
-		padding: 30px 25px;
-		.film__poster {
-			height: 220px;
-		}
+		padding: 30px 20px;
 
 		.film__caption {
 			margin: 15px 0 20px;

@@ -98,14 +98,6 @@
 
 /*media*/ 
 
-@media screen and (max-width: 1921px) {
-		
-}
-
-@media screen and (max-width: 1365px) {
-	
-	
-}
 
 @media screen and (max-width: 1279px) {
 	.header__button {
@@ -114,6 +106,20 @@
 
 	.header__link {
 		display: none;
+	}
+	
+	.header__link.header__link_scheme {
+		display: flex;
+		.header__link-text {
+			display: none;
+		}
+		.header__link-icon {
+			background: url(../images/icons/map-location.svg) no-repeat center;
+			background-size: contain;
+			box-sizing: border-box;
+			width: 30px;
+			height: 30px;
+		}
 	}
 	
 	.header__left-part {
