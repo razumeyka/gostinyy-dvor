@@ -514,6 +514,7 @@
 
 .calendar {
 	position: relative;
+	height: 90%;
 	.calendar__line {
 		margin-bottom: 17px;
 	}
@@ -539,11 +540,6 @@
 		left: 110px;
 		z-index: 10;
 	}
-	.calendar__line:last-child .calendar__months, .calendar__line:nth-child(4n) .calendar__months {
-		top: auto;
-		bottom: 0;
-	}
-	
 	.calendar__line {
 		&.active .calendar__year {
 			color: rgb(241, 56, 54);
@@ -931,6 +927,59 @@
   display: none !important;
 }
 
+/*error page*/ 
+
+.error-content {
+	align-items: center;
+	justify-content: center;
+	.error-content__figures {
+		font: 400 360px/1 "JOURNALISM";
+		color: #785f31;
+		margin-right: 50px;
+	}
+	.error-content__text {
+		max-width: 600px;
+		flex: 1;
+		font-size: 16px;
+	}
+	.error-content__caption {
+		max-width: 600px;
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	ul {
+		margin: 10px 0 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: block;
+			padding: 5px 0 5px 20px;
+			font-size: 16px;
+			position: relative;
+			&:before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background: #785f31;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 14px;
+			}
+		}
+	}
+}
+
+.search-form_error {
+	margin-top: 50px;
+	.input-search {
+		background: #f3f0ee;
+	}
+}
+
+
+
 /*media*/ 
 
 @media screen and (max-width: 1823px) {
@@ -1146,6 +1195,12 @@
 			font-size: 46px;
 		}
 	}
+	
+	.error-content {
+		.error-content__figures {
+			font: 400 240px/1 "JOURNALISM";
+		}
+	}
 }
 
 @media screen and (max-width: 1365px) {
@@ -1343,6 +1398,13 @@
 		svg {
 			width: 35px;
 		}
+	}
+	.error-content {
+		flex-direction: column;
+	}
+	
+	.error-content .error-content__figures {
+		margin: 0 0 30px;
 	}
 }
 
@@ -1714,6 +1776,22 @@
 	
 	.squares .squares__item {
 		padding: 30px 15px;
+	}
+	
+	.error-content .error-content__figures {
+		font: 400 160px/1 "JOURNALISM";
+	}
+	
+	.error-content .error-content__text {
+		font-size: 14px;
+	}
+	
+	.error-content .error-content__caption {
+		font-size: 20px;
+	}
+	
+	.error-content ul li {
+		font-size: 14px;
 	}
 }
 

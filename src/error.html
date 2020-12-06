@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.16/themes/black-tie/jquery-ui.css">
+		<link rel="stylesheet" href="css/main.css"> 
+		<title>Торгово-развлекательный центр "Гостиный двор"</title>
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="/js/main.js"></script>
+	</head>
+	<body>
+		<div class="container inner-page inner-page_scheme">
+			@@include('template/menu-column.html')
+			<div class="inner-page__content content">
+				@@include('template/header.html')
+				<div class="inner-page__main">
+					<div class="error-content flex">
+						<div class="error-content__figures">404</div>
+						<div class="error-content__text">
+							<div class="error-content__caption">К сожалению, запрашиваемая Вами страница не найдена на сайте нашей компании.</div>
+							<div>Мы приносим Вам извинения за доставленные неудобства. 
+							Чтобы найти интересующие Вас материалы, предлагаем следующие пути:</div>
+							<ul>
+								<li><a href="/">перейти на главную страницу сайта</a></li>
+								<li><a href="/sitemap/">воспользоваться картой сайта</a></li>
+								<li>связаться с нами по телефону <a href="tel:74957272424">+7 495 727 24 24</a></li>
+							</ul>						
+						</div>
+					</div>
+					<form class="search-form search-form_error" action="">
+						<input type="text" name="search" id="" placeholder="Найти" class="input-search">
+					</form>
+				</div>
+				@@include('template/footer.html')
+			</div>
+		</div>
+	</body>
+</html> 

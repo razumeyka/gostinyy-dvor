@@ -15,18 +15,10 @@
 }
 
 .scheme-filters {
-	align-items: center;
 	padding: 100px 10.4%;
 	background: #fff;
 	position: relative;
 	z-index: 2;
-	.select2-container {
-		margin-right: 20px;
-	}
-	
-	.search-form {
-		flex: 1;
-	}
 	.input-search {
 		background: #f3f0ee;
 		height: 59px;
@@ -72,6 +64,11 @@ input.input-search:not([type=submit]):focus {
 	}
 }
 
+input.input-search.is-open {
+	position: relative;
+	z-index: 10;
+}
+
 .inner-page_scheme {
 	.tabs {
 		padding: 100px 0;
@@ -92,7 +89,7 @@ input.input-search:not([type=submit]):focus {
 			padding-left: 0;
 			justify-content: flex-end;
 			position: absolute;
-			bottom: 100px;
+			top: 100px;
 			left: 10.4%;
 			flex-direction: column;
 			z-index: 2;
@@ -132,7 +129,7 @@ input.input-search:not([type=submit]):focus {
 	box-shadow: 0 0px 4px 0px #edeae8;
 	position: absolute;
 	right: 10.4%;
-	bottom: 0;
+	top: 0;
 	z-index: 2;
 }
 
@@ -173,6 +170,7 @@ input.input-search:not([type=submit]):focus {
 	-moz-transition: all 1s ease-in-out;
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+	cursor: grab;
 	.hover-plate {
 		opacity: 0;
 		position: absolute;
@@ -718,7 +716,7 @@ input.input-search:not([type=submit]):focus {
 	}
 	
 	.inner-page_scheme .tabs .tabs__buttons {
-		bottom: 70px;
+		top: 70px;
 	}
 	
 	.inner-page_scheme .tabs .tabs__button {
@@ -785,7 +783,7 @@ input.input-search:not([type=submit]):focus {
 		
 		.tabs .tabs__buttons {
 			left: 20px;
-			bottom: 50px;
+			top: 50px;
 		}
 		
 		.controls {
@@ -809,10 +807,6 @@ input.input-search:not([type=submit]):focus {
 		padding: 0 20px;
 	}
 	
-	.inner-page_scheme .select2-container {
-		margin-bottom: 0;
-	}
-	
 	.scheme .hover-plate.hover-plate_bottom2 {
 		margin-top: 9%;
 	}	
@@ -831,15 +825,7 @@ input.input-search:not([type=submit]):focus {
 }
 
 @media screen and (max-width: 639px) {
-	.scheme-filters {
-		flex-direction: column-reverse;
-	}
-	
-	.scheme-filters .input-search {
-		width: 250px;
-		margin-bottom: 15px;
-	}
-	
+
 	.inner-page_scheme .tabs .drag-container {
 		width: 120%;
 		left: -10%;
@@ -851,14 +837,12 @@ input.input-search:not([type=submit]):focus {
 	
 	.inner-page_scheme .tabs .tabs__buttons {
 		top: 50px;
-		bottom: auto;
 	}
 	
 	.inner-page_scheme .controls {
 		box-shadow: none;
 		top: -45px;
 		right: 5px;
-		bottom: auto;
 	}
 	
 	.inner-page_scheme .tabs .tabs__button {

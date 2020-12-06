@@ -171,7 +171,7 @@ $(document).ready(function(){
 	
 // validate
 	
-	$('.wpcf7-form').validate({
+	$('.inner-page_contacts .wpcf7-form').validate({
 		rules: {
 			name: 'required',
 			ucomment: 'required',
@@ -195,6 +195,36 @@ $(document).ready(function(){
 					$.fancybox.open({
 						src: '#err',
 						type : 'inline',
+					});
+				}
+			})
+		}
+	});
+	
+	$('.popup-form .wpcf7-form').validate({
+		rules: {
+			name: 'required',
+			tel: 'required',
+		},
+		submitHandler: function() {
+			$.ajax({
+				url: "/form.php",
+				method: "POST",
+				data:$(this).serializeArray(),
+			}).always(function(msg){
+				if(msg=="OK"){
+					$('#thx').css({
+						'display': 'block'
+					});
+					$('.form').css({
+						'display': 'none'
+					});
+				}else{
+					$('#err').css({
+						'display': 'block'
+					});
+					$('.form').css({
+						'display': 'none'
 					});
 				}
 			})
@@ -303,7 +333,7 @@ $(document).ready(function(){
 	$('.goods-plate').viewportChecker({
 		classToAdd: 'visible',
 		offset: 50,
-		repeat: true,
+		repeat: false,
 	});
 
 	$('.big-letter').viewportChecker({
@@ -321,13 +351,13 @@ $(document).ready(function(){
 	$('.event-banner').viewportChecker({
 		classToAdd: 'visible',
 		offset: 10,
-		repeat: true,
+		repeat: false,
 	});
 
 	$('.inner-page__right-text p').viewportChecker({
 		classToAdd: 'visible',
 		offset: 10,
-		repeat: true,
+		repeat: false,
 	});
 	
 

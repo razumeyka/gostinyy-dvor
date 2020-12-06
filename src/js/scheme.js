@@ -4,6 +4,36 @@
 
 $(document).ready(function(){
 	
+// scheme plates
+	
+	$.ajax({
+		url: 'shops.xml',
+		dataType: 'xml',
+		success: function(data){
+			// Extract relevant data from XML
+			var xml = $('shop',data);
+			var hoverPlates = [];
+			$(xml).each(function() {
+				var shopCode = $(this).attr('code');
+				var shopName = $(this).find('name').text();
+				var shopPhone = $(this).find('phone').text();
+				var internalLink = $(this).find('internal').text();
+				hoverPlates.push({code: shopCode, name: shopName, phone: shopPhone, internal: internalLink});
+			});
+			
+			for ( var i=0; i<hoverPlates.length; i++ ) {
+				var codeVal = hoverPlates[i].code;
+				var hoverPlate = $('.hover-plate[data-id=' + codeVal + ']');
+				hoverPlate.find(".hover-plate__name").html(hoverPlates[i].name);
+				hoverPlate.find(".contact_phone").html(hoverPlates[i].phone).attr('href', 'tel:' + hoverPlates[i].phone);
+				hoverPlate.find(".button").attr('href', hoverPlates[i].internal);
+			}
+		},
+		error: function(data){
+			console.log('Error loading XML data');
+		}
+	});
+
 	
 // scheme search
 	
@@ -17,6 +47,7 @@ $(document).ready(function(){
 
 	$( "#input-search-scheme" ).autocomplete({
 		source: availableShops,
+		autoFocus: true,
 		response:function(event,ui){
 			for ( var i=0; i<ui.content.length; i++ ) {
 				var newVal = ui.content[i].value;
@@ -27,6 +58,7 @@ $(document).ready(function(){
 		},
 		open:function(event,ui){
 			$("#input-search-scheme").addClass("is-open");
+			$('.hover-plate').removeClass('hover');
 		},
 		close:function(event,ui){
 			$( "#input-search-scheme" ).removeClass("is-open");
@@ -138,7 +170,7 @@ $(document).ready(function(){
 	
 	var panZoom = svgPanZoom('.svg-scheme_1', {
 		minZoom:1,
-		maxZoom: 1.5,
+		maxZoom: 2,
 		zoomEnabled: true,
 		panEnabled: false,
 		mouseWheelZoomEnabled: false,
@@ -164,7 +196,7 @@ $(document).ready(function(){
 	
 	var panZoom2 = svgPanZoom('.svg-scheme_2', {
 		minZoom:1,
-		maxZoom: 1.5,
+		maxZoom: 2,
 		zoomEnabled: true,
 		panEnabled: false,
 		mouseWheelZoomEnabled: false,
@@ -190,7 +222,7 @@ $(document).ready(function(){
 	
 	var panZoom3 = svgPanZoom('.svg-scheme_3', {
 		minZoom:1,
-		maxZoom: 1.5,
+		maxZoom: 2,
 		zoomEnabled: true,
 		panEnabled: false,
 		mouseWheelZoomEnabled: false,
@@ -216,7 +248,7 @@ $(document).ready(function(){
 	
 	var panZoom4 = svgPanZoom('.svg-scheme_4', {
 		minZoom:1,
-		maxZoom: 1.5,
+		maxZoom: 2,
 		zoomEnabled: true,
 		panEnabled: false,
 		mouseWheelZoomEnabled: false,
@@ -242,7 +274,7 @@ $(document).ready(function(){
 	
 	var panZoom5 = svgPanZoom('.svg-scheme_5', {
 		minZoom:1,
-		maxZoom: 1.5,
+		maxZoom: 2,
 		zoomEnabled: true,
 		panEnabled: false,
 		mouseWheelZoomEnabled: false,
